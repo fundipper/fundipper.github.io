@@ -7,25 +7,13 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/archive/202201/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/zh/archive/202110/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/category/Tutorials/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/category/xx/</loc>
+        <loc>https://fungo.dev/archive/202201/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -37,19 +25,25 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/category/xx/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/category/Tutorials/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/tag/HowTo/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tag/Download/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tag/xx/</loc>
+        <loc>https://fungo.dev/tag/TikTok/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -61,13 +55,25 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/tag/Download/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/tag/HowTo/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/zh/tag/Download/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tag/TikTok/</loc>
+        <loc>https://fungo.dev/tag/xx/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -85,25 +91,19 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/tag/HowTo/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/post/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/theme/</loc>
+        <loc>https://fungo.dev/zh/post/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/post/</loc>
+        <loc>https://fungo.dev/theme/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
