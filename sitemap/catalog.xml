@@ -43,31 +43,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tag/TikTok/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/zh/tag/TikTok/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tag/Download/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/zh/tag/HowTo/</loc>
-        <lastmod>2022-03-31</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/zh/tag/Download/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -86,6 +62,30 @@
     </url>
     <url>
         <loc>https://fungo.dev/tag/zz/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tag/TikTok/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tag/Download/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/tag/TikTok/</loc>
+        <lastmod>2022-03-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/tag/Download/</loc>
         <lastmod>2022-03-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
