@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>Fungo</title>
+    <link href="https://fungo.dev"/>
+    <summary type="html">simple and fast static site engine</summary>
+    <updated>2022-04-09 15:12:50.482197 +0800 CST m=+0.134180995</updated>
+    <entry>
+        <title>An update to Raspberry Pi OS Bullseye</title>
+        <link href="https://fungo.dev/post/raspberry-pi-bullseye-update-april-2022/"/>
+        <summary type="html">One of the things which we spend a lot of time thinking about here at Raspberry Pi is security.</summary>
+        <updated>2022-04-07 00:00:00 +0800 CST</updated>
+        <author>
+            <name>andy.jiang</name>
+        </author>
+    </entry>
+    <entry>
+        <title>How to download TikTok videos</title>
+        <link href="https://fungo.dev/post/how-to-tiktok/"/>
+        <summary type="html">Here is how to download TikTok videos in a few simple steps. Looking for how to download TikTok videos?</summary>
+        <updated>2021-10-11 00:00:00 +0800 CST</updated>
+        <author>
+            <name>andy</name>
+        </author>
+    </entry>
+</feed>

@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>An update to Raspberry Pi OS Bullseye - Fungo</title>
+		<meta name="description" content="One of the things which we spend a lot of time thinking about here at Raspberry Pi is security." />
+		<link rel="stylesheet" href="/assets/css/output.css" />
+	</head>
+	<body>
+		
+		
+<header class="bg-cyan-800 text-white text-center">
+	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
+		<div class="w-2/3 my-3">
+			<a href="/">
+				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+			</a>
+		</div>
+		<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</div>
+		<ul class="w-full md:w-1/3 my-3 hidden md:flex flex-row flex-wrap menu_bar">
+			
+			<li class="w-full md:w-1/4 h-10 leading-10">
+				<a href="/doc/overview/">文档</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10">
+				<a href="/theme/">主题</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10">
+				<a href="/post/">博客</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 flex justify-center items-center">
+				<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke-width="2"
+						d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+					/>
+				</svg>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+		
+		
+		<main class="py-3 bg-gray-100">
+			<div class="w-11/12 max-w-screen-lg mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+					<h1 class="text-3xl">An update to Raspberry Pi OS Bullseye</h1>
+					<div class="flex flex-row justify-between md:justify-start">
+						<p class="text-gray-500 flex flex-row justify-center md:justify-start items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+								</svg>
+							<span class="mx-2 text-sm">
+								
+								<a href="/category/news/"> News </a>
+								
+							</span>
+						</p>
+						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+								/>
+							</svg>
+							<span class="mx-2 text-sm"> 2022-04-07</span>
+						</p>
+					</div>
+					<div class="flex flex-row flex-wrap md:justify-between">
+						<article class="w-full  prose"><p>One of the things which we spend a lot of time thinking about here at Raspberry Pi is security. Cyber-attacks and hacking are, sadly, constantly on the increase, and Raspberry Pi computers are as much a target as any other, just because there are so many of them out there nowadays!</p>
+<p>Over the years, we have gradually ramped up the security of Raspberry Pi OS; not in response to particular threats, but more as a general precaution. There is always a balance to be struck, however, as security improvements usually carry a cost in terms of usability, and we have tried to keep the system as convenient to use as possible, while having an acceptable level of security.</p>
+<p>Up until now, all installs of Raspberry Pi OS have had a default user called “pi”. This isn’t that much of a weakness – just knowing a valid user name doesn’t really help much if someone wants to hack into your system; they would also need to know your password, and you’d need to have enabled some form of remote access in the first place. But nonetheless, it could potentially make a brute-force attack slightly easier, and in response to this, some countries are now introducing legislation to forbid any Internet-connected device from having default login credentials.</p>
+<p>So with this latest release, the default “pi” user is being removed, and instead you will create a user the first time you boot a newly-flashed Raspberry Pi OS image. This is in line with the way most operating systems work nowadays, and, while it may cause a few issues where software (and documentation) assumes the existence of the “pi” user, it feels like a sensible change to make at this point.</p>
+<p>The new wizard<br />
+The Raspberry Pi setup wizard should be a familiar sight by now. It was introduced several years ago, and runs on the first boot, configuring international settings, connecting to wireless LAN and installing any software updates; it also prompts you to change the default password. But the wizard has always been optional – if you pressed “Cancel” on the first page, it just went away and you weren’t forced to use it.</p>
+<p>From now on, working through the wizard is no longer optional, as this is how a user account is created; until you create a user account, you cannot log in to the desktop. So instead of running as an application in the desktop itself as before, the wizard now runs in a dedicated environment at first boot.</p>
+<p>When you boot a new image, you will see the wizard environment. You cannot run any applications from here – the menu button and application launcher have been removed from the taskbar; all the taskbar now allows you to do is to adjust volume and pair Bluetooth devices.</p>
+<p>The wizard itself is largely unchanged from before, with the key difference being that when you were previously prompted for a new password, you are now prompted for a user name and a password. (If you really want to, you can set these to “pi” and “raspberry” as before – you will get a warning message that doing so is unwise, but it is your choice – some software might require the “pi” user, so we aren’t being completely authoritarian about this. But we really would recommend choosing something else!)</p>
+<p>The other settings which were available in the wizard are largely unchanged. The only other difference is that the page which allows you to apply compensation for monitors with overscan – a black border around the image – now has separate settings for both monitors if you have a second monitor connected, and changing the setting now takes effect immediately; previously the overscan setting only took effect on a reboot.</p>
+<p>Once you get to the last page of the wizard and you press the “Restart” button, the system will reboot and the familiar Raspberry Pi Desktop will appear, logged in as the user you just created. And from here on, everything will work just as before.</p>
+<p>If you are using the Raspberry Pi OS Lite image, which doesn’t have the wizard, you will still need to create a new user account. You will therefore be prompted to create an account by text prompts at the command line when you first boot a Lite image.</p>
+<p>Headless setup<br />
+For people who run their Raspberry Pi headless and therefore cannot work through the wizard, the Raspberry Pi Imager tool allows you to preconfigure an image with a user account; when an image created like this is first booted, it will come straight up in the desktop, logged in as the user created in the Imager.</p>
+<p>To preconfigure an image like this, when you have selected the source image and destination in Imager, click the “settings” button – the picture of a cogwheel – before clicking “Write”, and use the Advanced options menu to enter a username and password, along with any other preconfiguration you want.</p>
+<p>Raspberry Pi OS<br />
+There are also mechanisms to preconfigure an image without using Imager. To set up a user on first boot and bypass the wizard completely, create a file called userconf or userconf.txt in the boot partition of the SD card; this is the part of the SD card which can be seen when it is mounted in a Windows or MacOS computer.</p>
+<p>This file should contain a single line of text, consisting of username:encrypted- password – so your desired username, followed immediately by a colon, followed immediately by an encrypted representation of the password you want to use.</p>
+<p>To generate the encrypted password, the easiest way is to use OpenSSL on a Raspberry Pi that is already running – open a terminal window and enter</p>
+<p>echo 'mypassword' | openssl passwd -6 -stdin<br />
+This will produce what looks like a string of random characters, which is actually an encrypted version of the supplied password.</p>
+<p>Existing installations<br />
+Some people, having read the above, may now be wondering whether they can rename the “pi” user on their existing images. As part of this update, we have included a mechanism to do that.</p>
+<p>After updating as described below, make sure you are logged in as the “pi” user, and then open a terminal window and type</p>
+<p>sudo rename-user<br />
+After a brief pause, you will be prompted to reboot, and the Raspberry Pi will then reboot into a cut-down version of the first-boot wizard which only allows you to change the user name and password.</p>
+<p>Raspberry Pi OS<br />
+Once you have entered a new username and password, you will be prompted to restart, and your Raspberry Pi will reboot to the desktop, with your existing user (and your home directory) renamed, but no other changes.</p>
+<p>One word of caution – most Raspberry Pi software (if it was written properly…) should handle having the home directory renamed and carry on working as before, but it is possible that some code may have been written with a hard-coded path to the /home/pi directory, and this will need to be modified in order to work correctly with the renamed user.</p>
+<p>Also, please note that, due to the way the rename-user process involves temporarily creating and logging in as a different user, this process will not work over a VNC connection (which requires you to be logged in as a specific user); you will need to be a local user in order to rename the”pi” user.</p>
+<p>The same rename-user command can also be used on a Lite image to rename the existing “pi” user; in this case it will run the same command-line prompts as are used to set up a user at first boot in the Lite image.</p>
+<p>Bluetooth peripherals<br />
+While we were creating the new wizard, we decided to address a long-standing issue. If you want to use a Bluetooth keyboard or mouse with your Raspberry Pi, you have always needed to use a USB mouse and/or keyboard to initially pair the Bluetooth peripherals, which is a bit irritating.</p>
+<p>That requirement has been removed in the new wizard. When it runs, the first page will prompt you to put any Bluetooth keyboard or mouse you wish to use into pairing mode, and then to wait. As long as you are on the first page of the wizard, the Raspberry Pi will now scan for pairable Bluetooth mice and keyboards, and will automatically pair the first of each which it finds. You will see messages pop up to indicate that a Bluetooth device has been found and is being paired – you may need to wait a few seconds after the final “connected” dialog appears for the newly-connected device to wake up and start being used by the system, but you can now set up a Raspberry Pi from scratch with just Bluetooth peripherals.</p>
+<p>This works both with the built-in Bluetooth adapter on Raspberry Pi 3 and 4, and also with USB Bluetooth adapters on earlier models of Raspberry Pi – just make sure the USB adapter is inserted before the Raspberry Pi is booted.</p>
+<p>One more thing…<br />
+Some of you may have heard of Wayland, a proposed replacement for the X Window System which has underpinned most Unix desktop environments for several decades now. Wayland has various advantages over X, notably security and performance, but it is still fairly new technology and hence still under development. A couple of Linux distros now run on top of Wayland, but it hasn’t yet been widely adopted – that said, it is looking as if Wayland is likely to be the future of desktop Linux.</p>
+<p>When we released the Bullseye version of Raspberry Pi OS last year, we started using mutter as the default window manager instead of openbox, and one of the reasons for this was that mutter supports the Wayland protocols. In this release, we are making it possible to run the desktop on top of Wayland as an experimental configuration for people who are interested in trying it.</p>
+<p>Before going any further, please note – we absolutely do not recommend most people run on top of Wayland yet! This is experimental code and there are many features which are not yet supported under Wayland. (To name a few – taking screenshots, the screen magnifier, any remote desktop application, the screen resolution setting tool; we hope to get some of these working in due course, but for now, they don’t.)</p>
+<p>Also, this is not a pure Wayland implementation of the desktop. There are several features of X – notably communication between applications – which are not supported at all in Wayland, which is purely a graphics protocol. The desktop relies on some of these features of X, and so this version of the desktop is a sort of half-way house. The mutter window manager runs as a true Wayland application, but everything else runs under XWayland, which is basically an implementation of X which uses Wayland to draw the graphics. This means that some of the advantages of Wayland will not be available in this version of the desktop.</p>
+<p>Nonetheless, after the use of mutter in the Bullseye release, this is another major step in the direction of Wayland, and people who are interested are welcome to try it. (But please don’t complain to us that some feature you depend on doesn’t work under Wayland – as above, we already know that a bunch of stuff doesn’t work, which is why we’ve warned you in advance!)</p>
+<p>Switching to Wayland is easy. Launch the raspi-config application from a terminal window using</p>
+<p>sudo raspi-config<br />
+and under the Advanced Options menu, just select the Wayland option – enable it, and reboot. You shouldn’t notice any obvious difference, but if you want to check if you are really running on Wayland, open a terminal and do</p>
+<p>echo $XDG_SESSION_TYPE<br />
+Under X, this will return “x11”; under Wayland it will return “wayland”. If you want to go back to X, use the same option in raspi-config to disable Wayland. (Using Wayland shouldn’t change anything permanently on your system, but we do recommend taking a backup before you enable anything experimental like this, just in case.)</p>
+<p>For now, Wayland is more something for the curious to play with than anything of interest to most users. But if you are curious, do have a play!</p>
+<p>How do I get it?<br />
+The new image is available for download from the usual place: our Downloads page.</p>
+<p>To update an existing image, use the usual terminal command:</p>
+<p>sudo apt update<br />
+sudo apt full-upgrade<br />
+If you want to install the experimental Wayland support, you will also need to do:</p>
+<p>sudo apt install rpi-wayland<br />
+As ever, all feedback is welcome, so please leave your comments below.</p>
+</article>
+						
+					</div>
+					<p class="py-3 text-gray-500 flex flex-row justify-start items-center">
+						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z" />
+						</svg>
+						
+						<span class="mx-2 text-sm ">
+							
+								
+								<a href="/tag/bullseye/">Bullseye </a>
+								
+							
+								
+								<a href="/tag/raspberry%20pi%20os/">Raspberry Pi OS </a>
+								
+							
+								
+								<a href="/tag/raspberry%20pi/">Raspberry Pi </a>
+								
+							
+						</span>
+					</p>
+					
+					
+					
+					<p>andy.jiang</p>
+					<p>150haomengting@163.com</p>
+				</div>
+			</div>
+		</main>
+
+		
+		
+<footer class="bg-cyan-800 text-white text-center">
+	<div class="w-11/12 max-w-screen-xl mx-auto py-6 flex flex-row flex-wrap">
+		<div class="w-full md:w-1/5">
+			
+			<div class="">
+				<img class="h-16 my-2 mx-auto" src="/assets/img/logo/fungox.png" alt="" />
+			</div>
+			
+			<p class="h-10 leading-10 my-3 text-gray-400 font-thin">
+				Made with<em class="mx-2 text-xl text-red-500">♥</em> by Fundipper
+			</p>
+		</div>
+
+		
+		<ul class="hidden md:block md:w-1/5">
+			<li class="h-10 leading-10">产品</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/doc/overview/">文档</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/theme/">主题</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/post/">博客</a>
+			</li>
+			
+		</ul>
+
+		
+		<ul class="hidden md:block md:w-1/5">
+			<li class="h-10 leading-10">开源</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="">FED</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="">BED</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="">Lab</a>
+			</li>
+			
+		</ul>
+
+		
+		<ul class="hidden md:block md:w-1/5">
+			<li class="h-10 leading-10">帮助</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/about/">关于我们</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/help/terms">服务条款</a>
+			</li>
+			
+			<li class="h-10 leading-10 text-xs">
+				<a href="/help/privacy/">隐私政策</a>
+			</li>
+			
+		</ul>
+
+		
+		<div class="w-full md:w-1/5">
+			<p class="h-10 leading-10">关注</p>
+			<ul class="flex flex-row">
+				
+				<li class="w-1/3">
+					<a href="">
+						<p>
+							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/twitter.png" alt="" />
+						</p>
+						<p class="h-10 leading-10 text-xs">Twitter</p>
+					</a>
+				</li>
+				
+				<li class="w-1/3">
+					<a href="">
+						<p>
+							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/youtube.png" alt="" />
+						</p>
+						<p class="h-10 leading-10 text-xs">Youtube</p>
+					</a>
+				</li>
+				
+				<li class="w-1/3">
+					<a href="">
+						<p>
+							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/github.png" alt="" />
+						</p>
+						<p class="h-10 leading-10 text-xs">Github</p>
+					</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+
+	
+	<p class="h-10 leading-10 border-t border-cyan-900 text-gray-400 font-thin text-xs">copyright © 2021 - 2022 fungo.dev</p>
+</footer>
+
+<script>
+	const btn = document.querySelector(".menu_button");
+	const bar = document.querySelector(".menu_bar");
+
+	btn.addEventListener("click", () => {
+		bar.classList.toggle("hidden");
+	});
+</script>
+
+
+	</body>
+</html>
