@@ -728,6 +728,76 @@ Check Allow write access
 </code></pre>
 <h3 id="workflows">新建workflows</h3>
 <p>在项目根目录增加<code>.github/workflows/deploy.yaml</code>文件，然后配置如下信息</p>
+<h3 id="-docker">使用 docker</h3>
+<p>因依赖较少，故速度更快</p>
+<pre><code># 名称，可自定义
+name: Fungo Deploy
+
+# 依赖
+on:
+  # 当命令为 push
+  push:
+    # 且分支为 master 时，触发
+    branches:
+      - master
+
+  # 当命令为 pull
+  pull_request:
+    # 且分支为 master 时，触发
+    branches:
+      - master
+  # 手动触发
+  workflow_dispatch:
+
+# 任务
+jobs:
+  # 任务名称，可自定义
+  deploy:
+    # 启动依赖，可设置为 ubuntu，windows，macos
+    runs-on: ubuntu-latest
+    
+    # 使用docker 镜像
+    container:
+      image: fundipper/fungo:latest
+
+    # 步骤
+    steps:
+
+      # 检出代码
+      - name: checkout
+        uses: actions/checkout@v3
+
+      # 配置ssh
+      - name: config
+        run: |
+          set -e
+          echo &quot;Host *
+            StrictHostKeyChecking no
+            UserKnownHostsFile=/dev/null
+          &quot; &gt; /etc/ssh/ssh_config
+
+      # 编译项目
+      - name: build
+        run: fungo build
+
+      # 部署项目
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          commit_message: ${{ github.event.head_commit.message }}
+          # 部署密钥
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # 发布地址
+          external_repository: &quot;your github page path as 'fundipper/fundipper.github.io'&quot;
+          # 使用分支
+          publish_branch: &quot;your branch as 'master'&quot;
+          # 使用目录
+          publish_dir: ./public
+          # 自定义域名
+          cname: fungo.dev
+</code></pre>
+<h3 id="-go-install">使用 go install</h3>
+<p>因依赖较多，故部署略慢</p>
 <pre><code># 名称，可自定义
 name: Fungo Deploy
 
