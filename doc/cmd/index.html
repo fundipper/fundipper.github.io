@@ -689,9 +689,15 @@
 <p>新建站点</p>
 <pre><code>fungo site your-site-name
 </code></pre>
+<p>docker</p>
+<pre><code>docker run -it --rm -v $PWD:/fungo fundipper/fungo site your-site-name
+</code></pre>
 <h3 id="file">file</h3>
 <p>新建文件</p>
-<pre><code>fungo file you-source-name your-file-name
+<pre><code>fungo file your-file-model your-file-name
+</code></pre>
+<p>docker</p>
+<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo file your-file-model your-file-name
 </code></pre>
 <p><code>source</code>目录已定义了<a href="/doc/source/article/">article</a>，<a href="/doc/source/document/">document</a>，<a href="/doc/source/page/">page</a>三类资源类型</p>
 <p>可对<code>已有资源</code>类型进行修改，亦可自定义其他<a href="/doc/source/extend/">个性化资源</a></p>
@@ -699,14 +705,23 @@
 <p>新建主题</p>
 <pre><code>fungo theme your-theme-name
 </code></pre>
+<p>docker</p>
+<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo theme your-theme-name
+</code></pre>
 <p>若不自行开发模板，则无需使用</p>
 <h3 id="serve">serve</h3>
 <p>预览模式</p>
 <pre><code>fungo serve
 </code></pre>
+<p>docker</p>
+<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site -p 3000:3000 fundipper/fungo serve
+</code></pre>
 <h3 id="build">build</h3>
 <p>编译模式</p>
 <pre><code>fungo build
+</code></pre>
+<p>docker</p>
+<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo build
 </code></pre>
 </article>
 						

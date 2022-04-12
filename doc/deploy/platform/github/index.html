@@ -779,11 +779,17 @@ jobs:
       - name: deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          external_repository: &quot;your github page path as 'fundipper/fundipper.github.io'&quot;
-          publish_branch: &quot;your branch as 'master'&quot;
-          publish_dir: ./public
           commit_message: ${{ github.event.head_commit.message }}
+          # 部署密钥
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # 发布地址
+          external_repository: &quot;your github page path as 'fundipper/fundipper.github.io'&quot;
+          # 使用分支
+          publish_branch: &quot;your branch as 'master'&quot;
+          # 使用目录
+          publish_dir: ./public
+          # 自定义域名
+          cname: fungo.dev
 </code></pre>
 <h3 id="workflows-1">查看workflows</h3>
 <pre><code>open https://{your-github-page-source}/actions
