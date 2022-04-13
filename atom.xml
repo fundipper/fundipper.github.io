@@ -3,14 +3,14 @@
     <title>Fungo</title>
     <link href="https://fungo.dev"/>
     <summary type="html">simple and fast static site engine</summary>
-    <updated>2022-04-13 10:11:29.494525886 +0800 CST m=+0.047905235</updated>
+    <updated>2022-04-13 16:37:08.224581061 +0800 CST m=+0.090504074</updated>
     <entry>
         <title>An update to Raspberry Pi OS Bullseye</title>
         <link href="https://fungo.dev/post/raspberry-pi-bullseye-update-april-2022/"/>
         <summary type="html">One of the things which we spend a lot of time thinking about here at Raspberry Pi is security.</summary>
         <updated>2022-04-07 00:00:00 +0800 CST</updated>
         <author>
-            <name>andy.jiang</name>
+            <name>andy</name>
         </author>
     </entry>
     <entry>
