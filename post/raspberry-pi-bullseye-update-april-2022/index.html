@@ -139,12 +139,18 @@
 			</li>
 			
 			<li class="w-full md:w-1/4 h-10 flex justify-center items-center">
-				<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
 					<path
 						stroke-linecap="round"
 						stroke-linejoin="round"
-						stroke-width="2"
-						d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
 					/>
 				</svg>
 			</li>
@@ -191,7 +197,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="mx-auto prose"><p>One of the things which we spend a lot of time thinking about here at Raspberry Pi is security. Cyber-attacks and hacking are, sadly, constantly on the increase, and Raspberry Pi computers are as much a target as any other, just because there are so many of them out there nowadays!</p>
+						<div class="mx-auto prose prose-base"><p>One of the things which we spend a lot of time thinking about here at Raspberry Pi is security. Cyber-attacks and hacking are, sadly, constantly on the increase, and Raspberry Pi computers are as much a target as any other, just because there are so many of them out there nowadays!</p>
 <p>Over the years, we have gradually ramped up the security of Raspberry Pi OS; not in response to particular threats, but more as a general precaution. There is always a balance to be struck, however, as security improvements usually carry a cost in terms of usability, and we have tried to keep the system as convenient to use as possible, while having an acceptable level of security.</p>
 <p>Up until now, all installs of Raspberry Pi OS have had a default user called “pi”. This isn’t that much of a weakness – just knowing a valid user name doesn’t really help much if someone wants to hack into your system; they would also need to know your password, and you’d need to have enabled some form of remote access in the first place. But nonetheless, it could potentially make a brute-force attack slightly easier, and in response to this, some countries are now introducing legislation to forbid any Internet-connected device from having default login credentials.</p>
 <p>So with this latest release, the default “pi” user is being removed, and instead you will create a user the first time you boot a newly-flashed Raspberry Pi OS image. This is in line with the way most operating systems work nowadays, and, while it may cause a few issues where software (and documentation) assumes the existence of the “pi” user, it feels like a sensible change to make at this point.</p>
@@ -316,10 +322,10 @@ As ever, all feedback is welcome, so please leave your comments below.</p>
 									</p>
 									<p class="w-2/3 flex flex-col">
 										<span class="h-10 leading-10 text-lg">andy.jiang</span>
-										<span class="h-10 leading-10 text-gray-400 text-sm"> Full Stack Developer &amp; SEO Engineer </span>
+										<span class="h-10 leading-10 text-gray-400 text-sm"> Full Stack Developer </span>
 									</p>
 								</div>
-								<p class="w-11/12 mx-auto my-5 text-gray-400">10 years of programming, familiar with golang, vue, tailwindcss. The latest is a static site engine named fungo.</p>
+								<p class="w-11/12 mx-auto my-5 text-gray-600">10 years of programming, familiar with golang, vue, tailwindcss. The latest is a static site engine named fungo.</p>
 								<a href="mailto:150haomengting@163.com">
 									<p
 										class="w-2/3 mx-auto h-10 leading-10 border hover:bg-gray-100 rounded flex felx-row justify-center items-center"
