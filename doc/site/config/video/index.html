@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>懒加载 - Fungo</title>
+		<title>嵌入视频 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
@@ -210,7 +210,14 @@
 										
 										<li class="indent-8">
 											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/lazyload/">懒加载</a>
+												<a href="/doc/site/config/image/">加载图片</a>
+											</p>
+											
+										</li>
+										
+										<li class="indent-8">
+											<p class="h-8 leading-8 text-blue-500">
+												<a href="/doc/site/config/video/">嵌入视频</a>
 											</p>
 											
 										</li>
@@ -622,7 +629,7 @@
 					</ul>
 				</aside>
 				<div class="w-full md:w-4/5 px-7">
-					<h1 class="text-3xl">懒加载</h1>
+					<h1 class="text-3xl">嵌入视频</h1>
 					<div class="flex flex-row justify-between md:justify-start">
 						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -637,23 +644,31 @@
 						</p>
 					</div>
 					<div class="flex flex-row">
-						<article class="w-full  prose"><p>该项为必选置项，<code>map</code>类型，包含站点图片懒加载信息</p>
+						<article class="w-full  prose"><p>该项为必选置项，<code>[]map[string]string</code>类型，包含站点嵌入视频信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
-<h3 id="sitelazyload">[site.lazyload]</h3>
+<h3 id="sitemarkdownvideo">[site.markdown.video]</h3>
 <p>站点配置</p>
-<pre><code>[site.lazyload]
-old = `&lt;img src=&quot;`
-new = `&lt;img class=&quot;lazy&quot; src=&quot;/assets/img/loading.gif&quot; data-src=`
+<pre><code>[[site.markdown.video]]
+host = &quot;www.youtube.com&quot;
+path = &quot;/embed&quot;
+
+[[site.markdown.video]]
+host = &quot;player.bilibili.com&quot;
+path = &quot;/player.html&quot;
+
+[[site.markdown.video]]
+host = &quot;v.qq.com&quot;
+path = &quot;/txp/iframe/player.html&quot;
 </code></pre>
 <p>Notice:</p>
 <blockquote>
 <p>该项所定义内容，在任意模板页均可使用<br />
-该项为字典类型，支持配置多个非重名[name]配置项</p>
+该项为数组字典类型，支持配置多个非重名[name]配置项</p>
 </blockquote>
-<h3 id="old">old</h3>
-<p>设置图片懒加载<code>目标字符串</code></p>
-<h3 id="new">new</h3>
-<p>设置图片懒加载<code>替换字符串</code></p>
+<h3 id="host">host</h3>
+<p>设置嵌入视频的<code>域名</code></p>
+<h3 id="path">path</h3>
+<p>设置嵌入视频的<code>路径</code></p>
 </article>
 						
 					</div>
