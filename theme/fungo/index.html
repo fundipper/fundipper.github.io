@@ -8,6 +8,7 @@
 		<title>Fungo - Fungo</title>
 		<meta name="description" content="xx" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
 	</head>
 
 	<body>
@@ -111,14 +112,35 @@
 		<main class="py-3 bg-gray-100">
 			<div class="w-11/12 max-w-screen-xl mx-auto">
 				<div class="grid grid-cols-3 gap-5">
-					<article class="col-span-2 my-5 py-5 bg-white rounded-md overflow-hidden">
+					<article class="col-span-2 my-5 bg-white rounded-md overflow-hidden">
 						
-						<p>https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp</p>
+						<div class="swiper w-11/12 mx-auto h-96 my-8 rounded-md">
+							
+							<div class="swiper-wrapper">
+								
+								
+								<div class="swiper-slide">
+									<img src="https://cdn.fundipper.cn/110119120/fundipper/official/bg/light.webp" alt="" />
+								</div>
+								
+								<div class="swiper-slide">
+									<img src="https://cdn.fundipper.cn/110119120/fundipper/official/bg/light.webp" alt="" />
+								</div>
+								
+								<div class="swiper-slide">
+									<img src="https://cdn.fundipper.cn/110119120/fundipper/official/bg/light.webp" alt="" />
+								</div>
+								
+							</div>
+							
+							<div class="swiper-pagination"></div>
+
+							
+							<div class="swiper-button-prev"></div>
+							<div class="swiper-button-next"></div>
+						</div>
+
 						
-						<p>https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp</p>
-						
-						<p>https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp</p>
-						 
 						<div class=""><ul>
 <li>
 <ul>
@@ -128,12 +150,18 @@
 <a href="#heading-1">介绍</a></li>
 <li>
 <a href="#heading-2">配置</a></li>
+<li>
+<a href="#heading-3">关于</a></li>
+<li>
+<a href="#heading-4">作者</a></li>
+<li>
+<a href="#heading-5">版权</a></li>
 </ul>
 </li>
 </ul>
 </div>
 						
-						<div class="mx-auto prose"><h2 id="heading">安装</h2>
+						<div class="py-5 mx-auto prose"><h2 id="heading">安装</h2>
 <p>下载文件</p>
 <pre><code>cd your-site-name/theme
 
@@ -193,6 +221,9 @@ tag = { title = 'tag', description = 'Fungo is a simple and fast static site eng
 
 
 </code></pre>
+<h2 id="heading-3">关于</h2>
+<h2 id="heading-4">作者</h2>
+<h2 id="heading-5">版权</h2>
 </div>
 					</article>
 					<aside class="row-span-1">
@@ -553,5 +584,29 @@ tag = { title = 'tag', description = 'Fungo is a simple and fast static site eng
 	});
 </script>
 
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+		<script>
+			const swiper = new Swiper(".swiper", {
+				
+				direction: "horizontal",
+				loop: true,
+
+				
+				pagination: {
+					el: ".swiper-pagination",
+				},
+
+				
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+
+				
+				scrollbar: {
+					el: ".swiper-scrollbar",
+				},
+			});
+		</script>
 	</body>
 </html>

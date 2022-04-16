@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>monitor - Fungo</title>
+		<title>modbus - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
@@ -116,7 +116,7 @@
 						<li class="px-5">
 							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
 								<span>1.</span>
-								<a href="/coldeye/1/">股票投资正道-“分享集”开场白</a>
+								<a href="/x/monitor/">监控部署文档</a>
 							</p>
 							
 						</li>
@@ -124,31 +124,7 @@
 						<li class="px-5">
 							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
 								<span>2.</span>
-								<a href="/coldeye/2/">股票投资 不循正道 散户容易倾家荡产 (第 1 篇)</a>
-							</p>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
-								<span>3.</span>
-								<a href="/coldeye/3/">买股票就是买股份 ( 第 2 篇 )</a>
-							</p>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
-								<span>4.</span>
-								<a href="/coldeye/4/">股票投资风险有多高？ ( 第 3 篇 )</a>
-							</p>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
-								<span>5.</span>
-								<a href="/coldeye/5/">股市赚钱不靠“炒” ( 第 4 篇 )</a>
+								<a href="/x/modbus/">通信测试案例</a>
 							</p>
 							
 						</li>
@@ -156,7 +132,7 @@
 					</ul>
 				</aside>
 				<div class="w-full md:w-3/4 px-7">
-					<h1 class="text-3xl">monitor</h1>
+					<h1 class="text-3xl">modbus</h1>
 					<div class="flex flex-row justify-between md:justify-start">
 						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -171,238 +147,39 @@
 						</p>
 					</div>
 					<div class="flex flex-row">
-						<article class="w-full  prose"><h1 id="heading">系统</h1>
-<p>1.刻录系统</p>
-<pre><code>get os
-32bit
-https://www.raspberrypi.org/downloads/raspbian/
+						<article class="w-full  prose"><pre><code>package main
 
-64bit
-https://downloads.raspberrypi.org/raspios_arm64/images/
+import (
+	&quot;fmt&quot;
+	&quot;log&quot;
+	&quot;os&quot;
+	&quot;time&quot;
 
-set os
-https://www.balena.io/etcher/
-</code></pre>
-<p>2.更新系统</p>
-<pre><code>sudo apt update
+	&quot;github.com/goburrow/modbus&quot;
+)
 
-sudo apt upgrade
+func main() {
+	handler := modbus.NewRTUClientHandler(&quot;/dev/ttyAMA0&quot;)
+	handler.BaudRate = 9600
+	handler.DataBits = 8
+	handler.Parity = &quot;N&quot;
+	handler.Timeout = 512 * time.Millisecond
+	handler.Logger = log.New(os.Stdout, &quot;test: &quot;, log.LstdFlags)
+	handler.SlaveId = 4
+	err := handler.Connect()
+	if err != nil {
+		fmt.Println(err)
+	}
+	defer handler.Close()
 
-sudo apt autoremove
-</code></pre>
-<p>3.开启远程</p>
-<pre><code>cd /boot
-
-sudo vim SSH  
-</code></pre>
-<p>4.开启串口</p>
-<pre><code>sudo raspi-config
-
-    select 3
-
-    select P6
-
-    select NO
-
-    select Yes
-
-    select Ok
-</code></pre>
-<p>5.添加扩展</p>
-<pre><code>sudo vim /boot/config.txt
-</code></pre>
-<p>add</p>
-<pre><code># pi 3
-dtoverlay=pi3-miniuart-bt
-
-# sc2 48
-dtoverlay=sc16is752-spi1,int_pin=24
-
-# w5500 lan
-dtoverlay=w5500,int_pin=13,speed=30000000,cs=0
-
-# disable bt &amp; wifi
-dtoverlay=pi3-disable-bt
-dtoverlay=pi3-disable-wifi
-</code></pre>
-<p>run</p>
-<pre><code>sudo reboot
-</code></pre>
-<h1 id="heading-1">环境</h1>
-<p>1.安装docker</p>
-<pre><code>sudo curl -sSL https://get.docker.com | sh
-
-sudo usermod -aG docker ${USER}
-</code></pre>
-<p>可选</p>
-<pre><code>sudo vim /etc/docker/daemon.json
-</code></pre>
-<p>add</p>
-<pre><code>{
-    &quot;dns&quot;: [&quot;8.8.8.8&quot;],
-        &quot;registry-mirrors&quot;: [
-        &quot;https://dockerhub.azk8s.cn&quot;,
-        &quot;https://docker.mirrors.ustc.edu.cn&quot;,
-        &quot;https://f1361db2.m.daocloud.io&quot;
-    ]
+	client := modbus.NewClient(handler)
+	result, err := client.ReadHoldingRegisters(73, 1)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(result)
 }
 </code></pre>
-<p>run</p>
-<pre><code>sudo systemctl daemon-reload
-
-sudo systemctl enable docker
-
-sudo systemctl start docker
-</code></pre>
-<p>2.安装docker-compose</p>
-<pre><code>sudo apt install docker-compose
-</code></pre>
-<p>3.重启系统</p>
-<pre><code>sudo reboot
-</code></pre>
-<p>4.创建网络</p>
-<pre><code>docker network create net_grpc
-</code></pre>
-<h1 id="heading-2">仓库</h1>
-<p>1.设置ssh</p>
-<pre><code>cd ~
-
-ssh-keygen
-
-next
-
-    press enter
-</code></pre>
-<p>2.设置gitee</p>
-<pre><code>vim .gitconfig
-
-add next
-
-[url &quot;ssh://git@gitee.com/&quot;]
-insteadOf = https://gitee.com/
-</code></pre>
-<p>3.下载配置</p>
-<pre><code>git clone https://gitee.com/lengend/config
-
-mv config conf
-
-cd conf
-
-git checkout pi64
-</code></pre>
-<h1 id="heading-3">软件</h1>
-<p>1.创建目录</p>
-<pre><code>cd /
-sudo mkdir web
-
-cd /web
-sudo mkdir Lengend
-sudo chown pi:pi Lengend
-
-cd Lengend
-mkdir interface
-mkdir service
-
-cd service
-mkdir src
-</code></pre>
-<p>2.安装服务</p>
-<p>clone</p>
-<pre><code>git clone https://gitee.com/lengend/echo
-
-cd echo
-
-git checkout pi64
-</code></pre>
-<p>db</p>
-<pre><code>cd mariadb 
-
-docker-compose up -d --build
-</code></pre>
-<p>cache</p>
-<pre><code>cd redis
-
-docker-compose up -d --build
-</code></pre>
-<p>nginx</p>
-<pre><code>cd nginx
-
-docker-compose up -d --build
-</code></pre>
-<p>3.安装应用</p>
-<p>account</p>
-<pre><code>git clone https://gitee.com/tiantour/account
-
-cd account
-
-git checkout pi64
-
-sh run.sh
-</code></pre>
-<p>monitor</p>
-<pre><code>git clone https://gitee.com/lengend/monitor
-
-cd monitor
-
-git checkout pi64
-
-sh run.sh
-</code></pre>
-<p>collect</p>
-<pre><code>git clone https://gitee.com/lengend/collect
-
-cd collect
-
-git checkout pi64
-
-sh run.sh
-</code></pre>
-<p>4.安装界面</p>
-<p>interface</p>
-<pre><code>git clone https://gitee.com/lengend/monitor.web
-
-cd monitor.web
-
-git checkout pi64
-</code></pre>
-<h1 id="heading-4">网络</h1>
-<p>1.设置IP</p>
-<pre><code>sudo vim /etc/dhcpcd.conf
-</code></pre>
-<p>add</p>
-<pre><code>interface eth0
-static ip_address=x.x.x.x/24
-static routers=x.x.x.x
-static domain_name_servers=x.x.x.x
-
-interface eth1
-static ip_address=x.x.x.x/24
-static routers=x.x.x.x
-static domain_name_servers=x.x.x.x
-</code></pre>
-<p>run</p>
-<pre><code>sudo systemctl enable dhcpcd
-sudo systemctl enable networking
-</code></pre>
-<p>2.内网穿透</p>
-<p>npc</p>
-<pre><code>cd npc
-
-docker-compose up -d --build
-</code></pre>
-<ol start="3">
-<li>定时任务</li>
-</ol>
-<p>run.sh</p>
-<pre><code>/usr/bin/docker container restart monitor_service
-/usr/bin/docker container restart account_service
-/usr/bin/docker container restart collect
-/usr/bin/docker container restart my_nginx
-/usr/bin/docker container restart my_mariadb
-/usr/bin/docker container restart my_redis
-</code></pre>
-<p>crontab -e</p>
-<pre><code>0 * * * * /bin/bash /home/pi/run.sh</code></pre>
 </article>
 						
 					</div>
