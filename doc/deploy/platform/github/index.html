@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>github - Fungo</title>
+		<title>部署到 Github Pages - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
@@ -629,7 +629,7 @@
 					</ul>
 				</aside>
 				<div class="w-full md:w-4/5 px-7">
-					<h1 class="text-3xl">github</h1>
+					<h1 class="text-3xl">部署到 Github Pages</h1>
 					<div class="flex flex-row justify-between md:justify-start">
 						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -825,6 +825,16 @@ jobs:
 <pre><code>open https://{your-github-page-source}/actions
 </code></pre>
 <p>查看github workflows 是否执行成功</p>
+<h3 id="heading">自定义域名</h3>
+<ol>
+<li>解析域域名</li>
+</ol>
+<p>将需要绑定的域名，使用CNAME解析至{your-github-page-path}</p>
+<ol start="2">
+<li>绑定域名</li>
+</ol>
+<p>待解析生效后，访问<code>https://{your-github-page-path}/settings/pages</code></p>
+<p>输入自定义域名，点击保存</p>
 </article>
 						
 					</div>

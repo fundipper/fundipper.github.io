@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>cloudflare - Fungo</title>
+		<title>部署到 Cloudflare Pages - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
@@ -629,7 +629,7 @@
 					</ul>
 				</aside>
 				<div class="w-full md:w-4/5 px-7">
-					<h1 class="text-3xl">cloudflare</h1>
+					<h1 class="text-3xl">部署到 Cloudflare Pages</h1>
 					<div class="flex flex-row justify-between md:justify-start">
 						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -644,9 +644,55 @@
 						</p>
 					</div>
 					<div class="flex flex-row">
-						<article class="w-full  prose"><h3 id="cloudflare">cloudflare</h3>
-<pre><code>comming soon
+						<article class="w-full  prose"><blockquote>
+<p>因 cloudflare 暂未内置 fungo，且使用无法自定义构建环境</p>
+</blockquote>
+<blockquote>
+<p>故使用 github pages 构建，cloudflare pages 同步部署</p>
+</blockquote>
+<blockquote>
+<p>请先配置<a href="https://fungo.dev/doc/deploy/platform/github/">github pages</a></p>
+</blockquote>
+<h3 id="heading">注册帐号</h3>
+<pre><code>打开 https://pages.cloudflare.com/ ，注册帐号
 </code></pre>
+<h3 id="heading-1">部署项目</h3>
+<ol>
+<li>
+<p>创建项目</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/new/provider/github">https://dash.cloudflare.com/{your-dash-id}/pages/new/provider/github</a><br />
+创建项目</p>
+</li>
+<li>
+<p>关联帐号</p>
+<p>输入 github 帐号，并选择存储库 {your-github-page-path}</p>
+</li>
+<li>
+<p>构建部署</p>
+<p>因无法自定义构建环境，故全部使用默认配置，不构建，仅同步</p>
+<p>框架预设: Node（默认）</p>
+<p>构建命令： （默认）</p>
+<p>构建目录： （默认）</p>
+</li>
+<li>
+<p>访问项目</p>
+<p>打开 {your-github-page-path}.pages.dev，即可访问项目</p>
+</li>
+</ol>
+<h3 id="heading-2">绑定域名</h3>
+<p>需先将域名DNS解析，替换为</p>
+<ol>
+<li>
+<p>更改DNS</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/add-site">https://dash.cloudflare.com/{your-dash-id}/add-site</a><br />
+添加跟域名，然后更改DNS</p>
+</li>
+<li>
+<p>配置域名</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/view/%7Byou-site-name%7D/domains">https://dash.cloudflare.com/{your-dash-id}/pages/view/{you-site-name}/domains</a><br />
+设置自定义域名</p>
+</li>
+</ol>
 </article>
 						
 					</div>
