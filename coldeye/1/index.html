@@ -15,7 +15,7 @@
 		
 <header class="bg-cyan-800 text-white text-center">
 	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
-		<div class="w-1/3 my-3">
+		<div class="w-2/3 my-3">
 			<a href="/">
 				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
 			</a>
@@ -25,53 +25,6 @@
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
 			</svg>
 		</div>
-		<div class="w-full md:w-1/3 flex justify-center items-center">
-<div class="w-full relative group" x-data="x()">
-	<p
-		class="h-10 leading-10 px-3 my-3 justify-end items-center bg-white text-gray-600 rounded overflow-hidden"
-		:class="state === 1?'flex':'hidden'"
-		x-show="state"
-	>
-		<input class="w-full border-none outline-none" type="text" placeholder="input your keyword" x-model="kw" @keyup="submit" />
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-5 w-5"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-			stroke-width="2"
-			@click="x"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
-			/>
-		</svg>
-	</p>
-	<p class="justify-end items-center" :class="state === 0?'flex':'hidden'" x-show="!state">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			class="h-5 w-5"
-			fill="none"
-			viewBox="0 0 24 24"
-			stroke="currentColor"
-			stroke-width="2"
-			@click="state=1"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-		</svg>
-	</p>
-	<ul class="max-h-64 px-3 bg-white text-gray-600 rounded overflow-auto text-left group-hover:block absolute">
-		<template x-for="(item, index) in dataList" :key="index">
-			<a :href="item.item.url">
-				<p class="h-8 leading-8" x-text="item.item.title"></p>
-				<p class="text-sm text-gray-400" x-text="item.item.summary"></p>
-			</a>
-		</template>
-	</ul>
-</div>
-</div>
 		<ul class="w-full md:w-1/3 my-3 hidden md:flex flex-row flex-wrap menu_bar">
 			
 			<li class="w-full md:w-1/4 h-10 leading-10">
@@ -193,111 +146,13 @@
 
 		
 		
-<footer class="bg-cyan-800 text-white text-center">
-	<div class="w-11/12 max-w-screen-xl mx-auto py-6 flex flex-row flex-wrap">
-		<div class="w-full md:w-1/5">
-			
-			<div class="">
-				<img class="h-16 my-2 mx-auto" src="/assets/img/logo/fungox.png" alt="" />
-			</div>
-			
-			<p class="h-10 leading-10 my-3 text-gray-400 font-thin">
-				Made with<em class="mx-2 text-xl text-red-500">♥</em> by Fundipper
-			</p>
-		</div>
-
+<footer class="bg-cyan-800 text-white border-t border-cyan-900">
+	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
 		
-		<ul class="hidden md:block md:w-1/5">
-			<li class="h-10 leading-10">产品</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/doc/overview/">文档</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/theme/">主题</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/post/">博客</a>
-			</li>
-			
-		</ul>
-
+		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
 		
-		<ul class="hidden md:block md:w-1/5">
-			<li class="h-10 leading-10">开源</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="">FED</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="">BED</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="">Lab</a>
-			</li>
-			
-		</ul>
-
-		
-		<ul class="hidden md:block md:w-1/5">
-			<li class="h-10 leading-10">帮助</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/about/">关于我们</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/help/terms">服务条款</a>
-			</li>
-			
-			<li class="h-10 leading-10 text-xs">
-				<a href="/help/privacy/">隐私政策</a>
-			</li>
-			
-		</ul>
-
-		
-		<div class="w-full md:w-1/5">
-			<p class="h-10 leading-10">关注</p>
-			<ul class="flex flex-row">
-				
-				<li class="w-1/3">
-					<a href="">
-						<p>
-							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/twitter.png" alt="" />
-						</p>
-						<p class="h-10 leading-10 text-xs">Twitter</p>
-					</a>
-				</li>
-				
-				<li class="w-1/3">
-					<a href="">
-						<p>
-							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/youtube.png" alt="" />
-						</p>
-						<p class="h-10 leading-10 text-xs">Youtube</p>
-					</a>
-				</li>
-				
-				<li class="w-1/3">
-					<a href="">
-						<p>
-							<img class="h-6 my-2 mx-auto" src="/assets/img/icon/github.png" alt="" />
-						</p>
-						<p class="h-10 leading-10 text-xs">Github</p>
-					</a>
-				</li>
-				
-			</ul>
-		</div>
+		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
 	</div>
-
-	
-	<p class="h-10 leading-10 border-t border-cyan-900 text-gray-400 font-thin text-xs">copyright © 2021 - 2022 fungo.dev</p>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
 <script>
@@ -306,59 +161,6 @@
 			img.setAttribute("src", "/assets/img/loading.gif");
 		},
 	});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.5.3/dist/fuse.min.js"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
-<script>
-	const x = () => {
-		return {
-			state: 0,
-			kw: "",
-			dataList: [],
-			submit() {
-				fetch("/feeds.json", {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json",
-					},
-				})
-					.then((res) => res.json())
-					.then((res) => {
-						this.search(res.items);
-					})
-					.catch((err) => {});
-			},
-			x() {
-				this.kw = "";
-				this.dataList = [];
-			},
-			search(data) {
-				const options = {
-					includeScore: true,
-					keys: [
-						{
-							name: "title",
-							weight: 0.5,
-						},
-						{
-							name: "summary",
-							weight: 0.2,
-						},
-						{
-							name: "content",
-							weight: 0.3,
-						},
-					],
-				};
-
-				
-				const fuse = new Fuse(data, options);
-
-				
-				this.dataList = fuse.search(this.kw);
-			},
-		};
-	};
 </script>
 <script>
 	const btn = document.querySelector(".menu_button");
