@@ -25,12 +25,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/category/all/</loc>
-        <lastmod>2022-04-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/category/Tutorials/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
@@ -49,31 +43,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tag/Download/</loc>
-        <lastmod>2022-04-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tag/Raspberry Pi OS/</loc>
-        <lastmod>2022-04-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tag/Raspberry Pi/</loc>
-        <lastmod>2022-04-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/zh/tag/Download/</loc>
-        <lastmod>2022-04-18</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tag/golang/</loc>
+        <loc>https://fungo.dev/category/all/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -91,19 +61,25 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/tag/Download/</loc>
+        <lastmod>2022-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/tag/Bullseye/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/tag/HowTo/</loc>
+        <loc>https://fungo.dev/tag/Raspberry Pi OS/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/tag/TikTok/</loc>
+        <loc>https://fungo.dev/zh/tag/HowTo/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -121,19 +97,43 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/tag/Raspberry Pi/</loc>
+        <lastmod>2022-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/tag/TikTok/</loc>
+        <lastmod>2022-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tag/golang/</loc>
+        <lastmod>2022-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/tag/Download/</loc>
+        <lastmod>2022-04-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/post/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/post/</loc>
+        <loc>https://fungo.dev/theme/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/theme/</loc>
+        <loc>https://fungo.dev/zh/post/</loc>
         <lastmod>2022-04-18</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
