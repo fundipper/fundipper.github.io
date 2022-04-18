@@ -13,7 +13,7 @@
 	<body>
 		
 		
-<header class="bg-cyan-800 text-white text-center">
+<header class="bg-cyan-700 text-white text-center">
 	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
 		<div class="w-2/3 my-2">
 			<a href="/">
@@ -652,7 +652,7 @@ nav:
 
 		
 		
-<footer class="bg-cyan-800 text-white border-t border-cyan-900">
+<footer class="bg-cyan-700 text-white border-t border-cyan-800">
 	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
 		
 		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
@@ -660,20 +660,21 @@ nav:
 		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
 	</div>
 </footer>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
-<script>
-	new LazyLoad({
-		callback_error: (img) => {
-			img.setAttribute("src", "/assets/img/loading.gif");
-		},
-	});
-</script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
 <script>
 	const btn = document.querySelector(".menu_button");
 	const bar = document.querySelector(".menu_bar");
 
 	btn.addEventListener("click", () => {
 		bar.classList.toggle("hidden");
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
+<script>
+	new LazyLoad({
+		callback_error: (img) => {
+			img.setAttribute("src", "/assets/img/loading.gif");
+		},
 	});
 </script>
 
