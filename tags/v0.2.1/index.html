@@ -13,7 +13,7 @@
 	<body class="bg-gray-100">
 		
 		
-<header class="bg-cyan-700 text-white text-center">
+<header class="bg-cyan-700 text-white">
 	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
 		<div class="w-2/3 my-2">
 			<a href="/">
@@ -28,15 +28,15 @@
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
 			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">文档</a>
+				<a href="/doc/overview/">Doc</a>
 			</li>
 			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">主题</a>
+				<a href="/theme/">Theme</a>
 			</li>
 			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">博客</a>
+				<a href="/post/">Blog</a>
 			</li>
 			
 			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
@@ -64,7 +64,7 @@
 		<main>
 			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
 				<h1 class="py-10 text-3xl text-center">Tags v0.2.1</h1>
-				<div class="mx-auto prose"><p>fungo use <code>fsnotify</code> to watch file change, before this commit, we have alreay add some dir, because fsnotify can only watch the first level, so if you have multiple levels of nested directories, fungo may be can't get your file change, you need restart fungo serve manual to watch theme.</p>
+				<div class="mx-auto prose"><p>fungo use <code>fsnotify</code> to watch file change,in the last version, we have alreay add some dir, because fsnotify can only watch the first level, so if you have multiple levels of nested directories, fungo may be can't get your file change, you need restart fungo serve manual to watch theme.</p>
 <p>now we add all of the file to <code>fsnotify</code>, whatever you change a markdown file, a templte file, a config file, a i18n file or a static file such as image, css, fungo will watch theme, and reload serve automatic.</p>
 <h2 id="add">ADD</h2>
 <ul>

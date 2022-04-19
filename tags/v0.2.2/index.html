@@ -5,8 +5,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tags v0.2.0 - Fungo</title>
-		<meta name="description" content="add goldmark-image &amp; goldmark-videos" />
+		<title>Tags v0.2.2 - Fungo</title>
+		<meta name="description" content="add cusitomze catalog template" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
 
@@ -63,13 +63,13 @@
 		
 		<main>
 			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
-				<h1 class="py-10 text-3xl text-center">Tags v0.2.0</h1>
-				<div class="mx-auto prose"><p>fungo use <code>goldmark</code> to parse markdown file, the markdown syntax support <code>image</code> but not support <code>video</code>, but in some scene, we need video and image with lazyload, how can we resolve them?</p>
-<p>we found a third party image lib named <code>goldmark-images</code> and a video lib named <code>goldmark-embed</code>, but both of them have some question such as can't set parmers or can's add more model</p>
-<p>so we add some features for them and public the <code>goldmark-images</code> lib and <code>goldmark-videos</code> lib, now we can easily add lazyload image and video in markdown file</p>
+				<h1 class="py-10 text-3xl text-center">Tags v0.2.2</h1>
+				<div class="mx-auto prose"><p>fungo have many catalog in <code>article</code> model, someone are automatic generate such as archive, categray, tag and someone are manual generate such as the list of <code>article</code>.</p>
+<p>in the last version, we use the same template named <code>catalog.html</code> to render all of the customize list of <code>article</code>, this is a big problem when you have more than one <code>article</code> dir and want to render them with different view.</p>
+<p>now we have resolve it, you can set template paramer when add <code>article</code> model in the <code>config.toml</code>, then you can render the different dir to different view by yourself.</p>
 <h2 id="add">ADD</h2>
 <ul>
-<li><input checked="" disabled="" type="checkbox" /> add goldmark-image &amp; goldmark-videos</li>
+<li><input checked="" disabled="" type="checkbox" /> add cusitomze catalog template</li>
 </ul>
 </div>
 			</div>
