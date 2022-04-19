@@ -5,8 +5,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>隐私政策 - Fungo</title>
-		<meta name="description" content="" />
+		<title>Tags v0.2.1 - Fungo</title>
+		<meta name="description" content="add route -&gt; path, modify watch bugs" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
 
@@ -62,9 +62,15 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
-				<h1 class="text-3xl text-center">隐私政策</h1>
-				<div class="w-full prose"></div>
+			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+				<h1 class="py-10 text-3xl text-center">Tags v0.2.1</h1>
+				<div class="mx-auto prose"><p>fungo use <code>fsnotify</code> to watch file change, before this commit, we have alreay add some dir, because fsnotify can only watch the first level, so if you have multiple levels of nested directories, fungo may be can't get your file change, you need restart fungo serve manual to watch theme.</p>
+<p>now we add all of the file to <code>fsnotify</code>, whatever you change a markdown file, a templte file, a config file, a i18n file or a static file such as image, css, fungo will watch theme, and reload serve automatic.</p>
+<h2 id="add">ADD</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox" /> add route -&gt; path, modify watch bugs</li>
+</ul>
+</div>
 			</div>
 		</main>
 

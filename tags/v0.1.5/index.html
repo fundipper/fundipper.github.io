@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>theme - Fungo</title>
-		<meta name="description" content="Fungo is a simple and fast static site engine, which can help you start writing without programming." />
+		<title>Tags v0.1.5 - Fungo</title>
+		<meta name="description" content="add create theme to create site command" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
 
@@ -63,56 +62,15 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto py-5 grid grid-cols-3 gap-5">
-				
-				<div class="col-span-1 py-5 rounded-md bg-white">
-					<div class="px-5">
-						<p class="max-h-48 overflow-hidden rounded">
-							<a href="/theme/fungo/">
-								<img class="w-full lazy" src="/assets/img/loading.gif" data-src="https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp" alt="" />
-							</a>
-						</p>
-					</div>
-					<div class="px-5">
-						<a href="/theme/fungo/">
-							<h2 class="text-2xl leading-loose">Fungo</h2>
-						</a>
-						<p class="leading-loose text-gray-600">xx</p>
-					</div>
-				</div>
-				
-				<div class="col-span-1 py-5 rounded-md bg-white">
-					<div class="px-5">
-						<p class="max-h-48 overflow-hidden rounded">
-							<a href="/theme/tiktok/">
-								<img class="w-full lazy" src="/assets/img/loading.gif" data-src="https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp" alt="" />
-							</a>
-						</p>
-					</div>
-					<div class="px-5">
-						<a href="/theme/tiktok/">
-							<h2 class="text-2xl leading-loose">Tiktok</h2>
-						</a>
-						<p class="leading-loose text-gray-600">xx</p>
-					</div>
-				</div>
-				
-				<div class="col-span-1 py-5 rounded-md bg-white">
-					<div class="px-5">
-						<p class="max-h-48 overflow-hidden rounded">
-							<a href="/theme/fundipper/">
-								<img class="w-full lazy" src="/assets/img/loading.gif" data-src="https://cdn.fundipper.cn/110119120/fundipper/official/project/lepu.webp" alt="" />
-							</a>
-						</p>
-					</div>
-					<div class="px-5">
-						<a href="/theme/fundipper/">
-							<h2 class="text-2xl leading-loose">Fundipper</h2>
-						</a>
-						<p class="leading-loose text-gray-600">xx</p>
-					</div>
-				</div>
-				
+			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+				<h1 class="py-10 text-3xl text-center">Tags v0.1.5</h1>
+				<div class="mx-auto prose"><p>before this when we use <code>site</code> command，we are only need clone the default content, because the default content include the default theme，but when we need update the default theme，we also need update the default content，it‘s a repeat action, we must have change.</p>
+<p>now，we split <code>site</code> command to two step，first clone the default content，then clone the default theme，this will help us change the default theme quickly，and reduce the count of commit</p>
+<h2 id="add">ADD</h2>
+<ul>
+<li><input checked="" disabled="" type="checkbox" /> add create theme to create site command</li>
+</ul>
+</div>
 			</div>
 		</main>
 
