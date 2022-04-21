@@ -12,59 +12,57 @@
 
 	<body class="bg-gray-100">
 		
-		
-<header class="bg-cyan-700 text-white">
-	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
-		<div class="w-2/3 my-2">
-			<a href="/">
-				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
-			</a>
-		</div>
-		<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-		</div>
-		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-					/>
-				</svg>
-			</li>
-		</ul>
-	</nav>
-</header>
-
+		<header class="bg-cyan-700 text-white shadow sticky top-0">
+			<nav class="px-5 flex flex-row flex-wrap">
+				<div class="w-2/3 my-2">
+					<a href="/">
+						<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+					</a>
+				</div>
+				<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</div>
+				<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/doc/overview/">Doc</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/theme/">Theme</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/post/">Blog</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+							/>
+						</svg>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto py-5 bg-white rounded-md flex flex-row flex-wrap">
-				<aside class="w-full md:w-1/4 md:border-r text-sm">
-					<ul>
+			<div class="flex flex-row flex-wrap">
+				<aside class="w-1/4 max-w-xs text-sm bg-white border-r">
+					<ul class="max-h-screen py-5 sticky top-14">
 						
 						<li class="px-5">
 							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
@@ -108,10 +106,10 @@
 						
 					</ul>
 				</aside>
-				<div class="w-full md:w-3/4 px-7">
-					<h1 class="text-3xl">刻舟求剑要不得 (第 5 篇)</h1>
-					<div class="flex flex-row justify-between md:justify-start">
-						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
+				<div class="w-1/2 flex-1 bg-white">
+					<article class="py-5 mx-auto prose">
+						<h1 class="text-3xl">刻舟求剑要不得 (第 5 篇)</h1>
+						<p class="text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
@@ -122,9 +120,7 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2004-10-16</span>
 						</p>
-					</div>
-					<div class="flex flex-row">
-						<article class="w-full  prose"><p>我写股票投资专栏，写了三十多年，我的主张，三十年不变，其中之一就是反对投机，主张长期投资。</p>
+						<p>我写股票投资专栏，写了三十多年，我的主张，三十年不变，其中之一就是反对投机，主张长期投资。</p>
 <p>我最近出版的“ 30 年股票投资心得”一书，最后一篇为“一万如何变百万”，我举了五个例子：马来亚银行、大众银行、丰隆贷款、OYL和东方实业，证明长期投资，可以致富。买进这五家公司的股票，平均收藏 30 年，一万令吉可以变成一百万令吉。我以 30 年为标准，是假设一个人由 25 岁开始工作，到 55 岁退休，刚好工作了 30 年。假设他在进入职场投资一万令吉于上述五家公司之一，到他退休时他已是百万富翁。</p>
 <p>最近我与一个做律师的朋友用午餐，他告诉我他 20 年前花数万令吉买进一批云顶的股票，收藏了一两个月卖掉，赚了一万多令吉，他高兴得不得了，假如他收藏至今，这批股票价值超过三百万令吉。10 年前，他在机场遇见一名银行家，该银行家对他说：假如他投资 10 万令吉于该银行的股票，他退休时将有足够的钱渡晚年。他听从该银行家的话，以 10 万令吉买进该银行的一批股票，紧握不放， 10 年后的今天，该批股票价值一百万令吉。这名曾在股市翻过筋斗的前辈律师的结论是：长期投资是致富的最佳途径。</p>
 <p>大家知道，跟陈水扁争台湾总统宝座的连战，是台湾富豪之一，身家数十亿，我最近看到一份有关他发迹的资料，令我感到惊异的是连战并不像王永庆等人有自己的事业，他的家族只是买进好股及地点优良的地皮，紧握不放，经数十年，靠股票与地产的增值成为巨富。</p>
@@ -138,40 +134,13 @@
 <p>但是，假如你发现，你持有股份的公司的业务，因环境的变动而日走下坡，而且在可以预见的将来，没有复苏的可能，那么，你再守下去，就是“刻舟求剑”，不但赚不到钱，而且会血本无归，就好像过河客永远找不到他的剑一样。所以，长期投资的倡议是对的，投资 30 年的理念也没错，但是，必须配合有效的股票组合管理才有效果，如果一味死守、呆守、守株待兔，兔子已死，守之作么？如果你发现环境已变，公司已没有前途，不要说赚钱，即使亏本也要脱售，否则你会亏得更多更惨。</p>
 <p>所以，买进时应作长期投资的打算，但要逐季、逐年检讨，不可置之不理。</p>
 <p>“长期投资”由数个月至数十年，是否继续投资下去，不应由时间，而应由公司的表现决定。你买进时不妨作终身投资的打算，但是假如股市疯狂，股价被推至极为离谱的高价，你再不出售，你就不是股票投资的料子。</p>
-</article>
-						
-					</div>
+
+					</article>
 				</div>
+				<aside class="w-1/4 max-w-xs text-sm bg-white">
+					
+				</aside>
 			</div>
 		</main>
-
-		
-		
-<footer class="bg-cyan-700 text-white border-t border-cyan-800">
-	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
-		
-		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
-		
-		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
-	</div>
-</footer>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
-<script>
-	const btn = document.querySelector(".menu_button");
-	const bar = document.querySelector(".menu_bar");
-
-	btn.addEventListener("click", () => {
-		bar.classList.toggle("hidden");
-	});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
-<script>
-	new LazyLoad({
-		callback_error: (img) => {
-			img.setAttribute("src", "/assets/img/loading.gif");
-		},
-	});
-</script>
-
 	</body>
 </html>

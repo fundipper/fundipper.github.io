@@ -12,59 +12,57 @@
 
 	<body class="bg-gray-100">
 		
-		
-<header class="bg-cyan-700 text-white">
-	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
-		<div class="w-2/3 my-2">
-			<a href="/">
-				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
-			</a>
-		</div>
-		<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-		</div>
-		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-					/>
-				</svg>
-			</li>
-		</ul>
-	</nav>
-</header>
-
+		<header class="bg-cyan-700 text-white shadow sticky top-0">
+			<nav class="px-5 flex flex-row flex-wrap">
+				<div class="w-2/3 my-2">
+					<a href="/">
+						<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+					</a>
+				</div>
+				<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</div>
+				<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/doc/overview/">Doc</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/theme/">Theme</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/post/">Blog</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+							/>
+						</svg>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto py-5 bg-white rounded-md flex flex-row flex-wrap">
-				<aside class="w-full md:w-1/4 md:border-r text-sm">
-					<ul>
+			<div class="flex flex-row flex-wrap">
+				<aside class="w-1/4 max-w-xs text-sm bg-white border-r">
+					<ul class="max-h-screen py-5 sticky top-14">
 						
 						<li class="px-5">
 							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
@@ -108,10 +106,10 @@
 						
 					</ul>
 				</aside>
-				<div class="w-full md:w-3/4 px-7">
-					<h1 class="text-3xl">为什么不能等三年？ ( 完结篇 )</h1>
-					<div class="flex flex-row justify-between md:justify-start">
-						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
+				<div class="w-1/2 flex-1 bg-white">
+					<article class="py-5 mx-auto prose">
+						<h1 class="text-3xl">为什么不能等三年？ ( 完结篇 )</h1>
+						<p class="text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
@@ -122,9 +120,7 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2004-10-22</span>
 						</p>
-					</div>
-					<div class="flex flex-row">
-						<article class="w-full  prose"><p>你买了一间屋子，由跟发展商签约到发展商交屋给你，前后三年，你觉得这是理所当然的事，三年的等待，你觉得一点也不长。在这期间，你没有分文收入，却定期的给银行利息，你也毫无怨言。</p>
+						<p>你买了一间屋子，由跟发展商签约到发展商交屋给你，前后三年，你觉得这是理所当然的事，三年的等待，你觉得一点也不长。在这期间，你没有分文收入，却定期的给银行利息，你也毫无怨言。</p>
 <p>●你买了一百英亩的荒地，开辟为油棕园，由伐木、烧芭、开路挖沟，育苗，种植，除草，施肥，整整忙了三年，才看到棕果出现，收成仍不足以维持开支，再等两年，棕果渐丰，油棕园的收支才达到平衡，仍没钱赚。这已是第五个年头了。忙了五年，只有付出，没有收入，你不以为苦，因为你知道那是赚钱无可避免的途径。</p>
 <p>●你买了五十亩的地，是树胶园，属农业地，你要把它发展为住宅区，於是你向土地局申请将农业地转为屋地，再将屋地分割为五、六百段每段20'×75'的屋地，以兴建五，六百间排屋出售。分割后为每段屋地申请个别地契，请绘测师设计屋子的图样，请工程师计算成本，请承包商承建屋子，由市场部登广告出售屋子，跟银行接洽融资问题，屋子建筑过程中要处理许多附近居民的申诉，要按期向购屋者收款，到领到入伙纸，把屋交给购屋者，由购买土地到交屋收工，前后长达五年，总算钱赚到了手。作为发展商，你认为以五年的时间赚钱，是正常的，是合理的，你耐心地等待，从无怨言。</p>
 <p>●你是一名中小型企业家，你有制造某种产品的经验，过去你是为别人管理公司的，现在决定自己创业，你决定建一间工厂，你从调查市场，向银行接洽借款，寻找厂地，设计厂房，招聘员工，装置机器，试验生产，到产品推入市场，从策划到产品出现在百货公司的货架上，前后三年，再苦撑两年，才开始有盈利，那已是第五个年头了。你认为这是创业的正常过程，你心甘情愿与你的事业同行五年，毫无怨言。</p>
@@ -140,40 +136,13 @@
 <p>上市公司多达 950 家，任你挑选参股的对象，你因为无知，因为贪婪，因为听信谣言，而参股於错误的企业，岂能完全归咎於股市？你自己没有责任吗？大多数股票每年的股价波动幅度由数十巴仙至数百巴仙不等，你在低价时不买，高价时抢进，亏了本，不怨自己怨别人，合理吗？参股做生意，例如合股种油棕，六、七年之后才可能分红，买棕油股，当年就可分到股息，不是更合算吗？</p>
 <p>在做任何事情失败后，多数人只怨别人，把责任推在别人或环境身上，能自我反省的人少之又少。股票投资也一样，亏了本不是怨股市，就是怨别人使奸用诈，从来不检讨自己失败的原因。</p>
 <p>我再问：买屋子可以等三年，为什么买股票不能等三年？</p>
-</article>
-						
-					</div>
+
+					</article>
 				</div>
+				<aside class="w-1/4 max-w-xs text-sm bg-white">
+					
+				</aside>
 			</div>
 		</main>
-
-		
-		
-<footer class="bg-cyan-700 text-white border-t border-cyan-800">
-	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
-		
-		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
-		
-		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
-	</div>
-</footer>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
-<script>
-	const btn = document.querySelector(".menu_button");
-	const bar = document.querySelector(".menu_bar");
-
-	btn.addEventListener("click", () => {
-		bar.classList.toggle("hidden");
-	});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
-<script>
-	new LazyLoad({
-		callback_error: (img) => {
-			img.setAttribute("src", "/assets/img/loading.gif");
-		},
-	});
-</script>
-
 	</body>
 </html>

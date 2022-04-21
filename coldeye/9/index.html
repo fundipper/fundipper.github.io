@@ -12,59 +12,57 @@
 
 	<body class="bg-gray-100">
 		
-		
-<header class="bg-cyan-700 text-white">
-	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
-		<div class="w-2/3 my-2">
-			<a href="/">
-				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
-			</a>
-		</div>
-		<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-			</svg>
-		</div>
-		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
-			</li>
-			
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					stroke-width="2"
-				>
-					<path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
-					/>
-				</svg>
-			</li>
-		</ul>
-	</nav>
-</header>
-
+		<header class="bg-cyan-700 text-white shadow sticky top-0">
+			<nav class="px-5 flex flex-row flex-wrap">
+				<div class="w-2/3 my-2">
+					<a href="/">
+						<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+					</a>
+				</div>
+				<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
+					<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</div>
+				<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/doc/overview/">Doc</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/theme/">Theme</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+						<a href="/post/">Blog</a>
+					</li>
+					
+					<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="h-5 w-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+							stroke-width="2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+							/>
+						</svg>
+					</li>
+				</ul>
+			</nav>
+		</header>
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto py-5 bg-white rounded-md flex flex-row flex-wrap">
-				<aside class="w-full md:w-1/4 md:border-r text-sm">
-					<ul>
+			<div class="flex flex-row flex-wrap">
+				<aside class="w-1/4 max-w-xs text-sm bg-white border-r">
+					<ul class="max-h-screen py-5 sticky top-14">
 						
 						<li class="px-5">
 							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
@@ -108,10 +106,10 @@
 						
 					</ul>
 				</aside>
-				<div class="w-full md:w-3/4 px-7">
-					<h1 class="text-3xl">“瘦身”行动成功马电讯仿效 国家稻米业绩大跃进</h1>
-					<div class="flex flex-row justify-between md:justify-start">
-						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
+				<div class="w-1/2 flex-1 bg-white">
+					<article class="py-5 mx-auto prose">
+						<h1 class="text-3xl">“瘦身”行动成功马电讯仿效 国家稻米业绩大跃进</h1>
+						<p class="text-gray-600 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
@@ -122,9 +120,7 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2005-05-14</span>
 						</p>
-					</div>
-					<div class="flex flex-row">
-						<article class="w-full  prose"><p>你买进一家公司的股票，就是买进该家公司的股份，马上成为该公司的股东。作为该公司的股东，你一定要贴身跟踪该公司的业绩进展，从而作出保留该公司股份或是退股（把股份卖掉）的决定。每一家上市公司，都必须根据股票交易所上市条例的规定，发表季报或年报，向股东报告业绩及业务进展。每一名投资者，都应详细阅读年报及季报，以了解公司的营运状况。</p>
+						<p>你买进一家公司的股票，就是买进该家公司的股份，马上成为该公司的股东。作为该公司的股东，你一定要贴身跟踪该公司的业绩进展，从而作出保留该公司股份或是退股（把股份卖掉）的决定。每一家上市公司，都必须根据股票交易所上市条例的规定，发表季报或年报，向股东报告业绩及业务进展。每一名投资者，都应详细阅读年报及季报，以了解公司的营运状况。</p>
 <p>年报和季报，提供了许多有用的资料，报章的版位有限，通常只作简略的报导，有时甚至略而不报，投资者单靠报章的报导来作出买进卖出的决定，是不够的。最好的方法，是进入马来西亚股票交易所的网站http://www.bursamalaysia.com/，详细的阅读<br />
 年报或季报。在阅读时，一定要详读账目中的附注（NOTES），因为公司的资产负债表（Balance Sheet）和损益表（Profit &amp; loss Account）太过精简，必须靠附注来提供详情，加以解释及补充才能窥见全貌。在详阅附注之后，你往往发现许多宝贵的资料，使你对公司的业绩，有更深一层认识。</p>
 <p>现在让我以国家稻米有限公司（BERNAS）最近公布的最后一季的季报为例，加以说明。根据上市条例规定，所有上市公司，都必须在每季结束后的 60 天内，公布有关季度的业绩。所以国家稻米在 2 月 28 日公布的，是去年 10 月至 12 月这一季的账目。根据季报，该公司最后一季的净利只有 1 千 2 百 76 万令吉，比上一季的 2 千 6 百 20 万令吉，减少超过一半。每股净利亦由上一季的5.88分跌至2.84分。表面上看起来，该公司这一季的盈利是比上一季差劲。</p>
@@ -136,40 +132,13 @@
 <p>该公司是在扣除了这四项共 4 千 6 百 70 万令吉，再加上出售一家运输公司所得的 7 百 60 万令吉净利之后，才得出最后一季 1 千 2 百 76 万令吉的净利。以上的四项开支及出售投资的收入，都是一次过性质。叫“特殊项目”以后不会再出现（广告开销可能例外）。我们在评估公司的业绩表现时，应把“特殊项目”与营业盈利（operating Profit）分开，这样才能看出该公司的营业实况。</p>
 <p>就以上述例子，假如我们不把特殊项目计算在内的话，该公司去年最后一项的净利高达 5 千 1百 86 万令吉；（RM46.7m－RM7.6m）＋RM12.755m=RM51.86m.，每股净利13.24分，比上一季的5.88分增加一倍以上，可见该公司最后一季实际上表现特出。该公司去年全年净利为 1 亿 2 千 1 百万令吉，每股净赚26.93分，以 3 月 2 日的股价RM1.52计算，本益比（PER）为5.6倍。假如我们不把特殊项目计算在内的话，去年全年净利高达 1 亿 6 千 7 百 70 万令吉，每股净赚37.34分，本益比仅为 4 倍。</p>
 <p>该公司去年和前年，两度通过自动离职计划，裁减员工人数，前年这方面的开支（一次过性质）高达 7 千 900 万令吉，去年达 1 千 800 万令吉。单单这两项开支，已使该公司这两年的净利，减少近 1 亿令吉。这些项目，以后都不再出现，等於盈利将相应的增加。该公司去年业绩大步跃进，一方面是裁员节省开支，一方面提高效率的结果。这些“瘦身”行动，使该公司成为一家更结实的公司，难怪马电讯局效尤。</p>
-</article>
-						
-					</div>
+
+					</article>
 				</div>
+				<aside class="w-1/4 max-w-xs text-sm bg-white">
+					
+				</aside>
 			</div>
 		</main>
-
-		
-		
-<footer class="bg-cyan-700 text-white border-t border-cyan-800">
-	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
-		
-		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
-		
-		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
-	</div>
-</footer>
-<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
-<script>
-	const btn = document.querySelector(".menu_button");
-	const bar = document.querySelector(".menu_bar");
-
-	btn.addEventListener("click", () => {
-		bar.classList.toggle("hidden");
-	});
-</script>
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
-<script>
-	new LazyLoad({
-		callback_error: (img) => {
-			img.setAttribute("src", "/assets/img/loading.gif");
-		},
-	});
-</script>
-
 	</body>
 </html>
