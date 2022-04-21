@@ -12,16 +12,4 @@
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
-    <url>
-        <loc>https://fungo.dev/software/ios/</loc>
-        <lastmod>2022-04-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/software/android/</loc>
-        <lastmod>2022-04-21</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
 </urlset>
