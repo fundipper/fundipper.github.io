@@ -62,32 +62,38 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto py-5 bg-white rounded-md flex flex-row flex-wrap">
-				<aside class="w-full md:w-1/4 md:border-r text-sm">
-					<ul>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
-								<span>1.</span>
-								<a href="/x/monitor/">监控部署文档</a>
-							</p>
+			<div class="w-11/12 max-w-screen-xl mx-auto my-5 rounded-md bg-white">
+				<div class="grid grid-cols-4 gap-5">
+					<aside class="col-span-1 px-5 py-5 h-screen overflow-auto border-r sticky top-0">
+						<ul class="prose prose-sm prose-cyan prose-p:my-0">
 							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-blue-500 whitespace-nowrap ttext-ellipsis overflow-hidden">
-								<span>2.</span>
-								<a href="/x/modbus/">通信测试案例</a>
-							</p>
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/x/monitor/"> 监控部署文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
 							
-						</li>
-						
-					</ul>
-				</aside>
-				<div class="w-full md:w-3/4 px-7">
-					<h1 class="text-3xl">modbus</h1>
-					<div class="flex flex-row justify-between md:justify-start">
-						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/x/modbus/"> 通信测试案例</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+							
+						</ul>
+					</aside>
+					<div class="col-span-3 px-10 py-5">
+						<h1 class="text-3xl">modbus</h1>
+						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
@@ -98,9 +104,8 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2005-06-04</span>
 						</p>
-					</div>
-					<div class="flex flex-row">
-						<article class="py-5 prose max-w-none"><pre><code>package main
+						<article class="max-w-none prose prose-sm prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+							<pre><code>package main
 
 import (
 	&quot;fmt&quot;
@@ -133,8 +138,8 @@ func main() {
 	fmt.Println(result)
 }
 </code></pre>
-</article>
-						
+
+						</article>
 					</div>
 				</div>
 			</div>
