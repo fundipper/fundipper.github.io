@@ -62,529 +62,375 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-xl mx-auto my-5 py-5 bg-white rounded-md flex flex-row flex-wrap">
-				<aside class="w-full md:w-1/5 md:border-r md:border-dotted h-screen overflow-auto sticky top-5">
-					<ul>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-base">1. 起步</p>
+			<div class="bg-white">
+				<div class="w-11/12 max-w-screen-xl mx-auto grid grid-cols-4 gap-5">
+					<aside class="col-span-1 h-screen overflow-auto border-r sticky top-0 py-5">
+						<ul>
 							
-							<ul>
+							<li class="px-5">
+								<p class="h-8 leading-8 text-xl">1. 起步</p>
 								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/overview/">概览</a>
-									</p>
+								<ul>
 									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/install/">安装</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/cmd/">指令</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">资源</a>
-									</p>
-									
-									<ul>
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/overview/">概览</a>
+										</p>
 										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/source/article/">文章类型</a>
-											</p>
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/install/">安装</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/cmd/">指令</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">资源</a>
+										</p>
+										
+										<ul>
 											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/source/document/">文档类型</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/source/page/">单页类型</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/source/extend/">拓展资源</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-							</ul>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-base">2. 站点</p>
-							
-							<ul>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/site/create/">新建站点</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/site/config/">站点设置</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/markdown/">markdown</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/image/">加载图片</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/video/">嵌入视频</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/feeds/">信息流</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/sitemap/">网站地图</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/site/config/static/">静态文件</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-							</ul>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-base">3. 内容</p>
-							
-							<ul>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">文章</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/article/create/">新建文章</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/article/config/">文章配置</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">文档</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/document/create/">新建文档</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/document/config">文档配置</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">单页</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/page/create/">新建单页</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/page/config/">单页配置</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">资源</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/source/create/">拓展资源</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/source/config/">使用资源</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">自定义页面</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/customize/create/">新建自定义页面</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/customize/config/">自定义页面配置</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">国际化支持</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/i18n/create/">新建国际化支持</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/content/i18n/config/">国际化支持配置</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-							</ul>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-base">4. 部署上线</p>
-							
-							<ul>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/deploy/serve/">预览</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/deploy/build/">编译</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/deploy/publish/">发布</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">第三方平台</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/deploy/platform/github/">github</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/deploy/platform/cloudflare/">cloudflare</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/deploy/platform/netlify/">netlify</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-							</ul>
-							
-						</li>
-						
-						<li class="px-5">
-							<p class="h-8 leading-8 text-base">5. 进阶教程</p>
-							
-							<ul>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="/doc/theme/create/">新建主题</a>
-									</p>
-									
-								</li>
-								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">开发模板</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/template/article/">内容模板</a>
-											</p>
-											
-											<ul>
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/source/article/">文章类型</a>
+												</p>
 												
-												<li class="indent-12">
-													<p class="h-8 leading-8 text-blue-500">
-														<a href="/doc/theme/template/article/">文章</a>
-													</p>
-													
-												</li>
-												
-												<li class="indent-12">
-													<p class="h-8 leading-8 text-blue-500">
-														<a href="/doc/theme/template/catalog/">目录</a>
-													</p>
-													
-												</li>
-												
-												<li class="indent-12">
-													<p class="h-8 leading-8 text-blue-500">
-														<a href="/doc/theme/template/archive/">归档</a>
-													</p>
-													
-												</li>
-												
-												<li class="indent-12">
-													<p class="h-8 leading-8 text-blue-500">
-														<a href="/doc/theme/template/category/">分类</a>
-													</p>
-													
-												</li>
-												
-												<li class="indent-12">
-													<p class="h-8 leading-8 text-blue-500">
-														<a href="/doc/theme/template/tag/">标签</a>
-													</p>
-													
-												</li>
-												
-											</ul>
+											</li>
 											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/template/document/">文档模板</a>
-											</p>
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/source/document/">文档类型</a>
+												</p>
+												
+											</li>
 											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/template/page/">单页模板</a>
-											</p>
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/source/page/">单页类型</a>
+												</p>
+												
+											</li>
 											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/template/customize/">自定义模板</a>
-											</p>
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/source/extend/">拓展资源</a>
+												</p>
+												
+											</li>
 											
-										</li>
+										</ul>
 										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/template/i18n/">国际化支持模板</a>
-											</p>
-											
-										</li>
-										
-									</ul>
+									</li>
 									
-								</li>
+								</ul>
 								
-								<li class="indent-4">
-									<p class="h-8 leading-8 text-blue-500">
-										<a href="">主题设置</a>
-									</p>
-									
-									<ul>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/theme/">主题</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/color/">配色</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/image/">图片</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/link/">链接</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/author/">作者</a>
-											</p>
-											
-										</li>
-										
-										<li class="indent-8">
-											<p class="h-8 leading-8 text-blue-500">
-												<a href="/doc/theme/config/tdk/">TDK</a>
-											</p>
-											
-										</li>
-										
-									</ul>
-									
-								</li>
-								
-							</ul>
+							</li>
 							
-						</li>
-						
-					</ul>
-				</aside>
-				<div class="w-full md:w-4/5 px-10">
-					<h1 class="text-3xl">安装</h1>
-					<div class="flex flex-row justify-between md:justify-start">
-						<p class="py-3 text-gray-600 flex flex-row justify-center md:justify-start items-center">
+							<li class="px-5">
+								<p class="h-8 leading-8 text-xl">2. 站点</p>
+								
+								<ul>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/site/create/">新建站点</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/site/config/">站点设置</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/markdown/">markdown</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/image/">加载图片</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/video/">嵌入视频</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/feeds/">信息流</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/sitemap/">网站地图</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/site/config/static/">静态文件</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+								</ul>
+								
+							</li>
+							
+							<li class="px-5">
+								<p class="h-8 leading-8 text-xl">3. 内容</p>
+								
+								<ul>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">文章</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/article/create/">新建文章</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/article/config/">文章配置</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">文档</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/document/create/">新建文档</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/document/config">文档配置</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">单页</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/page/create/">新建单页</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/page/config/">单页配置</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">资源</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/source/create/">拓展资源</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/source/config/">使用资源</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">自定义页面</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/customize/create/">新建自定义页面</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/customize/config/">自定义页面配置</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">国际化支持</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/i18n/create/">新建国际化支持</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/content/i18n/config/">国际化支持配置</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+								</ul>
+								
+							</li>
+							
+							<li class="px-5">
+								<p class="h-8 leading-8 text-xl">4. 部署上线</p>
+								
+								<ul>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/deploy/serve/">预览</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/deploy/build/">编译</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="/doc/deploy/publish/">发布</a>
+										</p>
+										
+									</li>
+									
+									<li class="indent-4">
+										<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+											<a href="">第三方平台</a>
+										</p>
+										
+										<ul>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/deploy/platform/github/">github</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/deploy/platform/cloudflare/">cloudflare</a>
+												</p>
+												
+											</li>
+											
+											<li class="indent-8">
+												<p class="h-8 leading-8 text-gray-700 hover:text-cyan-700">
+													<a href="/doc/deploy/platform/netlify/">netlify</a>
+												</p>
+												
+											</li>
+											
+										</ul>
+										
+									</li>
+									
+								</ul>
+								
+							</li>
+							
+						</ul>
+					</aside>
+					<div class="col-span-3 px-10 py-5">
+						<h1 class="text-3xl">安装</h1>
+						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
 									stroke-linecap="round"
@@ -595,16 +441,15 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2022-01-01</span>
 						</p>
-					</div>
-					<div class="flex flex-row">
-						<article class="py-5 prose max-w-none"><p>go get</p>
+						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+							<p>go get</p>
 <pre><code>go get github.com/fundipper/fungo
 </code></pre>
 <p>docker</p>
 <pre><code>docker pull fundipper/fungo
 </code></pre>
-</article>
-						
+
+						</article>
 					</div>
 				</div>
 			</div>
