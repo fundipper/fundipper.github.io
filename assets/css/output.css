@@ -874,6 +874,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 0;
 }
 
+.prose-cyan {
+  --tw-prose-links: #0891b2;
+  --tw-prose-invert-links: #06b6d4;
+}
+
 .static {
   position: static;
 }
@@ -1574,6 +1579,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .group:hover .group-hover\:block {
   display: block;
+}
+
+.prose-code\:text-gray-800 :is(:where(code):not(:where([class~="not-prose"] *))) {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.prose-pre\:bg-gray-100 :is(:where(pre):not(:where([class~="not-prose"] *))) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px) {
