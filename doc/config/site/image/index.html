@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>加载图片 - Fungo</title>
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="/assets/css/output.css" />
+		
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
+	</head>
+
+	<body class="bg-gray-100">
+		
+		
+<header class="bg-cyan-700 text-white">
+	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
+		<div class="w-2/3 my-2">
+			<a href="/">
+				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+			</a>
+		</div>
+		<div class="w-1/3 md:hidden flex justify-end items-center menu_button">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</div>
+		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/doc/overview/">Doc</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/theme/">Theme</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/post/">Blog</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+					/>
+				</svg>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+		
+		<main>
+			<div class="w-11/12 max-w-screen-xl mx-auto my-5 rounded-md bg-white">
+				<div class="grid grid-cols-4 gap-5">
+					<aside class="col-span-1 px-5 py-5 h-screen overflow-auto border-r sticky top-0">
+						<ul class="prose prose-sm prose-cyan prose-p:my-0">
+							
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 1. 起步</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/overview/"> 概览</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  入门</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/start/local/"> 本机运行</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/start/docker/"> docker运行</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  新建</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/site/"> 站点</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/theme/"> 主题</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 2. 配置文件</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/site/config/"> 站点设置</a>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/site/markdown/"> 代码高亮</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/site/image/"> 加载图片</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/configsite/video/"> 嵌入视频</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/site/feeds/"> 信息流</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/site/sitemap/"> 网站地图</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/site/robots/"> robots.txt</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  业务设置</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/static/"> 静态文件</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 3. 内容管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 4. 发布</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/serve/"> 预览</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/build/"> 编译</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/publish/"> 发布</a>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/platform/github/"> github</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/platform/cloudflare/"> cloudflare</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/deploy/platform/netlify/"> netlify</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 5. 资源管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  默认资源</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/extend"> 拓展资源</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 6. 自定义主题</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/theme/"> 主题设置</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  模板管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  列表</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/archive/"> 归档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/category/"> 分类</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/tag/"> 标签</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/catalog/"> 目录</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+						</ul>
+					</aside>
+					<div class="col-span-3 px-10 py-5">
+						<h1 class="text-3xl">加载图片</h1>
+						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
+							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+								/>
+							</svg>
+							<span class="mx-2 text-sm"> 2021-01-01</span>
+						</p>
+						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+							
+							<p>该项为必选置项，<code>map</code>类型，包含站点加载图片信息</p>
+<p>在项目目录 config.toml，可配置该项</p>
+<h2 id="heading">配置</h2>
+<hr />
+<pre><code>[site.markdown.image]
+source = &quot;/assets/img/loading.gif&quot;
+target = &quot;data-src&quot;
+attribute = { class = &quot;lazy&quot; }
+</code></pre>
+<h4 id="notice">Notice:</h4>
+<ul>
+<li>
+<p>该项所定义内容，在任意模板页均可使用</p>
+</li>
+<li>
+<p>该项为字典类型，支持配置多个非重名[name]配置项</p>
+</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>source</p>
+<p>设置图片懒加载<code>替代资源</code></p>
+</li>
+<li>
+<p>target</p>
+<p>设置图片懒加载<code>替代目标</code></p>
+</li>
+<li>
+<p>attribute</p>
+<p>设置图片懒加载<code>其他属性</code></p>
+</li>
+</ol>
+<h2 id="heading-2">举例</h2>
+<hr />
+<p><img src="/assets/img/loading.gif" alt="" title="logo" class="lazy" data-src="/assets/img/logo/fungo.png" /></p>
+
+						</article>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		
+		
+<footer class="bg-cyan-700 text-white border-t border-cyan-800">
+	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
+		
+		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
+		
+		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
+	</div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
+<script>
+	const btn = document.querySelector(".menu_button");
+	const bar = document.querySelector(".menu_bar");
+
+	btn.addEventListener("click", () => {
+		bar.classList.toggle("hidden");
+	});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
+<script>
+	new LazyLoad({
+		callback_error: (img) => {
+			img.setAttribute("src", "/assets/img/loading.gif");
+		},
+	});
+</script>
+
+	</body>
+</html>

@@ -8,6 +8,12 @@
 		<title>部署到 Github Pages - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
 	</head>
 
 	<body class="bg-gray-100">
@@ -67,6 +73,7 @@
 					<aside class="col-span-1 px-5 py-5 h-screen overflow-auto border-r sticky top-0">
 						<ul class="prose prose-sm prose-cyan prose-p:my-0">
 							
+							
 							<li>
 <p class="text-gray-700 font-medium">
 	
@@ -89,7 +96,15 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/install/"> 安装</a>
+	<span>  入门</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/start/local/"> 本机运行</a>
 	
 </p>
 <ul>
@@ -100,7 +115,29 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/cmd/"> 指令</a>
+	<a href="/doc/start/docker/"> docker运行</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  新建</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/site/"> 站点</a>
 	
 </p>
 <ul>
@@ -111,48 +148,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<span>  资源</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/article/"> 文章类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/document/"> 文档类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/page/"> 单页类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/extend/"> 拓展资源</a>
+	<a href="/doc/create/theme/"> 主题</a>
 	
 </p>
 <ul>
@@ -169,21 +165,10 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 2. 站点</span>
+	<span> 2. 配置文件</span>
 	
 </p>
 <ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/site/create/"> 新建站点</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
 	
 	<li>
 <p class="text-gray-700 font-medium">
@@ -196,7 +181,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/markdown/"> markdown</a>
+	<a href="/doc/config/site/markdown/"> 代码高亮</a>
 	
 </p>
 <ul>
@@ -207,7 +192,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/image/"> 加载图片</a>
+	<a href="/doc/config/site/image/"> 加载图片</a>
 	
 </p>
 <ul>
@@ -218,7 +203,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/video/"> 嵌入视频</a>
+	<a href="/doc/configsite/video/"> 嵌入视频</a>
 	
 </p>
 <ul>
@@ -229,7 +214,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/feeds/"> 信息流</a>
+	<a href="/doc/config/site/feeds/"> 信息流</a>
 	
 </p>
 <ul>
@@ -240,7 +225,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/sitemap/"> 网站地图</a>
+	<a href="/doc/config/site/sitemap/"> 网站地图</a>
 	
 </p>
 <ul>
@@ -251,7 +236,84 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/static/"> 静态文件</a>
+	<a href="/doc/config/site/robots/"> robots.txt</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  业务设置</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/static/"> 静态文件</a>
 	
 </p>
 <ul>
@@ -268,7 +330,7 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 3. 内容</span>
+	<span> 3. 内容管理</span>
 	
 </p>
 <ul>
@@ -276,15 +338,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<span>  文章</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/article/create/"> 新建文章</a>
+	<a href="/doc/create/article/"> 文章</a>
 	
 </p>
 <ul>
@@ -295,29 +349,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/article/config/"> 文章配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  文档</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/document/create/"> 新建文档</a>
+	<a href="/doc/create/document/"> 文档</a>
 	
 </p>
 <ul>
@@ -328,29 +360,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/document/config"> 文档配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  单页</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/page/create/"> 新建单页</a>
+	<a href="/doc/create/page/"> 单页</a>
 	
 </p>
 <ul>
@@ -361,29 +371,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/page/config/"> 单页配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  资源</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/source/create/"> 拓展资源</a>
+	<a href="/doc/create/customize/"> 自定义页面</a>
 	
 </p>
 <ul>
@@ -394,79 +382,10 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/source/config/"> 使用资源</a>
+	<a href="/doc/create/i18n/"> 国际化支持</a>
 	
 </p>
 <ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  自定义页面</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/customize/create/"> 新建自定义页面</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/customize/config/"> 自定义页面配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  国际化支持</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/i18n/create/"> 新建国际化支持</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/i18n/config/"> 国际化支持配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
 	
 </ul>
 </li>
@@ -477,7 +396,7 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 4. 部署上线</span>
+	<span> 4. 发布</span>
 	
 </p>
 <ul>
@@ -508,17 +427,6 @@
 <p class="text-gray-700 font-medium">
 	
 	<a href="/doc/deploy/publish/"> 发布</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  第三方平台</span>
 	
 </p>
 <ul>
@@ -562,6 +470,215 @@
 </ul>
 </li>
 							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 5. 资源管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  默认资源</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/extend"> 拓展资源</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 6. 自定义主题</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/theme/"> 主题设置</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  模板管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  列表</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/archive/"> 归档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/category/"> 分类</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/tag/"> 标签</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/catalog/"> 目录</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
@@ -577,7 +694,8 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
-						<article class="max-w-none prose prose-sm prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+							
 							<h3 id="ssh">新建SSH</h3>
 <ol>
 <li>生成密钥</li>

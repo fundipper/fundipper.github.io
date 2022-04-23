@@ -8,6 +8,12 @@
 		<title>Overview - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
 	</head>
 
 	<body class="bg-gray-100">
@@ -67,6 +73,7 @@
 					<aside class="col-span-1 px-5 py-5 h-screen overflow-auto border-r sticky top-0">
 						<ul class="prose prose-sm prose-cyan prose-p:my-0">
 							
+							
 							<li>
 <p class="text-gray-700 font-medium">
 	
@@ -89,7 +96,15 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/install/"> 安装</a>
+	<span>  入门</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/start/local/"> 本机运行</a>
 	
 </p>
 <ul>
@@ -100,7 +115,29 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/cmd/"> 指令</a>
+	<a href="/doc/start/docker/"> docker运行</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  新建</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/create/site/"> 站点</a>
 	
 </p>
 <ul>
@@ -111,48 +148,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<span>  资源</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/article/"> 文章类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/document/"> 文档类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/page/"> 单页类型</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/source/extend/"> 拓展资源</a>
+	<a href="/doc/create/theme/"> 主题</a>
 	
 </p>
 <ul>
@@ -169,21 +165,10 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 2. 站点</span>
+	<span> 2. 配置文件</span>
 	
 </p>
 <ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/site/create/"> 新建站点</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
 	
 	<li>
 <p class="text-gray-700 font-medium">
@@ -196,7 +181,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/markdown/"> markdown</a>
+	<a href="/doc/config/site/markdown/"> 代码高亮</a>
 	
 </p>
 <ul>
@@ -207,7 +192,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/image/"> 加载图片</a>
+	<a href="/doc/config/site/image/"> 加载图片</a>
 	
 </p>
 <ul>
@@ -218,7 +203,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/video/"> 嵌入视频</a>
+	<a href="/doc/configsite/video/"> 嵌入视频</a>
 	
 </p>
 <ul>
@@ -229,7 +214,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/feeds/"> 信息流</a>
+	<a href="/doc/config/site/feeds/"> 信息流</a>
 	
 </p>
 <ul>
@@ -240,7 +225,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/sitemap/"> 网站地图</a>
+	<a href="/doc/config/site/sitemap/"> 网站地图</a>
 	
 </p>
 <ul>
@@ -251,7 +236,84 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/site/config/static/"> 静态文件</a>
+	<a href="/doc/config/site/robots/"> robots.txt</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  业务设置</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/static/"> 静态文件</a>
 	
 </p>
 <ul>
@@ -268,7 +330,7 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 3. 内容</span>
+	<span> 3. 内容管理</span>
 	
 </p>
 <ul>
@@ -276,15 +338,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<span>  文章</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/article/create/"> 新建文章</a>
+	<a href="/doc/create/article/"> 文章</a>
 	
 </p>
 <ul>
@@ -295,29 +349,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/article/config/"> 文章配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  文档</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/document/create/"> 新建文档</a>
+	<a href="/doc/create/document/"> 文档</a>
 	
 </p>
 <ul>
@@ -328,29 +360,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/document/config"> 文档配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  单页</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/page/create/"> 新建单页</a>
+	<a href="/doc/create/page/"> 单页</a>
 	
 </p>
 <ul>
@@ -361,29 +371,7 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/page/config/"> 单页配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  资源</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/source/create/"> 拓展资源</a>
+	<a href="/doc/create/customize/"> 自定义页面</a>
 	
 </p>
 <ul>
@@ -394,79 +382,10 @@
 	<li>
 <p class="text-gray-700 font-medium">
 	
-	<a href="/doc/content/source/config/"> 使用资源</a>
+	<a href="/doc/create/i18n/"> 国际化支持</a>
 	
 </p>
 <ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  自定义页面</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/customize/create/"> 新建自定义页面</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/customize/config/"> 自定义页面配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  国际化支持</span>
-	
-</p>
-<ul>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/i18n/create/"> 新建国际化支持</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<a href="/doc/content/i18n/config/"> 国际化支持配置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
 	
 </ul>
 </li>
@@ -477,7 +396,7 @@
 							<li>
 <p class="text-gray-700 font-medium">
 	
-	<span> 4. 部署上线</span>
+	<span> 4. 发布</span>
 	
 </p>
 <ul>
@@ -508,17 +427,6 @@
 <p class="text-gray-700 font-medium">
 	
 	<a href="/doc/deploy/publish/"> 发布</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li>
-<p class="text-gray-700 font-medium">
-	
-	<span>  第三方平台</span>
 	
 </p>
 <ul>
@@ -562,6 +470,215 @@
 </ul>
 </li>
 							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 5. 资源管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  默认资源</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/source/extend"> 拓展资源</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
+							<li>
+<p class="text-gray-700 font-medium">
+	
+	<span> 6. 自定义主题</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/config/theme/"> 主题设置</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  模板管理</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/article/"> 文章</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/document/"> 文档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/page/"> 单页</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/customize/"> 自定义页面</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/i18n/"> 国际化支持</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<span>  列表</span>
+	
+</p>
+<ul>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/archive/"> 归档</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/category/"> 分类</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/tag/"> 标签</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+	<li>
+<p class="text-gray-700 font-medium">
+	
+	<a href="/doc/theme/template/catalog/"> 目录</a>
+	
+</p>
+<ul>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+	
+</ul>
+</li>
+							
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
@@ -577,7 +694,8 @@
 							</svg>
 							<span class="mx-2 text-sm"> 2022-03-27</span>
 						</p>
-						<article class="max-w-none prose prose-sm prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+							
 							<pre><code>     ____
     / __/  __  __   ____    ____ _  ____
    / /_   / / / /  / __ \  / __  / / __ \
@@ -585,80 +703,78 @@
  /_/     \__,_/  /_/ /_/  \__, /  \____/
                         /____/ v0.2.5
 </code></pre>
-<p><a href="https://fungo.dev/" title="fungo">fungo</a> is a simple and fast open-source static site generators base on golang.</p>
-<h1 id="install">install</h1>
-<p>go get</p>
-<pre><code>go get github.com/fundipper/fungo
+<p><a href="https://fungo.dev">fungo</a> is a simple and fast open-source static site generators base on golang.</p>
+<h2 id="highlight">Highlight</h2>
+<hr />
+<ol>
+<li>
+<p>Simple</p>
+<p>only 5 command, easy to use</p>
+</li>
+<li>
+<p>Fast</p>
+<p>serve &amp; build mode, both start less than 1s</p>
+</li>
+<li>
+<p>I18N</p>
+<p>add multi-language not need to change any code</p>
+</li>
+<li>
+<p>Customize</p>
+<p>can be blog &amp; document &amp; page and more</p>
+</li>
+<li>
+<p>Markdown</p>
+<p>syntax highlighting &amp; toc markdown support</p>
+</li>
+<li>
+<p>SEO</p>
+<p>automatic seo friendly siteamp &amp; rss</p>
+</li>
+</ol>
+<h2 id="install">install</h2>
+<hr />
+<p>local</p>
+<pre><code>go install github.com/fundipper/fungo@latest
 </code></pre>
 <p>docker</p>
-<pre><code>docker pull fundipper/fungo
+<pre><code>docker pull fundipper/fungo:latest
 </code></pre>
-<h1 id="command">command</h1>
-<p>fungo is easy to use, only have 5 commands.</p>
-<h2 id="site">site</h2>
-<p>create a new site</p>
-<pre><code>fungo site your-site-name
-</code></pre>
-<p>docker</p>
-<pre><code>docker run -it --rm -v $PWD:/fungo fundipper/fungo site your-site-name
-</code></pre>
-<h2 id="file">file</h2>
-<p>create a new file</p>
-<pre><code>fungo file your-file-model your-file-name
-</code></pre>
-<p>docker</p>
-<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo file your-file-model your-file-name
-</code></pre>
-<p>ps:</p>
-<p>default file model include [<code>article</code> , <code>page</code>, <code>document</code>]</p>
-<p>you can define your own file model with yaml in <code>source</code></p>
-<h2 id="theme">theme</h2>
-<p>create a new theme</p>
-<pre><code>fungo theme your-theme-name
-</code></pre>
-<p>docker</p>
-<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo theme your-theme-name
-</code></pre>
-<p>ps:</p>
-<p>usually, you can get theme from fungo theme store or some open source repository</p>
-<p>if you need your own one, use this command to create it</p>
-<p>it's not too complicated, only needs tailwindcss</p>
-<h2 id="serve">serve</h2>
-<p>run serve mode</p>
-<pre><code>fungo serve
-</code></pre>
-<p>docker</p>
-<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site -p 3000:3000 fundipper/fungo serve
-</code></pre>
-<h2 id="build">build</h2>
-<p>run build mode</p>
-<pre><code>fungo build
-</code></pre>
-<p>docker</p>
-<pre><code>docker run -it --rm -v $PWD:/fungo -w /fungo/my-fungo-site fundipper/fungo build
-</code></pre>
-<h1 id="document">document</h1>
-<p>ours <a href="https://fungo.dev/">official website</a>, <a href="https://fungo.dev/doc/overview/">document</a>, <a href="https://fungo.dev/theme/">theme</a>, <a href="https://fungo.dev/post/">blog</a> are all generate based on <code>fungo</code></p>
-<p>how to use fungo ? see <a href="https://fungo.dev/doc/overview/">https://fungo.dev/doc/overview/</a></p>
-<h1 id="feature">feature</h1>
+<p>get more info, checkout <a href="/doc/start/local/">local</a>， <a href="/doc/start/docker/">docker</a> document</p>
+<h2 id="document">document</h2>
+<hr />
+<p>the official website <a href="https://fungo.dev">fungo.dev</a> is generate by <code>fungo</code> now.</p>
+<ul>
+<li>
+<p><a href="/doc/overview/">document</a></p>
+</li>
+<li>
+<p><a href="/post/">blog</a></p>
+</li>
+<li>
+<p><a href="/theme/">theme</a></p>
+</li>
+</ul>
+<h2 id="feature">feature</h2>
+<hr />
 <ul>
 <li>
 <p><input checked="" disabled="" type="checkbox" /> Support</p>
 <ul>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Article</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/article/">Article</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Page</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/page/">Page</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Document</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/document/">Document</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Customize</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/customize/">Customize</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> I18N</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/i18n/">I18N</a></p>
 </li>
 </ul>
 </li>
@@ -669,21 +785,21 @@
 <p><input checked="" disabled="" type="checkbox" /> TOC</p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Highlighting</p>
-</li>
-<li>
 <p><input checked="" disabled="" type="checkbox" /> Emoji</p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Image Lazyload</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/markdown/">Highlighting</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Video Embed</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/image/">Image Lazyload</a></p>
+</li>
+<li>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/video/">Video Embed</a></p>
 </li>
 </ul>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> Feeds</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/feeds/">Feeds</a></p>
 <ul>
 <li>
 <p><input checked="" disabled="" type="checkbox" /> RSS 2.0</p>
@@ -697,29 +813,19 @@
 </ul>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> I18N</p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Content</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Template</p>
-</li>
-</ul>
-</li>
-<li>
 <p><input checked="" disabled="" type="checkbox" /> SEO</p>
 <ul>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> sitemap.xml</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/sitemap/">Sitemap.xml</a></p>
 </li>
 <li>
-<p><input checked="" disabled="" type="checkbox" /> robot.txt</p>
+<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/robots/">Robots.txt</a></p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="thanks">thanks</h1>
+<h2 id="thanks">thanks</h2>
+<hr />
 <ul>
 <li>
 <p>Language &amp; Framework</p>
