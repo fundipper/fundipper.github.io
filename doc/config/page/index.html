@@ -963,29 +963,91 @@
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<p>该项为可选置项，<code>array</code>类型，包含名称，跟路径等信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
-<h3 id="page">[[page]]</h3>
+<h2 id="heading">设置</h2>
+<hr />
 <pre><code>[[page]]
 name = &quot;page&quot;
 root = true
+catalog = true
 
 [[page]]
 ……
 </code></pre>
-<p>Notice:</p>
-<blockquote>
-<p>该项为列表类型，支持配置多个非重名[name]配置项</p>
-</blockquote>
-<h3 id="name">name</h3>
+<h3 id="notice">Notice:</h3>
+<ul>
+<li>该项为列表类型，支持配置多个非重名[name]配置项</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>name</p>
 <p>设置文章<code>存储目录</code>和<code>渲染模板</code>名称</p>
-<p>该目录需自行创建，名称可自定义</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>该目录需自行创建</p>
+</li>
+<li>
 <p>该目录支持多级子目录</p>
-<h2 id="root">root</h2>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>root</p>
 <p>设置根路径访问</p>
-<p>当为<code>ture</code>时，访问路径不包含<code>当前目录</code>。</p>
-<p>例如:</p>
-<pre><code>/page/about.md      -&gt; /about/
-/page/help/terms.md -&gt; /help/terms/
+</li>
+</ol>
+<ul>
+<li>当为<code>ture</code>时，访问路径不包含<code>当前目录</code>。</li>
+</ul>
+<ol start="3">
+<li>
+<p>catalog</p>
+<p>设置目录状态，<code>bool</code>类型</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>若设置为 false，则不生成目录</p>
+</li>
+<li>
+<p>若设置为 true，则生成</p>
+<ul>
+<li>catalog（文章目录）</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-2">举例</h2>
+<hr />
+<ul>
+<li>
+<p>本地文件</p>
+<pre><code>  /content/page/about.md
+
+  /content/page/help/terms.md
 </code></pre>
+</li>
+<li>
+<p>设置 root = fasle</p>
+<p>访问路径为:</p>
+<pre><code>  /page/about/
+  /page/help/terms/
+</code></pre>
+</li>
+<li>
+<p>设置 root = true</p>
+<p>访问路径为:</p>
+<pre><code>  /about/
+  /help/terms/
+</code></pre>
+</li>
+<li>
+<p>设置 catalog = true</p>
+<p>则在 <a href="/doc/config/customize/">自定义页面</a> 或 <a href="/doc/config/i18n/">国际化支持</a> ，可通过设置 action = /{your-page-name}/，获取列表信息</p>
+</li>
+</ul>
 
 						</article>
 					</div>

@@ -963,98 +963,135 @@
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<p>该项为可选置项，<code>array</code>类型，包含名称，侧边栏等信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
-<h3 id="document">[[document]]</h3>
+<h2 id="heading">配置</h2>
+<hr />
 <pre><code>[[document]]
 name = &quot;doc&quot;
 sidebar = [
-    { number = &quot;1&quot;, name = &quot;概览&quot;, node = [
-        { name = &quot;Why Fungo？&quot;, route = &quot;/doc/why/&quot; },
+    { number = &quot;1.&quot;, name = &quot;起步&quot;, node = [
         { name = &quot;概览&quot;, route = &quot;/doc/overview/&quot; },
-    ] },
-    { number = &quot;2&quot;, name = &quot;起步&quot;, node = [
-        { name = &quot;安装&quot;, route = &quot;/doc/start/install/&quot; },
-        { name = &quot;指令&quot;, node = [
-            { name = &quot;新建网站&quot;, route = &quot;/doc/start/cmd/site/&quot; },
-            { name = &quot;新建主题&quot;, route = &quot;/doc/start/cmd/theme/&quot; },
-            { name = &quot;新建文件&quot;, route = &quot;/doc/start/cmd/file/&quot; },
-            { name = &quot;预览模式&quot;, route = &quot;/doc/start/cmd/serve/&quot; },
-            { name = &quot;编译模式&quot;, route = &quot;/doc/start/cmd/build/&quot; },
+        { name = &quot;入门&quot;, node = [
+            { name = &quot;本机运行&quot;, route = &quot;/doc/start/local/&quot; },
+            { name = &quot;docker运行&quot;, route = &quot;/doc/start/docker/&quot; },
         ] },
     ] },
-    { number = &quot;3&quot;, name = &quot;网站配置&quot;, node = [
-        { name = &quot;网站&quot;, route = &quot;/doc/config/site/&quot; },
-        { name = &quot;内容&quot;, node = [
-            { name = &quot;文章类型&quot;, route = &quot;/doc/config/content/article/&quot; },
-            { name = &quot;单页类型&quot;, route = &quot;/doc/config/content/page/&quot; },
-            { name = &quot;文档类型&quot;, route = &quot;/doc/config/content/document/&quot; },
+    { number = &quot;2.&quot;, name = &quot;配置文件&quot;, node = [
+        { name = &quot;新建站点&quot;, route = &quot;/doc/create/site/&quot; },
+        { name = &quot;站点设置&quot;, route = &quot;/doc/config/site/&quot;, node = [
+            { name = &quot;代码高亮&quot;, route = &quot;/doc/config/site/markdown/&quot; },
+            { name = &quot;加载图片&quot;, route = &quot;/doc/config/site/image/&quot; },
+            { name = &quot;嵌入视频&quot;, route = &quot;/doc/configsite/video/&quot; },
+            { name = &quot;信息流&quot;, route = &quot;/doc/config/site/feeds/&quot; },
+            { name = &quot;网站地图&quot;, route = &quot;/doc/config/site/sitemap/&quot; },
+            { name = &quot;robots.txt&quot;, route = &quot;/doc/config/site/robots/&quot; },
         ] },
-        { name = &quot;自定义&quot;, route = &quot;/doc/config/customize/&quot; },
-        { name = &quot;国际化&quot;, route = &quot;/doc/config/i18n/&quot; },
-        { name = &quot;静态文件&quot;, route = &quot;/doc/config/static/&quot; },
-    ] },
+        { name = &quot;内容设置&quot;, node = [
+            { name = &quot;文章&quot;, route = &quot;/doc/config/article/&quot; },
+            { name = &quot;文档&quot;, route = &quot;/doc/config/document/&quot; },
+            { name = &quot;单页&quot;, route = &quot;/doc/config/page/&quot; },
+            { name = &quot;自定义页面&quot;, route = &quot;/doc/config/customize/&quot; },
+            { name = &quot;国际化支持&quot;, route = &quot;/doc/config/i18n/&quot; },
+            { name = &quot;静态文件&quot;, route = &quot;/doc/config/static/&quot; },
+        ] },
+    ] }
 ]
 
 [[document]]
 ……
 </code></pre>
-<p>Notice:</p>
-<blockquote>
-<p>该项为列表类型，支持配置多个非重名[name]配置项</p>
-</blockquote>
-<h3 id="name">name</h3>
-<p>设置文档<code>存储目录</code>和<code>渲染模板</code>名称</p>
-<p>该目录需自行创建，名称可自定义</p>
+<h3 id="notice">Notice:</h3>
+<ul>
+<li>该项为列表类型，支持配置多个非重名[name]配置项</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>name</p>
+<p>设置文档<code>存储目录</code>和<code>渲染模板</code>名称，<code>string</code>类型</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>该目录需自行创建</p>
+</li>
+<li>
 <p>该目录支持多级子目录</p>
-<h3 id="sidebar">sidebar</h3>
-<p>设置文档侧边栏</p>
-<p><code>map[string]interface{}</code>类型，支持多级嵌套</p>
-<blockquote>
-<p>number: 可自定义</p>
-</blockquote>
-<blockquote>
-<p>name: 可自定义</p>
-</blockquote>
-<blockquote>
-<p>route: 需与文件真实路径一致</p>
-</blockquote>
-<p>例如:</p>
-<pre><code>content/doc/why.md              -&gt;  /doc/why/
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>sidebar</p>
+<p>设置文档侧边栏，<code>map[string]interface{}</code>类型</p>
+</li>
+</ol>
+<ul>
+<li>
+<p>node 支持多级嵌套</p>
+<ul>
+<li>
+<p>number: 文档编号</p>
+</li>
+<li>
+<p>name: 文档名字</p>
+</li>
+<li>
+<p>route: 文档地址，需与文件真实路径一致</p>
+</li>
+<li>
+<p>node: 包含节点，可嵌套多个层级</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="heading-2">举例</h2>
+<hr />
+<ol>
+<li>
+<p>本地文件</p>
+<pre><code>content/doc/why.md
 
-content/doc/start/install.md    -&gt;  /doc/start/install/  
+content/doc/start/install.md
 
-content/doc/start/cmd/site.md   -&gt;  /doc/start/cmd/site/  
+content/doc/start/cmd/site.md
 </code></pre>
-<blockquote>
-<p>node: 可嵌套多个层级</p>
-</blockquote>
+</li>
+<li>
+<p>侧边栏</p>
+</li>
+</ol>
+<ul>
+<li>
 <p>1 级</p>
-<pre><code>sidebar = [
-    { number = &quot;1&quot;, name = &quot;为什么&quot;, route = &quot;/doc/why/&quot; },
-    { number = &quot;2&quot;, name = &quot;概览&quot;, route = &quot;/doc/overview/&quot; },
-]
+<pre><code>  sidebar = [
+      { number = &quot;1&quot;, name = &quot;why&quot;, route = &quot;/doc/why/&quot; },
+  ]
 </code></pre>
+</li>
+<li>
 <p>2 级</p>
-<pre><code>sidebar = [
-    { number = &quot;1&quot;, name = &quot;概览&quot;, node = [
-        { name = &quot;Why Fungo？&quot;, route = &quot;/doc/why/&quot; },
-        { name = &quot;概览&quot;, route = &quot;/doc/overview/&quot; },
-    ] },
-]
+<pre><code>  sidebar = [
+      { number = &quot;1&quot;, name = &quot;why&quot;, route = &quot;/doc/why/&quot; },
+      { number = &quot;2&quot;, name = &quot;start&quot;, node = [
+          { name = &quot;install&quot;, route = &quot;/doc/start/install/&quot; },
+      ] },
+  ]
 </code></pre>
+</li>
+<li>
 <p>3 级</p>
-<pre><code>sidebar = [
-    { number = &quot;2&quot;, name = &quot;起步&quot;, node = [
-        { name = &quot;安装&quot;, route = &quot;/doc/start/install/&quot; },
-        { name = &quot;指令&quot;, node = [
-            { name = &quot;新建网站&quot;, route = &quot;/doc/start/cmd/site/&quot; },
-            { name = &quot;新建主题&quot;, route = &quot;/doc/start/cmd/theme/&quot; },
-            { name = &quot;新建文件&quot;, route = &quot;/doc/start/cmd/file/&quot; },
-            { name = &quot;预览模式&quot;, route = &quot;/doc/start/cmd/serve/&quot; },
-            { name = &quot;编译模式&quot;, route = &quot;/doc/start/cmd/build/&quot; },
-        ] },
-    ] },
-]
+<pre><code>  sidebar = [
+      { number = &quot;1&quot;, name = &quot;why&quot;, route = &quot;/doc/why/&quot; },
+      { number = &quot;2&quot;, name = &quot;start&quot;, node = [
+          { name = &quot;install&quot;, route = &quot;/doc/start/install/&quot; },
+          { name = &quot;cmd&quot;, node = [
+              { name = &quot;site&quot;, route = &quot;/doc/start/cmd/site/&quot; },
+          ] },
+      ] },
+  ]
 </code></pre>
+</li>
+</ul>
 
 						</article>
 					</div>

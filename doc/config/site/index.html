@@ -963,34 +963,50 @@
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<p>该项为必选置项，<code>map</code>类型，包含站点名称，主题，端口，域名等信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
-<h2 id="site">[site]</h2>
-<p>站点配置</p>
+<h2 id="heading">配置</h2>
+<hr />
 <pre><code>[site]
-name = &quot;Fungo&quot;
-theme = &quot;fungo&quot;
-size = 10
-port = &quot;:3000&quot;
 origin = &quot;https://fungo.dev&quot;
+port = &quot;:3000&quot;
+name = &quot;Fungo&quot;
+slogan = &quot;simple and fast static site engine&quot;
+theme = &quot;fungo&quot;
 </code></pre>
-<p>Notice:</p>
-<blockquote>
-<p>该项所定义内容，在任意模板页均可使用<br />
-该项为字典类型，支持配置多个非重名[name]配置项</p>
-</blockquote>
-<h3 id="name">name</h3>
-<p>设置站点标题</p>
-<h3 id="theme">theme</h3>
-<p>设置当前使用的主题名称</p>
-<p>Notice:</p>
-<blockquote>
-<p>必须为theme目录下存在的主题名称，否则会引发异常</p>
-</blockquote>
-<h3 id="size">size</h3>
-<p>设置列表每页项目数据</p>
-<h3 id="port">port</h3>
-<p>设置预览模式使用端口</p>
-<h3 id="origin">origin</h3>
+<h3 id="notice">Notice:</h3>
+<ul>
+<li>
+<p>该项所定义内容，在任意模板页均可使用</p>
+</li>
+<li>
+<p>该项为字典类型，支持配置多个非重名[name]配置项</p>
+</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<ol>
+<li>
+<p>origin</p>
 <p>设置上线运行使用域名</p>
+</li>
+<li>
+<p>port</p>
+<p>设置预览模式使用端口</p>
+</li>
+<li>
+<p>name</p>
+<p>设置站点标题</p>
+</li>
+<li>
+<p>slogan</p>
+<p>设置站点口号，用于<code>feeds</code></p>
+</li>
+<li>
+<p>theme</p>
+<p>设置当前使用的主题名称</p>
+</li>
+</ol>
+<ul>
+<li>必须为 theme 目录下存在的主题名称，否则会引发异常</li>
+</ul>
 
 						</article>
 					</div>
