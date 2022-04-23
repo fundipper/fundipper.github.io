@@ -1,61 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://fungo.dev/doc/theme/config/theme/</loc>
+        <loc>https://fungo.dev/doc/theme/template/help/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/theme/template/article/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/site/sitemap/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/create/i18n/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/deploy/build/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/document/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/start/local/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/config/link/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/create/customize/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/create/theme/</loc>
+        <loc>https://fungo.dev/doc/theme/template/page/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -67,7 +19,19 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/theme/template/category/</loc>
+        <loc>https://fungo.dev/doc/create/theme/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/site/sitemap/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/source/extend/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -79,13 +43,79 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/doc/theme/template/sitemap/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/create/customize/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/overview/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/deploy/platform/github/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/deploy/serve/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/article/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/config/image/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/config/theme/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/template/category/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/doc/config/site/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/create/article/</loc>
+        <loc>https://fungo.dev/doc/theme/template/catalog/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/template/customize/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/deploy/platform/cloudflare/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -103,151 +133,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/overview/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/config/color/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/site/robots/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/static/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/deploy/platform/cloudflare/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/deploy/platform/github/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/deploy/platform/netlify/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/doc/deploy/publish/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/source/extend/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/config/tdk/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/customize/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/i18n/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/tag/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/article/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/customize/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/site/feeds/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/source/page/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/start/docker/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/help/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/config/page/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/deploy/serve/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/config/image/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/archive/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/catalog/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/doc/theme/template/document/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -259,19 +145,61 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/doc/deploy/build/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/customize/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/config/color/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/doc/config/i18n/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/config/site/image/</loc>
+        <loc>https://fungo.dev/doc/theme/config/link/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/source/document/</loc>
+        <loc>https://fungo.dev/doc/theme/template/archive/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/template/i18n/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/site/video/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/static/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/source/page/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -283,19 +211,91 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/theme/template/page/</loc>
+        <loc>https://fungo.dev/doc/config/site/feeds/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/theme/template/sitemap/</loc>
+        <loc>https://fungo.dev/doc/theme/template/article/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/doc/config/site/video/</loc>
+        <loc>https://fungo.dev/doc/theme/template/document/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/deploy/platform/netlify/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/create/i18n/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/template/tag/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/create/article/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/start/docker/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/start/local/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/document/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/page/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/theme/config/tdk/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/source/document/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/site/image/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/doc/config/site/robots/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
