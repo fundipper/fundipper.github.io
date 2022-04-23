@@ -152,59 +152,6 @@
 </ul>
  </li>
 	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8 text-gray-700">
-		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('新建')">
-			 新建
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-				<path
-					fill-rule="evenodd"
-					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</span>
-		
-	</p>
-	
-</div>
-
-<ul class="pl-4 text-sm"  :class="getState('新建') ? '':'hidden'" >
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/create/site/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/create/site/"> 站点 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/create/theme/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/create/theme/"> 主题 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-</ul>
- </li>
-	
 </ul>
  </li>
 							
@@ -220,6 +167,20 @@
 </div>
 
 <ul class="pl-4 text-sm" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/site/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/site/"> 新建站点 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/'?' hover:border-gray-500':'border-cyan-700'">
@@ -734,6 +695,20 @@
 <ul class="pl-4 text-sm" >
 	
 	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/theme/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/theme/"> 新建主题 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/config/theme/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -921,6 +896,50 @@
  </li>
 	
 </ul>
+ </li>
+	
+</ul>
+ </li>
+							
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">6. 常见问题 </span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-lang/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/faq/how-to-set-lang/"> 如何设置多语言 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-slug/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/faq/how-to-set-slug/"> 如何设置slug </a>
+		</span>
+		
+	</p>
+	
+</div>
  </li>
 	
 </ul>

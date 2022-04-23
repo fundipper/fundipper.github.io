@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>自定义页面 - Fungo</title>
+		<title>如何设置slug - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -948,7 +948,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
-						<h1 class="text-3xl">自定义页面</h1>
+						<h1 class="text-3xl">如何设置slug</h1>
 						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -958,10 +958,48 @@
 									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 								/>
 							</svg>
-							<span class="mx-2 text-sm"> 2021-01-01</span>
+							<span class="mx-2 text-sm"> 2022-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							
+							<blockquote>
+<p>相同目录下文件的 slug 不可重复</p>
+</blockquote>
+<h2 id="heading">使用</h2>
+<hr />
+<p>文件路径</p>
+<pre><code>doc/your-document-name.md
+</code></pre>
+<ol>
+<li>
+<p>slug = &quot;&quot;</p>
+<p>访问地址为:</p>
+<pre><code>/doc/your-document-name/
+</code></pre>
+</li>
+<li>
+<p>slug = &quot;this-is-a-slug-url&quot;</p>
+<p>访问地址为:</p>
+<pre><code>/doc/this-is-a-slug-url/
+</code></pre>
+</li>
+</ol>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ul>
+<li>
+<p>当 slug 为空时</p>
+<p>则文章 URL 为文件名</p>
+</li>
+<li>
+<p>当 slug 非空时</p>
+<p>则文章 URL 为 slug</p>
+</li>
+<li>
+<p>当 slug 含有空格时</p>
+<p>则自动替换<code> </code>为<code>-</code></p>
+</li>
+</ul>
+
 						</article>
 					</div>
 				</div>

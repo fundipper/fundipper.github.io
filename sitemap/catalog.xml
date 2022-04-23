@@ -31,12 +31,6 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tag/alpinejs/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/tag/fungo/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +61,18 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/tag/alpinejs/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tags/</loc>
+        <lastmod>2022-04-23</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/post/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
@@ -74,12 +80,6 @@
     </url>
     <url>
         <loc>https://fungo.dev/theme/</loc>
-        <lastmod>2022-04-23</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tags/</loc>
         <lastmod>2022-04-23</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
