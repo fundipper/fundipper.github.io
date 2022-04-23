@@ -114,6 +114,19 @@
 	btn.addEventListener("click", () => {
 		bar.classList.toggle("hidden");
 	});
+
+	window.sidebar = () => {
+		return {
+			path: window.location.pathname,
+			state: {},
+			getState: function (path) {
+				return this.state[path] ? true : false;
+			},
+			setState: function (path) {
+				this.state[path] = !this.getState(path);
+			},
+		};
+	};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
 <script>

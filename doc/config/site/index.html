@@ -69,613 +69,862 @@
 		<main>
 			<div class="w-11/12 max-w-screen-xl mx-auto my-5 rounded-md bg-white">
 				<div class="grid grid-cols-4 gap-5">
-					<aside class="col-span-1 py-5 h-screen overflow-auto border-r sticky top-0">
-						<ul>
+					<aside class="col-span-1 py-5 h-screen overflow-auto sticky top-0">
+						<ul x-data="sidebar">
 							
-							<li class="pl-4">
-<p class="h-8 leading-8">
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium"> 1. 起步</span>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">1. 起步 </span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/overview/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/overview/"> 概览</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/overview/"> 概览 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
 	
-</ul>
-</li>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('入门')">
+			 入门
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
 	
-	<span class="text-gray-700 font-medium">  入门</span>
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('入门') ? '':'hidden'" >
 	
-</p>
-<ul>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/start/local/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/start/local/"> 本机运行 </a>
+		</span>
+		
+	</p>
 	
-	<a class="text-cyan-700" href="/doc/start/local/"> 本机运行</a>
+</div>
+ </li>
 	
-</p>
-<ul>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/start/docker/'?' hover:border-gray-500':'border-cyan-700'">
 	
-</ul>
-</li>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/start/docker/"> docker运行 </a>
+		</span>
+		
+	</p>
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/start/docker/"> docker运行</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<span class="text-gray-700 font-medium">  新建</span>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/site/"> 站点</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/theme/"> 主题</a>
-	
-</p>
-<ul>
+</div>
+ </li>
 	
 </ul>
-</li>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('新建')">
+			 新建
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('新建') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/site/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/site/"> 站点 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/theme/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/theme/"> 主题 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 </ul>
-</li>
+ </li>
 	
 </ul>
-</li>
+ </li>
 							
-							<li class="pl-4">
-<p class="h-8 leading-8">
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium"> 2. 配置文件</span>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">2. 配置文件 </span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/config/site/"> 站点设置</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('站点设置')">
+			<a class="text-cyan-700" href="/doc/config/site/"> 站点设置 </a>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('站点设置') ? '':'hidden'" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/markdown/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/config/site/markdown/"> 代码高亮</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/markdown/"> 代码高亮 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
 	
-</ul>
-</li>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/image/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/image/"> 加载图片 </a>
+		</span>
+		
+	</p>
 	
-	<a class="text-cyan-700" href="/doc/config/site/image/"> 加载图片</a>
+</div>
+ </li>
 	
-</p>
-<ul>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/configsite/video/'?' hover:border-gray-500':'border-cyan-700'">
 	
-</ul>
-</li>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/configsite/video/"> 嵌入视频 </a>
+		</span>
+		
+	</p>
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+</div>
+ </li>
 	
-	<a class="text-cyan-700" href="/doc/configsite/video/"> 嵌入视频</a>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/feeds/'?' hover:border-gray-500':'border-cyan-700'">
 	
-</p>
-<ul>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/feeds/"> 信息流 </a>
+		</span>
+		
+	</p>
 	
-</ul>
-</li>
+</div>
+ </li>
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/sitemap/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/config/site/feeds/"> 信息流</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/sitemap/"> 网站地图 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
 	
-</ul>
-</li>
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/robots/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/robots/"> robots.txt </a>
+		</span>
+		
+	</p>
 	
-	<a class="text-cyan-700" href="/doc/config/site/sitemap/"> 网站地图</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/site/robots/"> robots.txt</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<span class="text-gray-700 font-medium">  业务设置</span>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/article/"> 文章</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/document/"> 文档</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/page/"> 单页</a>
-	
-</p>
-<ul>
+</div>
+ </li>
 	
 </ul>
-</li>
+ </li>
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/config/customize/"> 自定义页面</a>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('内容设置')">
+			 内容设置
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('内容设置') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/article/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/article/"> 文章 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/document/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/document/"> 文档 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/page/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/page/"> 单页 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/customize/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/customize/"> 自定义页面 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/static/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/static/"> 静态文件 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/i18n/"> 国际化支持</a>
-	
-</p>
-<ul>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/static/"> 静态文件</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
+ </li>
 							
-							<li class="pl-4">
-<p class="h-8 leading-8">
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium"> 3. 内容管理</span>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">3. 内容管理 </span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/create/article/"> 文章</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/article/"> 文章 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/document/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/document/"> 文档 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/page/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/page/"> 单页 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/customize/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/customize/"> 自定义页面 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/create/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/create/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('资源配置')">
+			 资源配置
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/source/document/"> 文档 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/page/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/source/page/"> 单页 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/extend'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/source/extend"> 拓展资源 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/document/"> 文档</a>
-	
-</p>
-<ul>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/page/"> 单页</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/customize/"> 自定义页面</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/create/i18n/"> 国际化支持</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
+ </li>
 							
-							<li class="pl-4">
-<p class="h-8 leading-8">
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium"> 4. 发布</span>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">4. 部署 </span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/serve/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/deploy/serve/"> 预览</a>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/serve/"> 预览 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/build/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/build/"> 编译 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
+			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/platform/github/"> github </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/cloudflare/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/platform/cloudflare/"> cloudflare </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/netlify/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/platform/netlify/"> netlify </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/deploy/build/"> 编译</a>
-	
-</p>
-<ul>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布</a>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/deploy/platform/github/"> github</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/deploy/platform/cloudflare/"> cloudflare</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/deploy/platform/netlify/"> netlify</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
+ </li>
 							
-							<li class="pl-4">
-<p class="h-8 leading-8">
+							<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium"> 5. 资源管理</span>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="font-medium">5. 自定义主题 </span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm" >
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/theme/'?' hover:border-gray-500':'border-cyan-700'">
 	
-	<span class="text-gray-700 font-medium">  默认资源</span>
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/theme/"> 主题设置 </a>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+ </li>
 	
-	<li class="pl-4">
-<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<a class="text-cyan-700" href="/doc/source/document/"> 文章</a>
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('模板开发')">
+			 模板开发
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
 	
-</p>
-<ul>
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('模板开发') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/article/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/article/"> 文章 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/document/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/document/"> 文档 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/page/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/page/"> 单页 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/customize/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('列表')">
+			 列表
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('列表') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/archive/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/archive/"> 归档 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/category/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/category/"> 分类 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/tag/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/tag/"> 标签 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/catalog/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/source/document/"> 文档</a>
-	
-</p>
-<ul>
+ </li>
 	
 </ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/source/page/"> 单页</a>
-	
-</p>
-<ul>
+ </li>
 	
 </ul>
-</li>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/source/extend"> 拓展资源</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-							
-							<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<span class="text-gray-700 font-medium"> 6. 自定义主题</span>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/config/theme/"> 主题设置</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<span class="text-gray-700 font-medium">  模板管理</span>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/article/"> 文章</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/document/"> 文档</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/page/"> 单页</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/i18n/"> 国际化支持</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<span class="text-gray-700 font-medium">  列表</span>
-	
-</p>
-<ul>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/archive/"> 归档</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/category/"> 分类</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/tag/"> 标签</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-	<li class="pl-4">
-<p class="h-8 leading-8">
-	
-	<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录</a>
-	
-</p>
-<ul>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
-	
-</ul>
-</li>
+ </li>
 							
 						</ul>
 					</aside>
@@ -748,6 +997,19 @@ origin = &quot;https://fungo.dev&quot;
 	btn.addEventListener("click", () => {
 		bar.classList.toggle("hidden");
 	});
+
+	window.sidebar = () => {
+		return {
+			path: window.location.pathname,
+			state: {},
+			getState: function (path) {
+				return this.state[path] ? true : false;
+			},
+			setState: function (path) {
+				this.state[path] = !this.getState(path);
+			},
+		};
+	};
 </script>
 <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
 <script>

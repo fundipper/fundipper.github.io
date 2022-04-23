@@ -1444,6 +1444,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(21 94 117 / var(--tw-border-opacity));
 }
 
+.border-cyan-700 {
+  --tw-border-opacity: 1;
+  border-color: rgb(14 116 144 / var(--tw-border-opacity));
+}
+
 .bg-amber-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 191 36 / var(--tw-bg-opacity));
@@ -1562,6 +1567,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1590,11 +1600,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
 }
 
 .pl-4 {
@@ -1749,6 +1754,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   outline-offset: 2px;
 }
 
+.hover\:border-gray-500:hover {
+  --tw-border-opacity: 1;
+  border-color: rgb(107 114 128 / var(--tw-border-opacity));
+}
+
 .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1762,11 +1772,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .group:hover .group-hover\:block {
   display: block;
-}
-
-.prose-p\:my-0 :is(:where(p):not(:where([class~="not-prose"] *))) {
-  margin-top: 0px;
-  margin-bottom: 0px;
 }
 
 .prose-code\:text-gray-700 :is(:where(code):not(:where([class~="not-prose"] *))) {
