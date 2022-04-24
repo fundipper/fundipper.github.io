@@ -723,20 +723,6 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/config/theme/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/config/theme/"> 主题设置 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
@@ -907,6 +893,101 @@
  </li>
 	
 </ul>
+ </li>
+	
+</ul>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('主题设置')">
+			<a class="text-cyan-700" href="/doc/theme/config/"> 主题设置 </a>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('主题设置') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/tdk/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/tdk/"> tdk </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/author/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/author/"> 作者 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/color/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/color/"> 配色 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/image/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/image/"> 图片 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/link/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/link/"> 链接 </a>
+		</span>
+		
+	</p>
+	
+</div>
  </li>
 	
 </ul>

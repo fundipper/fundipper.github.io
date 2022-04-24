@@ -67,13 +67,13 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tags/</loc>
+        <loc>https://fungo.dev/post/</loc>
         <lastmod>2022-04-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/post/</loc>
+        <loc>https://fungo.dev/tags/</loc>
         <lastmod>2022-04-24</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>

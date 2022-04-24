@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>链接 - Fungo</title>
+		<title>链接设置 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -723,20 +723,6 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/config/theme/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/config/theme/"> 主题设置 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
@@ -912,6 +898,101 @@
 </ul>
  </li>
 	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('主题设置')">
+			<a class="text-cyan-700" href="/doc/theme/config/"> 主题设置 </a>
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('主题设置') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/tdk/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/tdk/"> tdk </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/author/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/author/"> 作者 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/color/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/color/"> 配色 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/image/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/image/"> 图片 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/link/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/config/link/"> 链接 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+</ul>
+ </li>
+	
 </ul>
  </li>
 							
@@ -990,7 +1071,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
-						<h1 class="text-3xl">链接</h1>
+						<h1 class="text-3xl">链接设置</h1>
 						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1003,49 +1084,97 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<p>该项为可选置项，<code>map[string]interface{}</code>类型，包含product，github等信息</p>
+							<p>该项为可选置项，<code>map</code>类型，可将模板的<code>link</code>（header，footer）信息提取至配置文件</p>
 <p>在主题目录 theme.toml，可配置该项</p>
-<h3 id="themelink">[theme.link]</h3>
+<h2 id="heading">配置</h2>
+<hr />
 <pre><code>[theme.link]
-product = { name = &quot;产品&quot;, data = [
-    { name = &quot;文档&quot;, path = &quot;/doc/overview/&quot; },
-    { name = &quot;主题&quot;, path = &quot;/theme/&quot; },
-    { name = &quot;博客&quot;, path = &quot;/post/&quot; },
+header = { name = &quot;footer&quot;, data = [
+    { name = &quot;doc&quot;, path = &quot;/doc/overview/&quot; },
+    { name = &quot;theme&quot;, path = &quot;/theme/&quot; },
+    { name = &quot;blog&quot;, path = &quot;/post/&quot; },
 ] }
-github = { name = &quot;开源&quot;, data = [
+footer = { name = &quot;footer&quot;, data = [
     { name = &quot;FED&quot;, path = &quot;&quot; },
     { name = &quot;BED&quot;, path = &quot;&quot; },
     { name = &quot;Lab&quot;, path = &quot;&quot; },
 ] }
 </code></pre>
-<p>Notice:</p>
-<blockquote>
-<p>该项所定义内容，在任意模板页均可使用<br />
-该项为字典类型，支持配置多个非重名[name]配置项<br />
-该内容仅为<code>使用方法</code>举例，具体配置以使用主题配置文件为准。</p>
-</blockquote>
-<h3 id="product">product</h3>
-<p>设置<code>product</code>的link信息</p>
-<blockquote>
+<h4 id="notice">Notice:</h4>
+<ul>
+<li>
+<p>该项为字典类型，支持配置多个非重名[name]配置项</p>
+</li>
+<li>
+<p>该项所定义内容，在任意模板页均可使用</p>
+</li>
+<li>
+<p>该内容仅为<code>使用方法</code>举例，用户可基于<code>toml</code>语法，进行自定义配置</p>
+</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>header</p>
+<p>设置<code>header</code>的 link 信息</p>
+<ul>
+<li>
 <p>name</p>
-</blockquote>
-<p>设置<code>product</code>的名称信息</p>
-<blockquote>
+<p>设置<code>header</code>的名称</p>
+</li>
+<li>
 <p>data</p>
-</blockquote>
-<p>设置<code>product</code>的数据信息</p>
-<blockquote>
-<blockquote>
+<p>设置<code>header</code>的链接列表</p>
+<ul>
+<li>
 <p>name = &quot;&quot;</p>
-</blockquote>
-</blockquote>
 <p>设置链接的名称</p>
-<blockquote>
-<blockquote>
+</li>
+<li>
 <p>path = &quot;&quot;</p>
-</blockquote>
-</blockquote>
 <p>设置链接的路径</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>footer</p>
+<p>设置<code>footer</code>的 link 信息</p>
+<p>……</p>
+</li>
+</ol>
+<h2 id="heading-2">使用</h2>
+<hr />
+<ul>
+<li>
+<p>使用 header</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{define you-template-name}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	&lt;<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">title</span>&gt;Document&lt;/<span style="color:#000080">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	&lt;<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>		&lt;<span style="color:#000080">header</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>			&lt;<span style="color:#000080">ul</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>				{{range .Theme.link.header.data}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>				&lt;<span style="color:#000080">li</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>					&lt;<span style="color:#000080">a</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.path}}&#34;</span>&gt;{{.name}}&lt;/<span style="color:#000080">a</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>				&lt;/<span style="color:#000080">li</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>				{{end}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>			&lt;/<span style="color:#000080">ul</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>		&lt;/<span style="color:#000080">header</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>		&lt;<span style="color:#000080">main</span>&gt;write-you-customize-code-here&lt;/<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>&lt;/<span style="color:#000080">html</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>{{end}}
+</span></span></code></pre></li>
+</ul>
 
 						</article>
 					</div>
