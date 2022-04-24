@@ -233,12 +233,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/configsite/video/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/video/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/configsite/video/"> 嵌入视频 </a>
+			<a class="text-cyan-700" href="/doc/config/site/video/"> 嵌入视频 </a>
 		</span>
 		
 	</p>
@@ -920,7 +920,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/faq/how-to-set-lang/"> 如何设置多语言 </a>
+			<a class="text-cyan-700" href="/doc/faq/how-to-set-lang/"> 如何设置lang </a>
 		</span>
 		
 	</p>
@@ -935,6 +935,34 @@
 		
 		<span class="w-full inline-flex justify-between items-center">
 			<a class="text-cyan-700" href="/doc/faq/how-to-set-slug/"> 如何设置slug </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-action/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/faq/how-to-set-action/"> 如何设置action </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-modify-style/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/faq/how-to-modify-style/"> 如何修改style </a>
 		</span>
 		
 	</p>
@@ -963,7 +991,8 @@
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<p>该项为可选置项，<code>array</code>类型，包含名称，路由，关联等信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
-<h3 id="customize">[[customize]]</h3>
+<h2 id="heading">配置</h2>
+<hr />
 <pre><code>[[customize]]
 name = &quot;ios&quot;
 route = &quot;/software/ios/&quot;
@@ -977,23 +1006,29 @@ action = &quot;/post/&quot;
 [[customize]]
 ……
 </code></pre>
-<p>Notice:</p>
-<blockquote>
-<p>该项为列表类型，支持配置多个非重名[name]配置项</p>
-</blockquote>
-<h3 id="name">name</h3>
+<h4 id="notice">Notice:</h4>
+<ul>
+<li>该项为列表类型，支持配置多个非重名[name]配置项</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>name</p>
 <p>设置<code>渲染模板</code>名称</p>
-<h3 id="route">route</h3>
+</li>
+<li>
+<p>route</p>
 <p>设置<code>访问路由</code>和<code>生成目录</code>路径</p>
-<h3 id="action">action</h3>
+</li>
+<li>
+<p>action</p>
 <p>设置关联动态内容地址</p>
-<p>例如:</p>
-<pre><code>action = &quot;/post/&quot;
-</code></pre>
-<p>在自定义页面可访问<code>/post/</code>的列表数据</p>
-<pre><code>action = &quot;/tag/xxx/&quot;
-</code></pre>
-<p>在自定义页面可访问<code>/tag/xxx/</code>的列表数据</p>
+</li>
+</ol>
+<ul>
+<li>action 设置，查看<a href="/doc/faq/how-to-set-action/">hot-to-set-action</a></li>
+</ul>
 
 						</article>
 					</div>
