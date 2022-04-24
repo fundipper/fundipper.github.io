@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -989,197 +1003,238 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<h3 id="ssh">新建SSH</h3>
+							<blockquote>
+<p>使用 github workflows 自动部署</p>
+</blockquote>
+<h2 id="heading">配置</h2>
+<hr />
 <ol>
-<li>生成密钥</li>
+<li>新建 SSH</li>
 </ol>
+<ul>
+<li>
+<p>生成密钥</p>
 <pre><code>ssh-keygen -t rsa -m pem -b 4096 -C &quot; your git email name &quot; -N &quot; &quot;
 </code></pre>
-<blockquote>
+</li>
+<li>
 <p>获取私钥</p>
-</blockquote>
-<p>cat .ssh/id_rsa</p>
-<blockquote>
+<pre><code>cat .ssh/id_rsa
+</code></pre>
+</li>
+<li>
 <p>获取公钥</p>
-</blockquote>
-<p>cat .ssh/id_rsa.pub</p>
+<pre><code>cat .ssh/id_rsa.pub
+</code></pre>
+</li>
+</ul>
 <ol start="2">
 <li>配置私钥</li>
 </ol>
-<pre><code>open https://{your-github-page-resource}/settings/secrets/actions/new
-
-Set Name
-
-  ACTIONS_DEPLOY_KEY
-
-Set Value
-
-  input private key
-</code></pre>
+<ul>
+<li>
+<p>open https://{your-github-page-resource}/settings/secrets/actions/new</p>
+<ul>
+<li>
+<p>Set Name</p>
+<p>input ACTIONS_DEPLOY_KEY</p>
+</li>
+<li>
+<p>Set Value</p>
+<p>input your private key</p>
+</li>
+</ul>
+</li>
+</ul>
 <ol start="3">
 <li>配置公钥</li>
 </ol>
-<pre><code>open https://{your-github-page-path}/settings/keys/new
-
-Set Name
-
-  ACTIONS_DEPLOY_KEY
-
-Set Value
-
-  input public key
-
-Check Allow write access
-</code></pre>
-<h3 id="workflows">新建workflows</h3>
+<ul>
+<li>
+<p>open https://{your-github-page-path}/settings/keys/new</p>
+<ul>
+<li>
+<p>Set Name</p>
+<p>input ACTIONS_DEPLOY_KEY</p>
+</li>
+<li>
+<p>Set Value</p>
+<p>input your public key</p>
+</li>
+<li>
+<p>Check Allow write access</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="-workflows">编写 workflows</h2>
+<hr />
 <p>在项目根目录增加<code>.github/workflows/deploy.yaml</code>文件，然后配置如下信息</p>
-<h3 id="-docker">使用 docker</h3>
+<ul>
+<li>
+<p>使用 docker</p>
 <p>因依赖较少，故速度更快</p>
-<pre><code># 名称，可自定义
-name: Fungo Deploy
-
-# 依赖
-on:
-  # 当命令为 push
-  push:
-    # 且分支为 master 时，触发
-    branches:
-      - master
-
-  # 当命令为 pull
-  pull_request:
-    # 且分支为 master 时，触发
-    branches:
-      - master
-  # 手动触发
-  workflow_dispatch:
-
-# 任务
-jobs:
-  # 任务名称，可自定义
-  deploy:
-    # 启动依赖，可设置为 ubuntu，windows，macos
-    runs-on: ubuntu-latest
-    
-    # 使用docker 镜像
-    container:
-      image: fundipper/fungo:latest
-
-    # 步骤
-    steps:
-
-      # 检出代码
-      - name: checkout
-        uses: actions/checkout@v3
-
-      # 配置ssh
-      - name: config
-        run: |
-          set -e
-          echo &quot;Host *
-            StrictHostKeyChecking no
-            UserKnownHostsFile=/dev/null
-          &quot; &gt; /etc/ssh/ssh_config
-
-      # 编译项目
-      - name: build
-        run: fungo build
-
-      # 部署项目
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          commit_message: ${{ github.event.head_commit.message }}
-          # 部署密钥
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          # 发布地址
-          external_repository: &quot;your github page path as 'fundipper/fundipper.github.io'&quot;
-          # 使用分支
-          publish_branch: &quot;your branch as 'master'&quot;
-          # 使用目录
-          publish_dir: ./public
-          # 自定义域名
-          cname: fungo.dev
-</code></pre>
-<h3 id="-go-install">使用 go install</h3>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#998;font-style:italic"># 名称，可自定义</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#bbb"></span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>Fungo Deploy<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 依赖</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#000080">on</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 当命令为 push</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb">  </span><span style="color:#000080">push</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 且分支为 master 时，触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb">    </span><span style="color:#000080">branches</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb">      </span>- master<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 当命令为 pull</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb">  </span><span style="color:#000080">pull_request</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 且分支为 master 时，触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#bbb">    </span><span style="color:#000080">branches</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#bbb">      </span>- master<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 手动触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#bbb">  </span><span style="color:#000080">workflow_dispatch</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 任务</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#bbb"></span><span style="color:#000080">jobs</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 任务名称，可自定义</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#bbb">  </span><span style="color:#000080">deploy</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 启动依赖，可设置为 ubuntu，windows，macos</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#bbb">    </span><span style="color:#000080">runs-on</span>:<span style="color:#bbb"> </span>ubuntu-latest<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 使用docker 镜像</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#bbb">    </span><span style="color:#000080">container</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#bbb">      </span><span style="color:#000080">image</span>:<span style="color:#bbb"> </span>fundipper/fungo:latest<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 步骤</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#bbb">    </span><span style="color:#000080">steps</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 检出代码</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>checkout<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#bbb">        </span><span style="color:#000080">uses</span>:<span style="color:#bbb"> </span>actions/checkout@v3<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 配置ssh</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>config<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#bbb">        </span><span style="color:#000080">run</span>:<span style="color:#bbb"> </span>|<span style="color:#d14">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span><span style="color:#d14">          set -e
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span><span style="color:#d14">          echo &#34;Host *
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span><span style="color:#d14">            StrictHostKeyChecking no
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span><span style="color:#d14">            UserKnownHostsFile=/dev/null
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span><span style="color:#d14">          &#34; &gt; /etc/ssh/ssh_config</span><span style="color:#bbb">          
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 编译项目</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>build<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span><span style="color:#bbb">        </span><span style="color:#000080">run</span>:<span style="color:#bbb"> </span>fungo build<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 部署项目</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>deploy<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span><span style="color:#bbb">        </span><span style="color:#000080">uses</span>:<span style="color:#bbb"> </span>peaceiris/actions-gh-pages@v3<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span><span style="color:#bbb">        </span><span style="color:#000080">with</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span><span style="color:#bbb">          </span><span style="color:#000080">commit_message</span>:<span style="color:#bbb"> </span>${{ github.event.head_commit.message }}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 部署密钥</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span><span style="color:#bbb">          </span><span style="color:#000080">deploy_key</span>:<span style="color:#bbb"> </span>${{ secrets.ACTIONS_DEPLOY_KEY }}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 发布地址</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span><span style="color:#bbb">          </span><span style="color:#000080">external_repository</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;your github page path as &#39;fundipper/fundipper.github.io&#39;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 使用分支</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span><span style="color:#bbb">          </span><span style="color:#000080">publish_branch</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;your branch as &#39;master&#39;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 使用目录</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">62</span><span><span style="color:#bbb">          </span><span style="color:#000080">publish_dir</span>:<span style="color:#bbb"> </span>./public<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">63</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 自定义域名</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">64</span><span><span style="color:#bbb">          </span><span style="color:#000080">cname</span>:<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>your-customize-domain }<span style="color:#bbb">
+</span></span></span></code></pre></li>
+<li>
+<p>使用 go install</p>
 <p>因依赖较多，故部署略慢</p>
-<pre><code># 名称，可自定义
-name: Fungo Deploy
-
-# 依赖
-on:
-  # 当命令为 push
-  push:
-    # 且分支为 master 时，触发
-    branches:
-      - master
-
-  # 当命令为 pull
-  pull_request:
-    # 且分支为 master 时，触发
-    branches:
-      - master
-  # 手动触发
-  workflow_dispatch:
-
-# 任务
-jobs:
-  # 任务名称，可自定义
-  deploy:
-    # 启动依赖，可设置为 ubuntu，windows，macos
-    runs-on: ubuntu-latest
-    
-    # 步骤
-    steps:
-
-      # 检出代码
-      - name: checkout
-        uses: actions/checkout@v3
-
-      # 安装golang
-      - name: setup
-        uses: actions/setup-go@v3
-        with:
-          go-version: 1.18
-
-      # 安装fungo
-      - name: install
-        run: go install github.com/fundipper/fungo@latest
-
-      # 编译项目
-      - name: build
-        run: fungo build
-
-      # 部署项目
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          commit_message: ${{ github.event.head_commit.message }}
-          # 部署密钥
-          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-          # 发布地址
-          external_repository: &quot;your github page path as 'fundipper/fundipper.github.io'&quot;
-          # 使用分支
-          publish_branch: &quot;your branch as 'master'&quot;
-          # 使用目录
-          publish_dir: ./public
-          # 自定义域名
-          cname: fungo.dev
-</code></pre>
-<h3 id="workflows-1">查看workflows</h3>
-<pre><code>open https://{your-github-page-source}/actions
-</code></pre>
-<p>查看github workflows 是否执行成功</p>
-<h3 id="heading">自定义域名</h3>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#998;font-style:italic"># 名称，可自定义</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#bbb"></span><span style="color:#000080">name</span>:<span style="color:#bbb"> </span>Fungo Deploy<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 依赖</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#000080">on</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 当命令为 push</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb">  </span><span style="color:#000080">push</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 且分支为 master 时，触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb">    </span><span style="color:#000080">branches</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb">      </span>- master<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 当命令为 pull</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb">  </span><span style="color:#000080">pull_request</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 且分支为 master 时，触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#bbb">    </span><span style="color:#000080">branches</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#bbb">      </span>- master<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 手动触发</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span><span style="color:#bbb">  </span><span style="color:#000080">workflow_dispatch</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span><span style="color:#bbb"></span><span style="color:#998;font-style:italic"># 任务</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span><span style="color:#bbb"></span><span style="color:#000080">jobs</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span><span style="color:#bbb">  </span><span style="color:#998;font-style:italic"># 任务名称，可自定义</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span><span style="color:#bbb">  </span><span style="color:#000080">deploy</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 启动依赖，可设置为 ubuntu，windows，macos</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span><span style="color:#bbb">    </span><span style="color:#000080">runs-on</span>:<span style="color:#bbb"> </span>ubuntu-latest<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span><span style="color:#bbb">    </span><span style="color:#998;font-style:italic"># 步骤</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span><span style="color:#bbb">    </span><span style="color:#000080">steps</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 检出代码</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>checkout<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span><span style="color:#bbb">        </span><span style="color:#000080">uses</span>:<span style="color:#bbb"> </span>actions/checkout@v3<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 安装golang</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>setup<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span><span style="color:#bbb">        </span><span style="color:#000080">uses</span>:<span style="color:#bbb"> </span>actions/setup-go@v3<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span><span style="color:#bbb">        </span><span style="color:#000080">with</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span><span style="color:#bbb">          </span><span style="color:#000080">go-version</span>:<span style="color:#bbb"> </span><span style="color:#099">1.18</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">38</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">39</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 安装fungo</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">40</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>install<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">41</span><span><span style="color:#bbb">        </span><span style="color:#000080">run</span>:<span style="color:#bbb"> </span>go install github.com/fundipper/fungo@latest<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">42</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">43</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 编译项目</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">44</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>build<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">45</span><span><span style="color:#bbb">        </span><span style="color:#000080">run</span>:<span style="color:#bbb"> </span>fungo build<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">46</span><span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">47</span><span><span style="color:#bbb">      </span><span style="color:#998;font-style:italic"># 部署项目</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">48</span><span><span style="color:#bbb">      </span>- <span style="color:#000080">name</span>:<span style="color:#bbb"> </span>deploy<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">49</span><span><span style="color:#bbb">        </span><span style="color:#000080">uses</span>:<span style="color:#bbb"> </span>peaceiris/actions-gh-pages@v3<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span><span style="color:#bbb">        </span><span style="color:#000080">with</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span><span style="color:#bbb">          </span><span style="color:#000080">commit_message</span>:<span style="color:#bbb"> </span>${{ github.event.head_commit.message }}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 部署密钥</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">53</span><span><span style="color:#bbb">          </span><span style="color:#000080">deploy_key</span>:<span style="color:#bbb"> </span>${{ secrets.ACTIONS_DEPLOY_KEY }}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">54</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 发布地址</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">55</span><span><span style="color:#bbb">          </span><span style="color:#000080">external_repository</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;your github page path as &#39;fundipper/fundipper.github.io&#39;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">56</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 使用分支</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">57</span><span><span style="color:#bbb">          </span><span style="color:#000080">publish_branch</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;your branch as &#39;master&#39;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">58</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 使用目录</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span><span style="color:#bbb">          </span><span style="color:#000080">publish_dir</span>:<span style="color:#bbb"> </span>./public<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span><span style="color:#bbb">          </span><span style="color:#998;font-style:italic"># 自定义域名</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span><span style="color:#bbb">          </span><span style="color:#000080">cname</span>:<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span>your-customize-domain }<span style="color:#bbb">
+</span></span></span></code></pre></li>
+</ul>
+<h2 id="-workflows-1">查看 workflows</h2>
+<hr />
+<ul>
+<li>
+<p>使用 git push 提交代码到 github</p>
+</li>
+<li>
+<p>open https://{your-github-page-source}/actions</p>
+<p>查看 github workflows 是否执行成功</p>
+</li>
+</ul>
+<h2 id="heading-1">自定义域名</h2>
+<hr />
 <ol>
 <li>解析域域名</li>
 </ol>
-<p>将需要绑定的域名，使用CNAME解析至{your-github-page-path}</p>
+<ul>
+<li>将需要绑定的域名，使用 CNAME 解析至{your-github-page-path}</li>
+</ul>
 <ol start="2">
 <li>绑定域名</li>
 </ol>
+<ul>
+<li>
 <p>待解析生效后，访问<code>https://{your-github-page-path}/settings/pages</code></p>
+</li>
+<li>
 <p>输入自定义域名，点击保存</p>
+</li>
+</ul>
 
 						</article>
 					</div>

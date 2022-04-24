@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -990,21 +1004,15 @@
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<blockquote>
-<p>因 cloudflare 暂未内置 fungo，且使用无法自定义构建环境<br />
-故使用 github pages 构建，cloudflare pages 同步部署<br />
+<p>使用 github pages 构建，cloudflare pages 同步部署<br />
 请先配置<a href="/doc/deploy/platform/github/">github pages</a></p>
 </blockquote>
-<h3 id="heading">注册帐号</h3>
-<ol>
-<li>打开 <a href="https://pages.cloudflare.com/">https://pages.cloudflare.com/</a><br />
-注册帐号</li>
-</ol>
-<h3 id="heading-1">部署项目</h3>
+<h2 id="heading">部署</h2>
+<hr />
 <ol>
 <li>
 <p>创建项目</p>
-<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/new/provider/github">https://dash.cloudflare.com/{your-dash-id}/pages/new/provider/github</a><br />
-创建项目</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/new/provider/github">https://dash.cloudflare.com/{your-dash-id}/pages/new/provider/github</a></p>
 </li>
 <li>
 <p>关联帐号</p>
@@ -1013,40 +1021,52 @@
 <li>
 <p>构建部署</p>
 <p>因无法自定义构建环境，故全部使用默认配置，不构建，仅同步</p>
-<p>框架预设: Node（默认）</p>
-<p>构建命令： （默认）</p>
-<p>构建目录： （默认）</p>
+<pre><code> 框架预设: Node（默认）
+
+ 构建命令： （默认）
+
+ 构建目录： （默认）
+</code></pre>
 </li>
 <li>
 <p>访问项目</p>
 <p>打开 {your-github-page-path}.pages.dev，即可访问项目</p>
 </li>
 </ol>
-<h3 id="heading-2">绑定域名</h3>
-<p>需先将域名DNS解析，替换为</p>
+<h2 id="heading-1">优化</h2>
+<hr />
 <ol>
 <li>
-<p>更改DNS</p>
-<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/add-site">https://dash.cloudflare.com/{your-dash-id}/add-site</a><br />
-添加跟域名，然后更改DNS</p>
+<p>绑定域名</p>
+<ul>
+<li>
+<p>更改 DNS</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/add-site">https://dash.cloudflare.com/{your-dash-id}/add-site</a></p>
+<p>添加跟域名，然后更改 DNS</p>
 </li>
 <li>
 <p>配置域名</p>
-<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/view/%7Byour-site-name%7D/domains">https://dash.cloudflare.com/{your-dash-id}/pages/view/{your-site-name}/domains</a><br />
-设置自定义域名</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/pages/view/%7Byour-site-name%7D/domains">https://dash.cloudflare.com/{your-dash-id}/pages/view/{your-site-name}/domains</a></p>
+<p>设置自定义域名</p>
 </li>
-</ol>
-<h3 id="heading-3">网站加速</h3>
-<ol>
+</ul>
+</li>
+<li>
+<p>网站加速</p>
+<ul>
 <li>
 <p>添加规则</p>
-<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/%7Byour-site-host%7D/rules/form">https://dash.cloudflare.com/{your-dash-id}/{your-site-host}/rules/form</a><br />
-添加规则</p>
+<p>打开 <a href="https://dash.cloudflare.com/%7Byour-dash-id%7D/%7Byour-site-host%7D/rules/form">https://dash.cloudflare.com/{your-dash-id}/{your-site-host}/rules/form</a></p>
+<p>添加规则</p>
 </li>
 <li>
 <p>配置规则</p>
-<p>URL: {your-site-host}/*</p>
-<p>Setting: 缓存级别/缓存所有内容</p>
+<pre><code>   URL: {your-site-host}/\*
+
+   Setting: 缓存级别/缓存所有内容
+</code></pre>
+</li>
+</ul>
 </li>
 </ol>
 

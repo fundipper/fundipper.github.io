@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -989,52 +1003,101 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<p>当已定义资源无法满足需求时</p>
-<p>用户可基于<code>yaml</code>语法，拓展自定义资源</p>
-<p>例子:</p>
+							<p>当默认资源无法满足需求时，可自行拓展资源</p>
 <p>在<code>source</code>目录，新建<code>theme.yaml</code>资源</p>
-<pre><code>title: &quot;&quot;
-keywords: &quot;&quot;
-description: &quot;&quot;
-date: &quot;&quot;
-lang: &quot;&quot;
-slug: &quot;&quot;
-category: &quot;&quot;
-tag: [&quot;&quot;, &quot;&quot;, &quot;&quot;]
-thumb: [&quot;&quot;, &quot;&quot;, &quot;&quot;]
-nav: [&quot;&quot;, &quot;&quot;, &quot;&quot;]
+<h2 id="heading">配置</h2>
+<hr />
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#000080">title</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#bbb"></span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb"></span><span style="color:#000080">keywords</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#000080">date</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#000080">category</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb"></span><span style="color:#000080">tag</span>:<span style="color:#bbb"> </span>[<span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>,<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span>]<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb"></span><span style="color:#000080">author</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb"></span><span style="color:#000080">thumb</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb"></span><span style="color:#000080">image</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb">  </span>- <span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">  </span>- <span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb"></span><span style="color:#000080">website</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb"></span><span style="color:#000080">repository</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span><span style="color:#bbb"></span><span style="color:#000080">star</span>:<span style="color:#bbb"> </span><span style="color:#099">0</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span><span style="color:#bbb"></span><span style="color:#000080">version</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span><span style="color:#bbb"></span><span style="color:#000080">license</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span></code></pre><ul>
+<li>用户可基于<code>yaml</code>语法，拓展自定义资源</li>
+</ul>
+<h2 id="heading-1">释义</h2>
+<hr />
+<ol>
+<li>
+<p>title</p>
+<p>主题名称，默认为当前文件名，可自行修改</p>
+</li>
+<li>
+<p>description</p>
+<p>主题描述，可不设置，主要用于<code>SEO</code></p>
+</li>
+<li>
+<p>keywords</p>
+<p>主题关键词，可不设置，主要用于<code>SEO</code></p>
+</li>
+<li>
+<p>date</p>
+<p>主题更新日期</p>
+</li>
+<li>
+<p>category</p>
+<p>主题分类</p>
+</li>
+<li>
+<p>tag</p>
+<p>主题标签签，可设置多个</p>
+</li>
+<li>
+<p>author</p>
+<p>主题作者</p>
+</li>
+<li>
+<p>thumb</p>
+<p>主题缩略图</p>
+</li>
+<li>
+<p>image</p>
+<p>主题轮播图</p>
+</li>
+<li>
+<p>website</p>
+<p>主题预览地址</p>
+</li>
+<li>
+<p>repository</p>
+<p>主题仓库地址</p>
+</li>
+<li>
+<p>star</p>
+<p>主题 star 数量</p>
+</li>
+<li>
+<p>version</p>
+<p>主题最新版本</p>
+</li>
+<li>
+<p>license</p>
+<p>主题开源协议</p>
+</li>
+</ol>
+<h2 id="heading-2">使用</h2>
+<hr />
+<pre><code>fungo file theme you-file-name
 </code></pre>
-<p>然后使用<code>fungo file theme your-theme-name</code></p>
-<p>即可生成自定义的<code>theme</code>类型的资源</p>
-<p>使用 cat 命令查看文件</p>
-<pre><code>
-➜ cat your-theme-name.md
----
-title: your-product-name
-description: &quot;&quot;
-keywords: &quot;&quot;
-date: &quot;2022-03-31&quot;
-lang: &quot;&quot;
-category: &quot;&quot;
-slug: &quot;&quot;
-tag:
-  - &quot;&quot;
-  - &quot;&quot;
-  - &quot;&quot;
-thumb:
-  - &quot;&quot;
-  - &quot;&quot;
-  - &quot;&quot;
-nav:
-  - &quot;&quot;
-  - &quot;&quot;
-  - &quot;&quot;
----
-</code></pre>
-<blockquote>
-<p>因 map 随机遍历，故无法保证<code>meta</code>的顺序<br />
-是否调整顺序都不影响文件解析</p>
-</blockquote>
+<ul>
+<li>
+<p>因 map 随机遍历，故无法保证<code>meta</code>各字段的顺序</p>
+</li>
+<li>
+<p>顺序调整与否都不影响文件解析</p>
+</li>
+</ul>
 
 						</article>
 					</div>

@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>发布 - Fungo</title>
+		<title>自建服务器 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -976,7 +990,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
-						<h1 class="text-3xl">发布</h1>
+						<h1 class="text-3xl">自建服务器</h1>
 						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -989,23 +1003,65 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<p>编译后文件位于<code>public</code>目录</p>
-<h3 id="heading">自建站点</h3>
-<pre><code>1. 使用FTP/git/svn将该文件夹上传至服务器
-
-2. 把`public`下的`文件`和`文件夹`名称，配置路径到ninx/apache/candy/iis服务
-</code></pre>
-<h4 id="nginx">nginx</h4>
-<pre><code>comming soon
-</code></pre>
-<h4 id="apache">apache</h4>
-<pre><code>comming soon
-</code></pre>
-<h4 id="candy">candy</h4>
-<pre><code>comming soon
-</code></pre>
-<h4 id="iis">iis</h4>
-<pre><code>comming soon</code></pre>
+							<blockquote>
+<p>编译后文件位于<code>public</code>目录</p>
+</blockquote>
+<h2 id="heading">上传</h2>
+<hr />
+<ol>
+<li>
+<p>上传<code>public</code>目录</p>
+<p>可使用 ftp，git，svn，scp 等</p>
+</li>
+<li>
+<p>配置 web 服务器</p>
+<p>可使用 nginx，apache，iis，candy 等</p>
+</li>
+</ol>
+<h2 id="heading-1">配置</h2>
+<hr />
+<ol>
+<li>
+<p>nginx</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#000;font-weight:bold">server{</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#d14">listen</span> <span style="color:#099">80</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#000;font-weight:bold">server_name</span> {<span style="color:#000;font-weight:bold">your-domain-name}</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    <span style="color:#000;font-weight:bold">charset</span> <span style="color:#d14">utf-8,gb2312</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#000;font-weight:bold">access_log</span> <span style="color:#d14">/var/log/nginx/</span>{<span style="color:#000;font-weight:bold">your-domain-name}_access.log</span>  <span style="color:#d14">main</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>    <span style="color:#000;font-weight:bold">error_log</span> <span style="color:#d14">/var/log/nginx/</span>{<span style="color:#000;font-weight:bold">your-domain-name}_error.log</span> <span style="color:#d14">warn</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>    <span style="color:#000;font-weight:bold">location</span> = <span style="color:#d14">/</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        <span style="color:#000;font-weight:bold">root</span> <span style="color:#d14">/</span>{<span style="color:#000;font-weight:bold">your-file-path}/public</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        <span style="color:#000;font-weight:bold">expires</span> <span style="color:#d14">30d</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        <span style="color:#000;font-weight:bold">access_log</span> <span style="color:#008080">off</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>        <span style="color:#000;font-weight:bold">default_type</span> <span style="color:#d14">text/html</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#000;font-weight:bold">location</span> <span style="color:#d14">/</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>        <span style="color:#000;font-weight:bold">root</span>  <span style="color:#d14">/</span>{<span style="color:#000;font-weight:bold">your-file-path}/public</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>        <span style="color:#000;font-weight:bold">index</span> <span style="color:#d14">index.html</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>    <span style="color:#000;font-weight:bold">location</span> <span style="color:#d14">/assets</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>        <span style="color:#000;font-weight:bold">root</span>  <span style="color:#d14">/</span>{<span style="color:#000;font-weight:bold">your-file-path}/public</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>        <span style="color:#000;font-weight:bold">index</span> <span style="color:#d14">index.html</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>    <span style="color:#000;font-weight:bold">location</span> <span style="color:#d14">/media</span> {
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>        <span style="color:#000;font-weight:bold">root</span>  <span style="color:#d14">/</span>{<span style="color:#000;font-weight:bold">your-file-path}/public</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>        <span style="color:#000;font-weight:bold">index</span> <span style="color:#d14">index.html</span>;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>    }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>}
+</span></span></code></pre></li>
+<li>
+<p>apache</p>
+<p>comming soon</p>
+</li>
+<li>
+<p>iis</p>
+<p>comming soon</p>
+</li>
+<li>
+<p>candy</p>
+<p>comming soon</p>
+</li>
+</ol>
 
 						</article>
 					</div>

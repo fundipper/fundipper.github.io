@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -993,41 +1007,40 @@
 <p>在项目目录 config.toml，可配置该项</p>
 <h2 id="heading">配置</h2>
 <hr />
-<pre><code>[[document]]
-name = &quot;doc&quot;
-sidebar = [
-    { number = &quot;1.&quot;, name = &quot;起步&quot;, node = [
-        { name = &quot;概览&quot;, route = &quot;/doc/overview/&quot; },
-        { name = &quot;入门&quot;, node = [
-            { name = &quot;本机运行&quot;, route = &quot;/doc/start/local/&quot; },
-            { name = &quot;docker运行&quot;, route = &quot;/doc/start/docker/&quot; },
-        ] },
-    ] },
-    { number = &quot;2.&quot;, name = &quot;配置文件&quot;, node = [
-        { name = &quot;新建站点&quot;, route = &quot;/doc/create/site/&quot; },
-        { name = &quot;站点设置&quot;, route = &quot;/doc/config/site/&quot;, node = [
-            { name = &quot;代码高亮&quot;, route = &quot;/doc/config/site/markdown/&quot; },
-            { name = &quot;加载图片&quot;, route = &quot;/doc/config/site/image/&quot; },
-            { name = &quot;嵌入视频&quot;, route = &quot;/doc/configsite/video/&quot; },
-            { name = &quot;信息流&quot;, route = &quot;/doc/config/site/feeds/&quot; },
-            { name = &quot;网站地图&quot;, route = &quot;/doc/config/site/sitemap/&quot; },
-            { name = &quot;robots.txt&quot;, route = &quot;/doc/config/site/robots/&quot; },
-        ] },
-        { name = &quot;内容设置&quot;, node = [
-            { name = &quot;文章&quot;, route = &quot;/doc/config/article/&quot; },
-            { name = &quot;文档&quot;, route = &quot;/doc/config/document/&quot; },
-            { name = &quot;单页&quot;, route = &quot;/doc/config/page/&quot; },
-            { name = &quot;自定义页面&quot;, route = &quot;/doc/config/customize/&quot; },
-            { name = &quot;国际化支持&quot;, route = &quot;/doc/config/i18n/&quot; },
-            { name = &quot;静态文件&quot;, route = &quot;/doc/config/static/&quot; },
-        ] },
-    ] }
-]
-
-[[document]]
-……
-</code></pre>
-<h4 id="notice">Notice:</h4>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[[document]]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>name = <span style="color:#d14">&#34;doc&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>sidebar = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    { number = <span style="color:#d14">&#34;1.&#34;</span>, name = <span style="color:#d14">&#34;起步&#34;</span>, node = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>        { name = <span style="color:#d14">&#34;概览&#34;</span>, route = <span style="color:#d14">&#34;/doc/overview/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        { name = <span style="color:#d14">&#34;入门&#34;</span>, node = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            { name = <span style="color:#d14">&#34;本机运行&#34;</span>, route = <span style="color:#d14">&#34;/doc/start/local/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>            { name = <span style="color:#d14">&#34;docker运行&#34;</span>, route = <span style="color:#d14">&#34;/doc/start/docker/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        ] },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    ] },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    { number = <span style="color:#d14">&#34;2.&#34;</span>, name = <span style="color:#d14">&#34;配置文件&#34;</span>, node = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        { name = <span style="color:#d14">&#34;新建站点&#34;</span>, route = <span style="color:#d14">&#34;/doc/create/site/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>        { name = <span style="color:#d14">&#34;站点设置&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/&#34;</span>, node = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>            { name = <span style="color:#d14">&#34;代码高亮&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/markdown/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>            { name = <span style="color:#d14">&#34;加载图片&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/image/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>            { name = <span style="color:#d14">&#34;嵌入视频&#34;</span>, route = <span style="color:#d14">&#34;/doc/configsite/video/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>            { name = <span style="color:#d14">&#34;信息流&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/feeds/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>            { name = <span style="color:#d14">&#34;网站地图&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/sitemap/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>            { name = <span style="color:#d14">&#34;robots.txt&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/site/robots/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>        ] },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>        { name = <span style="color:#d14">&#34;内容设置&#34;</span>, node = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>            { name = <span style="color:#d14">&#34;文章&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/article/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>            { name = <span style="color:#d14">&#34;文档&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/document/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>            { name = <span style="color:#d14">&#34;单页&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/page/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>            { name = <span style="color:#d14">&#34;自定义页面&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/customize/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>            { name = <span style="color:#d14">&#34;国际化支持&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/i18n/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>            { name = <span style="color:#d14">&#34;静态文件&#34;</span>, route = <span style="color:#d14">&#34;/doc/config/static/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>        ] },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>    ] }
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>[[document]]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span><span style="color:#a61717;background-color:#e3d2d2">……</span>
+</span></span></code></pre><h4 id="notice">Notice:</h4>
 <ul>
 <li>该项为列表类型，支持配置多个非重名[name]配置项</li>
 </ul>

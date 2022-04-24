@@ -509,12 +509,12 @@
 <ul class="pl-4 text-sm"  :class="getState('资源配置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/source/document/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== '/doc/source/article/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/source/document/"> 文章 </a>
+			<a class="text-cyan-700" href="/doc/source/article/"> 文章 </a>
 		</span>
 		
 	</p>
@@ -612,12 +612,12 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/publish/'?' hover:border-gray-500':'border-cyan-700'">
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
-	<p class="h-8 leading-8">
+	<p class="h-8 leading-8 text-gray-700">
 		
 		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			<a class="text-cyan-700" href="/doc/deploy/publish/"> 发布 </a>
+			 发布
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -632,6 +632,20 @@
 </div>
 
 <ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/server/"> 自建服务器 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/github/'?' hover:border-gray-500':'border-cyan-700'">
@@ -989,24 +1003,36 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<h3 id="serve">serve</h3>
-<p>该指令用于启动预览模式，在项目目录执行</p>
+							<p>该指令用于启动预览模式，在项目目录执行</p>
+<h2 id="heading">执行</h2>
+<hr />
 <pre><code>fungo serve
 </code></pre>
 <p>当返回如下信息时，则为执行成功</p>
-<pre><code>    ____                                
-   / __/  __  __   ____    ____ _  ____ 
+<pre><code>    ____
+   / __/  __  __   ____    ____ _  ____
   / /_   / / / /  / __ \  / __  / / __ \
  / __/  / /_/ /  / / / / / /_/ / / /_/ /
-/_/     \__,_/  /_/ /_/  \__, /  \____/ 
-                        /____/ v1.0.0
+/_/     \__,_/  /_/ /_/  \__, /  \____/
+                        /____/ version
 https://fungo.dev
 simple and fast
 ____________________________O/_______
                             O\
 server run on : http://localhost:3000
 </code></pre>
-<p>如需更改端口，查看<a href="/doc/site/config/">配置站点</a></p>
+<h2 id="heading-1">访问</h2>
+<hr />
+<pre><code>http://localhost:3000
+</code></pre>
+<ul>
+<li>
+<p>如需更改端口，查看<a href="/doc/config/site/">站点配置</a></p>
+</li>
+<li>
+<p>可在预览模式下进行<code>主题开发</code>和<code>内容创作</code>，主题，内容，配置文件的改动会被监控并自动重启服务</p>
+</li>
+</ul>
 
 						</article>
 					</div>
