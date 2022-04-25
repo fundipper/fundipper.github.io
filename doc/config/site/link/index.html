@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>站点设置 - Fungo</title>
+		<title>重置链接 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -1124,7 +1124,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
-						<h1 class="text-3xl">站点设置</h1>
+						<h1 class="text-3xl">重置链接</h1>
 						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1137,50 +1137,62 @@
 							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<p>该项为必选置项，<code>map</code>类型，包含站点名称，主题，端口，域名等信息</p>
+							<p>该项为必选置项，<code>map</code>类型，包含站点嵌入视频信息</p>
 <p>在项目目录 config.toml，可配置该项</p>
 <h2 id="heading">配置</h2>
-<hr />
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[site]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>origin = <span style="color:#d14">&#34;https://fungo.dev&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>port = <span style="color:#d14">&#34;:3000&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>name = <span style="color:#d14">&#34;Fungo&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>slogan = <span style="color:#d14">&#34;simple and fast static site engine&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>theme = <span style="color:#d14">&#34;fungo&#34;</span>
-</span></span></code></pre><h4 id="notice">Notice:</h4>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[site.markdown.link.source]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#d14">&#34;fungo.dev&#34;</span> = <span style="color:#000;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#d14">&#34;www.fundipper.cn&#34;</span> = <span style="color:#000;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>[site.markdown.link.attribute]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>rel = <span style="color:#d14">&#34;nofollow&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>target = <span style="color:#d14">&#34;_blank&#34;</span>
+</span></span></code></pre><h5 id="notice">Notice:</h5>
 <ul>
 <li>
 <p>该项所定义内容，在任意模板页均可使用</p>
 </li>
 <li>
-<p>该项为字典类型，支持配置多个非重名[name]配置项</p>
+<p>该项为数组字典类型，支持配置多个非重名[name]配置项</p>
 </li>
 </ul>
 <h2 id="heading-1">释义</h2>
+<hr />
 <ol>
-<li>
-<p>origin</p>
-<p>设置上线运行使用域名</p>
-</li>
-<li>
-<p>port</p>
-<p>设置预览模式使用端口</p>
-</li>
-<li>
-<p>name</p>
-<p>设置站点标题</p>
-</li>
-<li>
-<p>slogan</p>
-<p>设置站点口号，用于<code>feeds</code></p>
-</li>
-<li>
-<p>theme</p>
-<p>设置当前使用的主题名称</p>
-</li>
+<li>source</li>
 </ol>
+<p>设置重置链接的<code>资源</code></p>
 <ul>
-<li>必须为 theme 目录下存在的主题名称，否则会引发异常</li>
+<li>
+<p>key</p>
+<p>链接 host string 类型</p>
+</li>
+<li>
+<p>value</p>
+<p>重置状态 bool 类型</p>
+</li>
+</ul>
+<ol start="2">
+<li>attribute</li>
+</ol>
+<p>设置重置链接的<code>属性</code></p>
+<h2 id="heading-2">举例</h2>
+<ul>
+<li>
+<p>markdown</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[<span style="color:#000080">website</span>](<span style="color:#008080">http://fungo.dev</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[<span style="color:#000080">source</span>](<span style="color:#008080">http://github.com/fundipper/fungo</span>)
+</span></span></code></pre></li>
+<li>
+<p>html</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>&lt;<span style="color:#000080">p</span>&gt;&lt;<span style="color:#000080">a</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;http://fungo.dev&#34;</span>&gt;website&lt;/<span style="color:#000080">a</span>&gt;&lt;/<span style="color:#000080">p</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>&lt;<span style="color:#000080">p</span>&gt;&lt;<span style="color:#000080">a</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;http://github.com/fundipper/fungo&#34;</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;nofollow&#34;</span> <span style="color:#008080">target</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;_blank&#34;</span>&gt;source&lt;/<span style="color:#000080">a</span>&gt;&lt;/<span style="color:#000080">p</span>&gt;
+</span></span></code></pre></li>
+<li>
+<p>code</p>
+<p><a href="http://fungo.dev">website</a></p>
+<p><a href="http://github.com/fundipper/fungo" rel="nofollow" target="_blank">source</a></p>
+</li>
 </ul>
 
 						</article>
