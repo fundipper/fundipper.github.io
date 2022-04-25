@@ -1141,19 +1141,20 @@
 <p>在主题目录 theme.toml，可配置该项</p>
 <h2 id="heading">配置</h2>
 <hr />
-<pre><code>[theme.link]
-header = { name = &quot;footer&quot;, data = [
-    { name = &quot;doc&quot;, path = &quot;/doc/overview/&quot; },
-    { name = &quot;theme&quot;, path = &quot;/theme/&quot; },
-    { name = &quot;blog&quot;, path = &quot;/post/&quot; },
-] }
-footer = { name = &quot;footer&quot;, data = [
-    { name = &quot;FED&quot;, path = &quot;&quot; },
-    { name = &quot;BED&quot;, path = &quot;&quot; },
-    { name = &quot;Lab&quot;, path = &quot;&quot; },
-] }
-</code></pre>
-<h4 id="notice">Notice:</h4>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[theme.link.header]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>name = <span style="color:#d14">&#34;header&#34;</span>, data = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>  { name = <span style="color:#d14">&#34;doc&#34;</span>, path = <span style="color:#d14">&#34;/doc/overview/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>  { name = <span style="color:#d14">&#34;theme&#34;</span>, path = <span style="color:#d14">&#34;/theme/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>  { name = <span style="color:#d14">&#34;blog&#34;</span>, path = <span style="color:#d14">&#34;/post/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>[theme.link.footer]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>name = <span style="color:#d14">&#34;footer&#34;</span>, data = [
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>  { name = <span style="color:#d14">&#34;doc&#34;</span>, path = <span style="color:#d14">&#34;/doc/overview/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>  { name = <span style="color:#d14">&#34;theme&#34;</span>, path = <span style="color:#d14">&#34;/theme/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>  { name = <span style="color:#d14">&#34;blog&#34;</span>, path = <span style="color:#d14">&#34;/post/&#34;</span> },
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>]
+</span></span></code></pre><h4 id="notice">Notice:</h4>
 <ul>
 <li>
 <p>该项为字典类型，支持配置多个非重名[name]配置项</p>
@@ -1274,6 +1275,16 @@ footer = { name = &quot;footer&quot;, data = [
 			img.setAttribute("src", "/assets/img/loading.gif");
 		},
 	});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BM8SY54VDW"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+
+	gtag("config", "G-BM8SY54VDW");
 </script>
 
 	</body>
