@@ -8,6 +8,11 @@
 		<title>Tags v0.2.1 - Fungo</title>
 		<meta name="description" content="add route -&gt; path, modify watch bugs" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
 	</head>
 
 	<body class="bg-gray-100">
@@ -62,9 +67,9 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+			<div class="w-11/12 max-w-screen-lg mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
 				<h1 class="py-10 text-3xl text-center">Tags v0.2.1</h1>
-				<div class="mx-auto prose"><p>fungo use <code>fsnotify</code> to watch file change,in the last version, we have alreay add some dir, because fsnotify can only watch the first level, so if you have multiple levels of nested directories, fungo may be can't get your file change, you need restart fungo serve manual to watch theme.</p>
+				<div class="max-w-none prose prose-lg prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700"><p>fungo use <code>fsnotify</code> to watch file change,in the last version, we have alreay add some dir, because fsnotify can only watch the first level, so if you have multiple levels of nested directories, fungo may be can't get your file change, you need restart fungo serve manual to watch theme.</p>
 <p>now we add all of the file to <code>fsnotify</code>, whatever you change a markdown file, a templte file, a config file, a i18n file or a static file such as image, css, fungo will watch theme, and reload serve automatic.</p>
 <h2 id="add">ADD</h2>
 <ul>

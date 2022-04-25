@@ -5,8 +5,8 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Tags v0.2.0 - Fungo</title>
-		<meta name="description" content="add goldmark-image &amp; goldmark-videos" />
+		<title>Tags v0.2.5 - Fungo</title>
+		<meta name="description" content="support markdown highlighting linenumber" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
 			.prose pre {
@@ -68,13 +68,17 @@
 		
 		<main>
 			<div class="w-11/12 max-w-screen-lg mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
-				<h1 class="py-10 text-3xl text-center">Tags v0.2.0</h1>
-				<div class="max-w-none prose prose-lg prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700"><p>fungo use <code>goldmark</code> to parse markdown file, the markdown syntax support <code>image</code> but not support <code>video</code>, but in some scene, we need video and image with lazyload, how can we resolve them?</p>
-<p>we found a third party image lib named <code>goldmark-images</code> and a video lib named <code>goldmark-embed</code>, but both of them have some question such as can't set parmers or can's add more model</p>
-<p>so we add some features for them and public the <code>goldmark-images</code> lib and <code>goldmark-videos</code> lib, now we can easily add lazyload image and video in markdown file</p>
+				<h1 class="py-10 text-3xl text-center">Tags v0.2.5</h1>
+				<div class="max-w-none prose prose-lg prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700"><p>in this version, we add a config of markdown highlighting</p>
+<p>you can set it in config.toml</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[site.markdown.highlighting]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>theme = <span style="color:#d14">&#34;github&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>linenumber = <span style="color:#000;font-weight:bold">true</span>
+</span></span></code></pre><p>if set linenumber value true<br />
+the template will render line number on left side.</p>
 <h2 id="add">ADD</h2>
 <ul>
-<li><input checked="" disabled="" type="checkbox" /> add goldmark-image &amp; goldmark-videos</li>
+<li><input checked="" disabled="" type="checkbox" /> support markdown highlighting linenumber</li>
 </ul>
 </div>
 			</div>

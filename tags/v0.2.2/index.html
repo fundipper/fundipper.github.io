@@ -8,6 +8,11 @@
 		<title>Tags v0.2.2 - Fungo</title>
 		<meta name="description" content="add cusitomze catalog template" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
 	</head>
 
 	<body class="bg-gray-100">
@@ -62,9 +67,9 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+			<div class="w-11/12 max-w-screen-lg mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
 				<h1 class="py-10 text-3xl text-center">Tags v0.2.2</h1>
-				<div class="mx-auto prose"><p>fungo have many catalog in <code>article</code> model, someone are automatic generate such as archive, categray, tag and someone are manual generate such as the list of <code>article</code>.</p>
+				<div class="max-w-none prose prose-lg prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700"><p>fungo have many catalog in <code>article</code> model, someone are automatic generate such as archive, categray, tag and someone are manual generate such as the list of <code>article</code>.</p>
 <p>in the last version, we use the same template named <code>catalog.html</code> to render all of the customize list of <code>article</code>, this is a big problem when you have more than one <code>article</code> dir and want to render them with different view.</p>
 <p>now we have resolve it, you can set template paramer when add <code>article</code> model in the <code>config.toml</code>, then you can render the different dir to different view by yourself.</p>
 <h2 id="add">ADD</h2>

@@ -8,6 +8,11 @@
 		<title>Tags v0.1.7 - Fungo</title>
 		<meta name="description" content="add git to alpine" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
 	</head>
 
 	<body class="bg-gray-100">
@@ -62,9 +67,9 @@
 
 		
 		<main>
-			<div class="w-11/12 max-w-screen-md mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
+			<div class="w-11/12 max-w-screen-lg mx-auto my-5 px-5 md:px-10 py-5 bg-white rounded-md">
 				<h1 class="py-10 text-3xl text-center">Tags v0.1.7</h1>
-				<div class="mx-auto prose"><p>in the last version, we use <code>go install</code> in github workflows to install fungo environment, because all of the dependency libraries need network, that cost at least 40 seconds, is there some way to change it?</p>
+				<div class="max-w-none prose prose-lg prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700"><p>in the last version, we use <code>go install</code> in github workflows to install fungo environment, because all of the dependency libraries need network, that cost at least 40 seconds, is there some way to change it?</p>
 <p>of course, it's docker, with it we only need a start container, so we make an docker image named <code>fundipper/fungo</code>, and put it in github workflows, now the cost at most 15 second.</p>
 <h2 id="add">ADD</h2>
 <ul>
