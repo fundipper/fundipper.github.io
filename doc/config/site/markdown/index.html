@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>代码高亮 - Fungo</title>
+		<title>Markdown 配置 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -210,7 +210,21 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/config/site/markdown/"> 代码高亮 </a>
+			<a class="text-cyan-700" href="/doc/config/site/markdown/"> Mardkown配置 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/config/site/highlighting/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/config/site/highlighting/"> 代码高亮 </a>
 		</span>
 		
 	</p>
@@ -1124,7 +1138,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-3 px-10 py-5">
-						<h1 class="text-3xl">代码高亮</h1>
+						<h1 class="text-3xl">Markdown 配置</h1>
 						<p class="py-3 text-gray-500 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1141,9 +1155,18 @@
 <p>在项目目录 config.toml，可配置该项</p>
 <h2 id="heading">配置</h2>
 <hr />
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[site.markdown.highlighting]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>theme = <span style="color:#d14">&#34;github&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>linenumber = <span style="color:#000;font-weight:bold">true</span>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[site.markdown.state]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>emoji = <span style="color:#000;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>gfm = <span style="color:#000;font-weight:bold">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#998;font-style:italic"># table = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#998;font-style:italic"># strikethrough = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#998;font-style:italic"># linkify = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#998;font-style:italic"># taskList = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#998;font-style:italic"># definitionList = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#998;font-style:italic"># footnote = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#998;font-style:italic"># typographer = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#998;font-style:italic"># mathjax = false</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#998;font-style:italic"># mermaid = false</span>
 </span></span></code></pre><h5 id="notice">Notice:</h5>
 <ul>
 <li>该项所定义内容，在任意模板页均可使用</li>
@@ -1153,24 +1176,96 @@
 <hr />
 <ol>
 <li>
-<p>theme</p>
-<p>设置代码高亮<code>主题颜色</code></p>
+<p>Emoji</p>
+<p>设置 Markdown 的<code>Emoji</code>状态</p>
 </li>
 <li>
-<p>linenumber</p>
-<p>设置代码高亮是否<code>显示行号</code></p>
+<p>GFM</p>
+<p>设置 Markdown 的<code>GFM</code>状态</p>
+<ul>
+<li>若 GFM = True， 等价与 Table，Strikethrough，Linkify，TaskList 都为 true</li>
+</ul>
+</li>
+<li>
+<p>Table</p>
+<p>设置 Markdown 的<code>Table</code>状态</p>
+<ul>
+<li>单独配置，需先设置 GFM = fasle</li>
+</ul>
+</li>
+<li>
+<p>Strikethrough</p>
+<p>设置 Markdown 的<code>Strikethrough</code>状态</p>
+<ul>
+<li>单独配置，需先设置 GFM = fasle</li>
+</ul>
+</li>
+<li>
+<p>Linkify</p>
+<p>设置 Markdown 的<code>Linkify</code>状态</p>
+<ul>
+<li>
+<p>单独配置，需先设置 GFM = fasle</p>
+</li>
+<li>
+<p>当 Linkify = True，https://fungo.dev/会自动解析为<a href="https://fungo.dev/">https://fungo.dev/</a>，不利于<code>SEO</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>TaskList</p>
+<p>设置 Markdown 的<code>TaskList</code>状态</p>
+<ul>
+<li>单独配置，需先设置 GFM = fasle</li>
+</ul>
+</li>
+<li>
+<p>DefinitionList</p>
+<p>设置 Markdown 的<code>DefinitionList</code>状态</p>
+</li>
+<li>
+<p>Footnote</p>
+<p>设置 Markdown 的<code>Footnote</code>状态</p>
+</li>
+<li>
+<p>Typographer</p>
+<p>设置 Markdown 的<code>Typographer</code>状态</p>
+</li>
+<li>
+<p>Mathjax</p>
+<p>设置 Markdown 的<code>Mathjax</code>状态</p>
+</li>
+<li>
+<p>Mermaid</p>
+<p>设置 Markdown 的<code>Mermaid</code>状态</p>
 </li>
 </ol>
 <h2 id="heading-2">举例</h2>
 <hr />
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#000;font-weight:bold">package</span> main
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#000;font-weight:bold">import</span> <span style="color:#d14">&#34;fmt&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span><span style="color:#000;font-weight:bold">func</span> <span style="color:#900;font-weight:bold">main</span>() {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>	fmt.<span style="color:#900;font-weight:bold">Println</span>(<span style="color:#d14">&#34;Hello, 世界&#34;</span>)
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>}
-</span></span></code></pre>
+<ol>
+<li>
+<p>ball</p>
+<p>&#x1f3c0;<br />
+&#x26bd;<br />
+&#x26be;<br />
+&#x1f3be;<br />
+&#x1f3b1;<br />
+&#x1f3c9;<br />
+&#x1f3b3;<br />
+&#x26f3;</p>
+</li>
+<li>
+<p>sport</p>
+<p>&#x1f6b5;<br />
+&#x1f6b4;<br />
+&#x1f3c7;<br />
+&#x1f3c2;<br />
+&#x1f3ca;<br />
+&#x1f3c4;<br />
+&#x1f3bf;</p>
+</li>
+</ol>
+
 						</article>
 					</div>
 				</div>
