@@ -141,8 +141,8 @@
 </li>
 </ul>
 <ol start="4">
-<li>if you need add image to markdown file, you can set config.toml like this</li>
-</ol>
+<li>
+<p>if you need add image to markdown file, you can set config.toml like this</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#998;font-style:italic"># image</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[site.markdown.image]
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>state = <span style="color:#000;font-weight:bold">true</span>
@@ -151,35 +151,35 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7</span><span>[site.markdown.image.attribute]
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8</span><span>class = <span style="color:#d14">&#34;lazy&#34;</span>
-</span></span></code></pre><ul>
-<li>
-<p>support set customize attribute</p>
-</li>
-<li>
-<p>support set image lazyload</p>
-</li>
-</ul>
-<ol start="5">
-<li>if you need add video to markdown file, you can set config.toml like this</li>
+</span></span></code></pre></li>
 </ol>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#998;font-style:italic"># video</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>[site.markdown.video]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>state = <span style="color:#000;font-weight:bold">true</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>[site.markdown.video.source]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#d14">&#34;www.youtube.com&#34;</span> = <span style="color:#d14">&#34;/embed&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#d14">&#34;player.bilibili.com&#34;</span> = <span style="color:#d14">&#34;/player.html&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#d14">&#34;v.qq.com&#34;</span> = <span style="color:#d14">&#34;/txp/iframe/player.html&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>[site.markdown.video.attribute]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>width = <span style="color:#d14">&#34;560&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>height = <span style="color:#d14">&#34;315&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>border = <span style="color:#d14">&#34;0&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>scrolling = <span style="color:#d14">&#34;no&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>frameborder = <span style="color:#d14">&#34;no&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>framespacing = <span style="color:#d14">&#34;0&#34;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>allowfullscreen = <span style="color:#d14">&#34;true&#34;</span>
-</span></span></code></pre><ul>
+<pre><code>
+- support set customize attribute
+
+- support set image lazyload
+
+5. if you need add video to markdown file, you can set config.toml like this
+
+   ```toml
+   # video
+   [site.markdown.video]
+   state = true
+
+   [site.markdown.video.source]
+   &quot;www.youtube.com&quot; = &quot;/embed&quot;
+   &quot;player.bilibili.com&quot; = &quot;/player.html&quot;
+   &quot;v.qq.com&quot; = &quot;/txp/iframe/player.html&quot;
+
+   [site.markdown.video.attribute]
+   width = &quot;560&quot;
+   height = &quot;315&quot;
+   border = &quot;0&quot;
+   scrolling = &quot;no&quot;
+   frameborder = &quot;no&quot;
+   framespacing = &quot;0&quot;
+   allowfullscreen = &quot;true&quot;
+</code></pre>
+<ul>
 <li>
 <p>support set customize video platform</p>
 </li>
