@@ -128,44 +128,44 @@
 		<main>
 			
 			
-<div class="w-11/12 max-w-screen-xl mx-auto -mt-10 mb-10 py-10 bg-white rounded-xl md:rounded-3xl shadow">
+<div class="w-11/12 max-w-screen-xl mx-auto bg-white">
 	<ul class="flex flex-row flex-wrap text-center">
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/sample.png" alt="" />
 			</p>
 			<p class="text-2xl text-cyan-900 leading-loose">Simple</p>
 			<p class="text-base text-gray-700">only 5 command, easy to use</p>
 		</li>
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/quick.png" alt="" />
 			</p>
 			<p class="text-2xl text-cyan-900 leading-loose">Fast</p>
 			<p class="text-base text-gray-700">serve & build mode, both start less than 1s</p>
 		</li>
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/i18n.png" alt="" />
 			</p>
 			<p class="text-2xl text-cyan-900 leading-loose">I18N</p>
 			<p class="text-base text-gray-700">add multi-language not need to change any code</p>
 		</li>
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/customize.png" alt="" />
 			</p>
 			<p class="text-2xl text-cyan-900 leading-loose">Customize</p>
 			<p class="text-base text-gray-700">can be blog & document & page and more</p>
 		</li>
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/markdown.png" alt="" />
 			</p>
 			<p class="text-2xl text-cyan-900 leading-loose">Markdown</p>
 			<p class="text-base text-gray-700">syntax highlighting & toc markdown support</p>
 		</li>
-		<li class="w-1/2 md:w-1/3 py-6">
+		<li class="w-full md:w-1/3 py-6">
 			<p>
 				<img class="h-10 mx-auto" src="/assets/img/icon/seo.png" alt="" />
 			</p>
@@ -178,7 +178,7 @@
 
 			
 			<div class="w-11/12 max-w-screen-xl mx-auto py-10" x-data="{ active: 0 }">
-				<div class="w-11/12 mx-auto h-60 flex flex-col justify-center items-center">
+				<div class="w-11/12 mx-auto h-48 flex flex-col justify-center items-center">
 					<p
 						class="bg-clip-text leading-loose text-3xl md:text-5xl text-transparent bg-gradient-to-r from-cyan-800 to-amber-300"
 					>
@@ -198,28 +198,28 @@
 						:class="active === 0?'bg-amber-400 text-white':''"
 						@click="active = 0"
 					>
-						BLOG
+						Blog
 					</li>
 					<li
 						class="w-1/3 rounded-full overflow-hidden cursor-pointer"
 						:class="active === 1?'bg-amber-400 text-white':''"
 						@click="active = 1"
 					>
-						DOCUMENT
+						Document
 					</li>
 					<li
 						class="w-1/3 rounded-full overflow-hidden cursor-pointer"
 						:class="active === 2?'bg-amber-400 text-white':''"
 						@click="active = 2"
 					>
-						PAGE
+						Page
 					</li>
 					<li
 						class="w-1/3 rounded-full overflow-hidden cursor-pointer"
 						:class="active === 3?'bg-amber-400 text-white':''"
 						@click="active = 3"
 					>
-						MORE
+						More
 					</li>
 				</ul>
 				<div class="w-3/4 mx-auto py-10 flex flex-row" x-show="active === 0">
