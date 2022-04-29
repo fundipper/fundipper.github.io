@@ -1766,9 +1766,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(21 94 117 / 0));
 }
 
-.from-gray-600 {
-  --tw-gradient-from: #4b5563;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(75 85 99 / 0));
+.from-cyan-700 {
+  --tw-gradient-from: #0e7490;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(14 116 144 / 0));
 }
 
 .to-amber-300 {
