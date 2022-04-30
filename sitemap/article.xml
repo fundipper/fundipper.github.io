@@ -7,7 +7,19 @@
         <priority>0.7</priority>
     </url>
     <url>
+        <loc>https://fungo.dev/zh/post/why-we-made-fungo/</loc>
+        <lastmod>2022-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
         <loc>https://fungo.dev/theme/fungo/</loc>
+        <lastmod>2022-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/theme/fungo.zh/</loc>
         <lastmod>2022-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>

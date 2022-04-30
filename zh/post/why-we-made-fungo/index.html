@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>为什么要开发fungo - Fungo</title>
+		<meta name="description" content="fungo是一个使用GO语言开发的使用简单、运行快速的开源静态网站生成工具。" />
+		<link rel="stylesheet" href="/assets/css/output.css" />
+		<style>
+			.prose pre {
+				background-color: rgb(243, 244, 246) !important;
+			}
+		</style>
+	</head>
+	<body class="bg-gray-100">
+		
+		
+<header class="bg-cyan-700 text-white">
+	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
+		<div class="w-2/3 my-2 flex flex-row items-center">
+			<a href="/">
+				<img class="h-10" src="/assets/img/logo/fungo.png" alt="" />
+			</a>
+		</div>
+		<div class="w-1/3 md:hidden flex flex-row justify-end items-center menu_button">
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+			</svg>
+		</div>
+		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/doc/overview/">Doc</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/theme/">Theme</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
+				<a href="/post/">Blog</a>
+			</li>
+			
+			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="h-5 w-5"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke="currentColor"
+					stroke-width="2"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
+					/>
+				</svg>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+		
+		<main>
+			<div class="w-11/12 max-w-screen-xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-3 md:gap-5">
+					<div class="col-span-1 md:col-span-2 my-5">
+						<div class="px-10 py-5 bg-white rounded-md overflow-hidden">
+							<h1 class="text-3xl">为什么要开发fungo</h1>
+							<div class="py-5 flex flex-row">
+								<p class="text-gray-400 flex flex-row justify-center md:justify-start items-center">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
+										/>
+									</svg>
+									<span class="mx-2 text-sm"> 2021-10-11</span>
+								</p>
+								<p class="text-gray-400 flex flex-row justify-center md:justify-start items-center">
+									<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14"
+										/>
+									</svg>
+									<span class="mx-2 text-sm">
+										
+										<a class="text-gray-400" href="/zh/category/news/">
+											News
+										</a>
+										
+									</span>
+								</p>
+							</div>
+							<article class="max-w-none prose prose-sm prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
+								<p>当我们想</p>
+<ul>
+<li>
+<p>撰写一篇博客</p>
+</li>
+<li>
+<p>编辑一些文档</p>
+</li>
+<li>
+<p>展示一个产品</p>
+</li>
+<li>
+<p>发布一个海报</p>
+</li>
+<li>
+<p>……</p>
+</li>
+</ul>
+<p>我们希望有一款产品，可以具有以下特性：</p>
+<ol>
+<li>
+<p>开源</p>
+</li>
+<li>
+<p>支持博客，文档，单页和自定义模型</p>
+</li>
+<li>
+<p>支持 Markdown 文档，支持 I18N</p>
+</li>
+<li>
+<p>支持拓展内容和定制主题</p>
+</li>
+<li>
+<p>支持预览和编译</p>
+</li>
+<li>
+<p>容易上手</p>
+</li>
+<li>
+<p>SEO 友好</p>
+</li>
+</ol>
+<hr />
+<p>我们寻找并测试了一些广受好评的作品，包括但不限于</p>
+<ul>
+<li>
+<p>Hugo</p>
+</li>
+<li>
+<p>Zola</p>
+</li>
+<li>
+<p>Hexo</p>
+</li>
+<li>
+<p>Gridea</p>
+</li>
+<li>
+<p>Zine</p>
+</li>
+<li>
+<p>……</p>
+</li>
+</ul>
+<p>结果，无一例外的经历了<code>从入门到放弃</code></p>
+<hr />
+<p><strong>索性</strong></p>
+<p><strong>我们来建造一个理想国吧！</strong></p>
+<p>于是，便有了 Fungo</p>
+<hr />
+<ol>
+<li>
+<p>开箱即用</p>
+<p>5 条指令<code>site，file，theme，serve，build</code></p>
+</li>
+<li>
+<p>一站式服务</p>
+<p>做官网，做博客，做文档，做单页，做海报全都支持</p>
+</li>
+<li>
+<p>上手简单</p>
+<p>内容使用<code>markdown</code>呈现，支持 TOC，Meta，Mathjax，Mermaid，图片懒加载，视频嵌入，链接重置</p>
+<p>模板使用<code>go template</code>方案，几乎不含自创语法</p>
+<p>样式使用主流<code>tailwindcss</code>方案，无需重复学习</p>
+</li>
+</ol>
+
+							</article>
+						</div>
+					</div>
+					<aside class="col-span-1">
+						<div class="md:my-5 py-5 bg-white rounded-md">
+							
+							<div class="flex flex-row">
+								<p class="w-1/3">
+									<img
+										class="w-20 h-20 mx-auto rounded-full lazy"
+										src="/assets/img/loading.gif"
+										data-src="https://avatars.githubusercontent.com/u/9425368?s=400&amp;u=a8083b0ebf6ac9f66be2f2c504044b72bbf807bd&amp;v=4"
+										alt=""
+									/>
+								</p>
+								<p class="w-2/3 flex flex-col">
+									<span class="h-10 leading-10 text-lg">andy.jiang</span>
+									<span class="h-10 leading-10 text-gray-400 text-sm"> Full Stack Developer </span>
+								</p>
+							</div>
+							<p class="w-11/12 mx-auto my-5 text-gray-700">10 years programming experience, familiar with golang, javascript, vue, tailwindcss. The latest is a static site engine named fungo.</p>
+							<a href="mailto:150haomengting@163.com">
+								<p
+									class="w-2/3 mx-auto h-10 leading-10 border hover:bg-gray-100 rounded flex felx-row justify-center items-center"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-5 w-5"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+										stroke-width="2"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+										/>
+									</svg>
+									<span class="px-5 text-sm">Contact Me</span>
+								</p>
+							</a>
+						</div>
+						<div class="sticky top-5">
+							
+							<div class="px-5 my-5 py-5 bg-white rounded-md">
+								<p class="h-10 leading-10 flex flex-row items-center">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="h-5 w-5 text-gray-400"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"
+										/>
+									</svg>
+									<span class="px-3 text-lg">TAG</span>
+								</p>
+								
+								<ul class="flex flex-row flex-wrap">
+									
+									<li class="w-1/2 h-10 leading-10 text-sm inline-flex items-center">
+										<span class="w-1/4">
+											<p class="w-6 h-6 leading-6 rounded-full bg-gray-100 text-sm text-center">1</p>
+										</span>
+										<p class="w-3/4 inline-flex">
+											
+											<a href="/zh/tag/fungo/">fungo </a>
+											
+										</p>
+									</li>
+									
+									<li class="w-1/2 h-10 leading-10 text-sm inline-flex items-center">
+										<span class="w-1/4">
+											<p class="w-6 h-6 leading-6 rounded-full bg-gray-100 text-sm text-center">2</p>
+										</span>
+										<p class="w-3/4 inline-flex">
+											
+											<a href="/zh/tag/why/">why </a>
+											
+										</p>
+									</li>
+									
+									<li class="w-1/2 h-10 leading-10 text-sm inline-flex items-center">
+										<span class="w-1/4">
+											<p class="w-6 h-6 leading-6 rounded-full bg-gray-100 text-sm text-center">3</p>
+										</span>
+										<p class="w-3/4 inline-flex">
+											
+											<a href="/zh/tag/reason/">reason </a>
+											
+										</p>
+									</li>
+									
+								</ul>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+		</main>
+
+		
+		
+<footer class="bg-cyan-700 text-white border-t border-cyan-800">
+	<div class="w-11/12 max-w-screen-xl mx-auto flex flex-row justify-between text-sm font-extralight">
+		
+		<p class="h-10 leading-10">Made with<em class="mx-3 text-base text-red-500">♥</em> by Fundipper</p>
+		
+		<p class="h-10 leading-10">copyright © 2021 - 2022 fungo.dev</p>
+	</div>
+</footer>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.9.5/dist/cdn.min.js"></script>
+<script>
+	const btn = document.querySelector(".menu_button");
+	const bar = document.querySelector(".menu_bar");
+
+	btn.addEventListener("click", () => {
+		bar.classList.toggle("hidden");
+	});
+
+	window.sidebar = () => {
+		return {
+			path: window.location.pathname,
+			state: {},
+			getState: function (path) {
+				return this.state[path] ? true : false;
+			},
+			setState: function (path) {
+				this.state[path] = !this.getState(path);
+			},
+		};
+	};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.7.0/dist/lazyload.min.js"></script>
+<script>
+	new LazyLoad({
+		callback_error: (img) => {
+			img.setAttribute("src", "/assets/img/loading.gif");
+		},
+	});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BM8SY54VDW"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag("js", new Date());
+
+	gtag("config", "G-BM8SY54VDW");
+</script>
+
+	</body>
+</html>
