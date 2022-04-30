@@ -19,19 +19,7 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tags/v0.1.8/</loc>
-        <lastmod>2022-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tags/v0.2.1/</loc>
-        <lastmod>2022-04-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://fungo.dev/tags/v0.2.7/</loc>
+        <loc>https://fungo.dev/tags/v0.1.5/</loc>
         <lastmod>2022-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -49,13 +37,13 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tags/v0.2.2/</loc>
+        <loc>https://fungo.dev/tags/v0.2.7/</loc>
         <lastmod>2022-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tags/v0.2.9/</loc>
+        <loc>https://fungo.dev/tags/v0.1.8/</loc>
         <lastmod>2022-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
@@ -67,7 +55,19 @@
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/tags/v0.1.5/</loc>
+        <loc>https://fungo.dev/tags/v0.2.1/</loc>
+        <lastmod>2022-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tags/v0.2.2/</loc>
+        <lastmod>2022-04-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/tags/v0.2.9/</loc>
         <lastmod>2022-04-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
