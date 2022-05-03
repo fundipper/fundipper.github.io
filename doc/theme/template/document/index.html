@@ -1084,7 +1084,118 @@
 							<span class="mx-2 text-sm"> 2021-05-04</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<h2 id="heading">举例</h2>
+							<h2 id="heading">数据</h2>
+<hr />
+<ol>
+<li>
+<p>站点设置</p>
+<ul>
+<li>站点信息，map 类型</li>
+</ul>
+<pre><code>{{.Site}}
+</code></pre>
+<ul>
+<li>站点名称，string 类型</li>
+</ul>
+<pre><code>{{.Site.Name}}
+</code></pre>
+<ul>
+<li>站点域名，string 类型</li>
+</ul>
+<pre><code>{{.Site.Origin}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>主题设置</p>
+<ul>
+<li>主题信息，map 类型</li>
+</ul>
+<pre><code>{{.Theme}}
+</code></pre>
+<ul>
+<li>版权信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.copyright}}
+</code></pre>
+<ul>
+<li>统计信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.analysis}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>内容信息</p>
+<ul>
+<li>文章信息，map 类型</li>
+</ul>
+<pre><code>{{.Message}}
+</code></pre>
+<ul>
+<li>内容信息，string 类型</li>
+</ul>
+<pre><code>{{.Message.Content}}
+</code></pre>
+<ul>
+<li>Meta 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.Meta}}
+
+&lt;!-- 描述 --&gt;
+{{.Message.Meta.description}}
+
+&lt;!-- 日期 --&gt;
+{{.Message.Meta.date}}
+
+</code></pre>
+<ul>
+<li>TOC 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.TOC}}
+</code></pre>
+<ul>
+<li>Lang 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.Lang}}
+
+</code></pre>
+</li>
+<li>
+<p>路径信息</p>
+<pre><code>{{.Path}}
+</code></pre>
+</li>
+<li>
+<p>侧边栏信息</p>
+<ul>
+<li>侧边栏信息，array 类型</li>
+</ul>
+<pre><code>{{.Sidebar}}
+</code></pre>
+<ul>
+<li>编号信息，string 类型</li>
+</ul>
+<pre><code>{{.Number}}
+</code></pre>
+<ul>
+<li>名称信息，string 类型</li>
+</ul>
+<pre><code>{{.Name}}
+</code></pre>
+<ul>
+<li>路由信息，string 类型</li>
+</ul>
+<pre><code>{{.Route}}
+</code></pre>
+<ul>
+<li>节点信息，array 类型</li>
+</ul>
+<pre><code>{{.Node}}
+</code></pre>
+</li>
+</ol>
+<h2 id="heading-1">举例</h2>
 <hr />
 <ul>
 <li>设置 TDK</li>
@@ -1279,118 +1390,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>	};
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>&lt;/<span style="color:#000080">script</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>{{end}}
-</span></span></code></pre><h2 id="heading-1">数据</h2>
-<hr />
-<ol>
-<li>
-<p>站点设置</p>
-<ul>
-<li>站点信息，map 类型</li>
-</ul>
-<pre><code>{{.Site}}
-</code></pre>
-<ul>
-<li>站点名称，string 类型</li>
-</ul>
-<pre><code>{{.Site.Name}}
-</code></pre>
-<ul>
-<li>站点域名，string 类型</li>
-</ul>
-<pre><code>{{.Site.Origin}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>主题设置</p>
-<ul>
-<li>主题信息，map 类型</li>
-</ul>
-<pre><code>{{.Theme}}
-</code></pre>
-<ul>
-<li>版权信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.copyright}}
-</code></pre>
-<ul>
-<li>统计信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.analysis}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>内容信息</p>
-<ul>
-<li>文章信息，map 类型</li>
-</ul>
-<pre><code>{{.Message}}
-</code></pre>
-<ul>
-<li>内容信息，string 类型</li>
-</ul>
-<pre><code>{{.Message.Content}}
-</code></pre>
-<ul>
-<li>Meta 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.Meta}}
-
-&lt;!-- 描述 --&gt;
-{{.Message.Meta.description}}
-
-&lt;!-- 日期 --&gt;
-{{.Message.Meta.date}}
-
-</code></pre>
-<ul>
-<li>TOC 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.TOC}}
-</code></pre>
-<ul>
-<li>Lang 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.Lang}}
-
-</code></pre>
-</li>
-<li>
-<p>路径信息</p>
-<pre><code>{{.Path}}
-</code></pre>
-</li>
-<li>
-<p>侧边栏信息</p>
-<ul>
-<li>侧边栏信息，array 类型</li>
-</ul>
-<pre><code>{{.Sidebar}}
-</code></pre>
-<ul>
-<li>编号信息，string 类型</li>
-</ul>
-<pre><code>{{.Number}}
-</code></pre>
-<ul>
-<li>名称信息，string 类型</li>
-</ul>
-<pre><code>{{.Name}}
-</code></pre>
-<ul>
-<li>路由信息，string 类型</li>
-</ul>
-<pre><code>{{.Route}}
-</code></pre>
-<ul>
-<li>节点信息，array 类型</li>
-</ul>
-<pre><code>{{.Node}}
-</code></pre>
-</li>
-</ol>
-
+</span></span></code></pre>
 						</article>
 					</div>
 				</div>

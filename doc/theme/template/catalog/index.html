@@ -1084,7 +1084,122 @@
 							<span class="mx-2 text-sm"> 2021-05-03</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<h2 id="heading">举例</h2>
+							<h2 id="heading">数据</h2>
+<hr />
+<ol>
+<li>
+<p>站点设置</p>
+<ul>
+<li>站点信息，map 类型</li>
+</ul>
+<pre><code>{{.Site}}
+</code></pre>
+<ul>
+<li>站点名称，string 类型</li>
+</ul>
+<pre><code>{{.Site.Name}}
+</code></pre>
+<ul>
+<li>站点域名，string 类型</li>
+</ul>
+<pre><code>{{.Site.Origin}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>主题设置</p>
+<ul>
+<li>主题信息，map 类型</li>
+</ul>
+<pre><code>{{.Theme}}
+</code></pre>
+<ul>
+<li>版权信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.copyright}}
+</code></pre>
+<ul>
+<li>统计信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.analysis}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>列表信息</p>
+<ul>
+<li>归档列表，array 类型</li>
+</ul>
+<pre><code>{{range .Catalog}}
+
+	&lt;!-- 路径 --&gt;
+	{{.Name}}
+
+	&lt;!-- 描述 --&gt;
+	{{.Meta.description}}
+	&lt;!-- 日期 --&gt;
+	{{.Meta.date}}
+	……
+{{end}}
+</code></pre>
+<ul>
+<li>分页信息，map 类型</li>
+</ul>
+<pre><code>{{.Page}}
+</code></pre>
+<ul>
+<li>页码，int 类型</li>
+</ul>
+<pre><code>{{.Page.Index}}
+</code></pre>
+<ul>
+<li>数量，int 类型</li>
+</ul>
+<pre><code>{{.Page.Size}}
+</code></pre>
+<ul>
+<li>总数，int 类型</li>
+</ul>
+<pre><code>{{.Page.Total}}
+</code></pre>
+<ul>
+<li>上一页，int 类型</li>
+</ul>
+<pre><code>{{.Page.Pre}}
+</code></pre>
+<ul>
+<li>下一页，int 类型</li>
+</ul>
+<pre><code>{{.Page.Next}}
+</code></pre>
+<ul>
+<li>数据，array 类型</li>
+</ul>
+<pre><code>{{range .Page.Data}}
+
+  &lt;!-- 序号 --&gt;
+  {{.}}
+
+{{end}}
+</code></pre>
+<ul>
+<li>路径， string 类型</li>
+</ul>
+<pre><code>{{.Page.Path}}
+</code></pre>
+</li>
+<li>
+<p>路径信息</p>
+<pre><code>{{.Path}}
+</code></pre>
+</li>
+<li>
+<p>语言信息</p>
+<pre><code>{{.Lang}}
+</code></pre>
+</li>
+</ol>
+<h2 id="heading-1">举例</h2>
 <hr />
 <ul>
 <li>设置 TDK</li>
@@ -1201,122 +1316,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">50</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">51</span><span>&lt;/<span style="color:#000080">html</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">52</span><span>{{end}}
-</span></span></code></pre><h2 id="heading-1">数据</h2>
-<hr />
-<ol>
-<li>
-<p>站点设置</p>
-<ul>
-<li>站点信息，map 类型</li>
-</ul>
-<pre><code>{{.Site}}
-</code></pre>
-<ul>
-<li>站点名称，string 类型</li>
-</ul>
-<pre><code>{{.Site.Name}}
-</code></pre>
-<ul>
-<li>站点域名，string 类型</li>
-</ul>
-<pre><code>{{.Site.Origin}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>主题设置</p>
-<ul>
-<li>主题信息，map 类型</li>
-</ul>
-<pre><code>{{.Theme}}
-</code></pre>
-<ul>
-<li>版权信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.copyright}}
-</code></pre>
-<ul>
-<li>统计信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.analysis}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>列表信息</p>
-<ul>
-<li>归档列表，array 类型</li>
-</ul>
-<pre><code>{{range .Catalog}}
-
-	&lt;!-- 路径 --&gt;
-	{{.Name}}
-
-	&lt;!-- 描述 --&gt;
-	{{.Meta.description}}
-	&lt;!-- 日期 --&gt;
-	{{.Meta.date}}
-	……
-{{end}}
-</code></pre>
-<ul>
-<li>分页信息，map 类型</li>
-</ul>
-<pre><code>{{.Page}}
-</code></pre>
-<ul>
-<li>页码，int 类型</li>
-</ul>
-<pre><code>{{.Page.Index}}
-</code></pre>
-<ul>
-<li>数量，int 类型</li>
-</ul>
-<pre><code>{{.Page.Size}}
-</code></pre>
-<ul>
-<li>总数，int 类型</li>
-</ul>
-<pre><code>{{.Page.Total}}
-</code></pre>
-<ul>
-<li>上一页，int 类型</li>
-</ul>
-<pre><code>{{.Page.Pre}}
-</code></pre>
-<ul>
-<li>下一页，int 类型</li>
-</ul>
-<pre><code>{{.Page.Next}}
-</code></pre>
-<ul>
-<li>数据，array 类型</li>
-</ul>
-<pre><code>{{range .Page.Data}}
-
-  &lt;!-- 序号 --&gt;
-  {{.}}
-
-{{end}}
-</code></pre>
-<ul>
-<li>路径， string 类型</li>
-</ul>
-<pre><code>{{.Page.Path}}
-</code></pre>
-</li>
-<li>
-<p>路径信息</p>
-<pre><code>{{.Path}}
-</code></pre>
-</li>
-<li>
-<p>语言信息</p>
-<pre><code>{{.Lang}}
-</code></pre>
-</li>
-</ol>
-
+</span></span></code></pre>
 						</article>
 					</div>
 				</div>
