@@ -873,71 +873,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 语法 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8 text-gray-700">
-		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('列表')">
-			 列表
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-				<path
-					fill-rule="evenodd"
-					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</span>
-		
-	</p>
-	
-</div>
-
-<ul class="pl-4 text-sm"  :class="getState('列表') ? '':'hidden'" >
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/archive/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/archive/"> 归档 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/category/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/category/"> 分类 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/tag/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/tag/"> 标签 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 模板语法 </a>
 		</span>
 		
 	</p>
@@ -951,7 +887,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录模板 </a>
 		</span>
 		
 	</p>
@@ -959,16 +895,13 @@
 </div>
  </li>
 	
-</ul>
- </li>
-	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('详情')">
-			 详情
+		<span class="w-full inline-flex justify-between items-center" @click="setState('详情模板')">
+			 详情模板
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -982,7 +915,7 @@
 	
 </div>
 
-<ul class="pl-4 text-sm"  :class="getState('详情') ? '':'hidden'" >
+<ul class="pl-4 text-sm"  :class="getState('详情模板') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/article/'?' hover:border-gray-500':'border-cyan-700'">
@@ -1026,35 +959,21 @@
 </div>
  </li>
 	
+</ul>
+ </li>
+	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/customize/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面模板 </a>
 		</span>
 		
 	</p>
 	
 </div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/i18n/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/i18n/"> 国际化支持 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-</ul>
  </li>
 	
 </ul>
@@ -1168,6 +1087,65 @@
 							<blockquote>
 <p>使用<code>template/page.html</code>渲染数据，可自行定义展示样式</p>
 </blockquote>
+<h2 id="fungo-">fungo 语法</h2>
+<hr />
+<ul>
+<li>
+<p>转大写</p>
+<pre><code>  {{toUpper &quot;aaa&quot;}}
+</code></pre>
+</li>
+<li>
+<p>转小写</p>
+<pre><code>  {{toLower &quot;AAA&quot;}}
+</code></pre>
+</li>
+<li>
+<p>转 JSON</p>
+<pre><code>  {{toJSON .Catalog}}
+</code></pre>
+</li>
+<li>
+<p>加法</p>
+<pre><code>  {{add 1 2 }}
+</code></pre>
+</li>
+<li>
+<p>减法</p>
+<pre><code>  {{subtract 3 2}}
+</code></pre>
+</li>
+<li>
+<p>乘法</p>
+<pre><code>  {{multiply 2 2}}
+</code></pre>
+</li>
+<li>
+<p>除法</p>
+<pre><code>  {{remainder 4 2}}
+</code></pre>
+</li>
+<li>
+<p>显示 html 内容</p>
+<pre><code>  {{safe .Message.Content}}
+</code></pre>
+</li>
+<li>
+<p>国际化支持</p>
+<pre><code>  {{i18n &quot;zh&quot; &quot;button.start&quot;}}
+</code></pre>
+</li>
+<li>
+<p>获取页面 Slug</p>
+<pre><code>  {{slug .Path}}
+</code></pre>
+</li>
+<li>
+<p>获取页面 Path</p>
+<pre><code>  {{slug .Path}}
+</code></pre>
+</li>
+</ul>
 <h2 id="golang-">golang 语法</h2>
 <hr />
 <ul>
@@ -1251,60 +1229,6 @@
 </code></pre>
 </li>
 </ul>
-</li>
-</ul>
-<h2 id="fungo-">fungo 语法</h2>
-<hr />
-<ul>
-<li>
-<p>小写转大写</p>
-<pre><code>  {{toUpper &quot;aaa&quot;}}
-</code></pre>
-</li>
-<li>
-<p>大写转小写</p>
-<pre><code>  {{toLower &quot;AAA&quot;}}
-</code></pre>
-</li>
-<li>
-<p>object 转 json</p>
-<pre><code>  {{toJSON .Catalog}}
-</code></pre>
-</li>
-<li>
-<p>加法</p>
-<pre><code>  {{add 1 2 }}
-</code></pre>
-</li>
-<li>
-<p>减法</p>
-<pre><code>  {{subtract 3 2}}
-</code></pre>
-</li>
-<li>
-<p>乘法</p>
-<pre><code>  {{multiply 2 2}}
-</code></pre>
-</li>
-<li>
-<p>除法</p>
-<pre><code>  {{remainder 4 2}}
-</code></pre>
-</li>
-<li>
-<p>显示 html 内容</p>
-<pre><code>  {{safe .Message.Content}}
-</code></pre>
-</li>
-<li>
-<p>获取页面 Path</p>
-<pre><code>  {{slug .Path}}
-</code></pre>
-</li>
-<li>
-<p>国际化支持</p>
-<pre><code>  {{i18n &quot;zh&quot; &quot;btn_start&quot;}}
-</code></pre>
 </li>
 </ul>
 <p>更多用法，查看<a href="https://pkg.go.dev/html/template" target="_blank" rel="nofollow">html/template</a>文档</p>

@@ -873,71 +873,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 语法 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8 text-gray-700">
-		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('列表')">
-			 列表
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-				<path
-					fill-rule="evenodd"
-					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</span>
-		
-	</p>
-	
-</div>
-
-<ul class="pl-4 text-sm"  :class="getState('列表') ? '':'hidden'" >
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/archive/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/archive/"> 归档 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/category/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/category/"> 分类 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/tag/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/tag/"> 标签 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 模板语法 </a>
 		</span>
 		
 	</p>
@@ -951,7 +887,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录模板 </a>
 		</span>
 		
 	</p>
@@ -959,16 +895,13 @@
 </div>
  </li>
 	
-</ul>
- </li>
-	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('详情')">
-			 详情
+		<span class="w-full inline-flex justify-between items-center" @click="setState('详情模板')">
+			 详情模板
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -982,7 +915,7 @@
 	
 </div>
 
-<ul class="pl-4 text-sm"  :class="getState('详情') ? '':'hidden'" >
+<ul class="pl-4 text-sm"  :class="getState('详情模板') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/article/'?' hover:border-gray-500':'border-cyan-700'">
@@ -1026,35 +959,21 @@
 </div>
  </li>
 	
+</ul>
+ </li>
+	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/customize/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面模板 </a>
 		</span>
 		
 	</p>
 	
 </div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/i18n/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/i18n/"> 国际化支持 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-</ul>
  </li>
 	
 </ul>
@@ -1166,77 +1085,127 @@
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<blockquote>
-<p>支持把<code>{your-theme-name}/i18n/*.toml</code>文件，转化为<code>数据源</code>适配站点页面</p>
+<p>lang 需为<code>国际化</code>配置的语言列表的语言</p>
 </blockquote>
-<h2 id="heading">配置</h2>
-<hr />
-<ul>
-<li>
-<p>en.toml</p>
-<pre><code>  btn_start = &quot;GET STARTED&quot;
-</code></pre>
-</li>
-<li>
-<p>zh-CN.toml</p>
-<pre><code>  btn_start = &quot;起步&quot;
-</code></pre>
-</li>
-</ul>
-<h2 id="heading-1">使用</h2>
+<h2 id="heading">使用</h2>
 <hr />
 <ol>
-<li>
-<p>模板</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{define you-template-name}}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	&lt;<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">title</span>&gt;Document&lt;/<span style="color:#000080">title</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	&lt;<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>		{{template &#34;header&#34; .}}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>		&lt;<span style="color:#000080">main</span>&gt;{{i18n you-lang-name &#34;btn_start&#34;}}&lt;/<span style="color:#000080">main</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>		{{template &#34;footer&#34; .}}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>&lt;/<span style="color:#000080">html</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>{{end}}```
-</span></span></code></pre></li>
+<li>默认语言，en</li>
 </ol>
 <ul>
-<li>在模板中调用<code>i18n</code>方法，可实现语言自动适配</li>
+<li>路径</li>
+</ul>
+<p>/post/why-we-made-fungo.md</p>
+<ul>
+<li>Meta</li>
+</ul>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#000080">title</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;why we made fungo&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#bbb"></span><span style="color:#000080">keywords</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb"></span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;fungo is a simple and fast open-source static site generators base on golang.&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#000080">lang</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#000080">slug</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;why-we-made-fungo&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb"></span><span style="color:#000080">category</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;News&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb"></span><span style="color:#000080">author</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;andy&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb"></span><span style="color:#000080">thumb</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb"></span><span style="color:#000080">date</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;2021-10-11&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb"></span><span style="color:#000080">tag</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">  </span>- fungo<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb">  </span>- why<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb">  </span>- reason<span style="color:#bbb">
+</span></span></span></code></pre><ol start="2">
+<li>增加语言，zh</li>
+</ol>
+<ul>
+<li>路径</li>
+</ul>
+<p>/post/why-we-made-fungo.zh.md</p>
+<ul>
+<li>Meta</li>
+</ul>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#000080">title</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;为什么我们制作了Fungo&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#bbb"></span><span style="color:#000080">keywords</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span><span style="color:#bbb"></span><span style="color:#000080">description</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;Fungo是一个简单快速的静态站点引擎&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span><span style="color:#bbb"></span><span style="color:#000080">lang</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;zh&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span><span style="color:#bbb"></span><span style="color:#000080">slug</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;why-we-made-fungo&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span><span style="color:#bbb"></span><span style="color:#000080">category</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;News&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span><span style="color:#bbb"></span><span style="color:#000080">author</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;andy&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span><span style="color:#bbb"></span><span style="color:#000080">thumb</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span><span style="color:#bbb"></span><span style="color:#000080">date</span>:<span style="color:#bbb"> </span><span style="color:#d14">&#34;2021-10-11&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span><span style="color:#bbb"></span><span style="color:#000080">tag</span>:<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span><span style="color:#bbb">  </span>- fungo<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span><span style="color:#bbb">  </span>- why<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span><span style="color:#bbb">  </span>- reason<span style="color:#bbb">
+</span></span></span></code></pre><h2 id="heading-1">释义</h2>
+<ol>
+<li>lang</li>
+</ol>
+<p>设置当前文件的使用语言</p>
+<ul>
+<li>
+<p>当lang = &quot;&quot;</p>
+</li>
+<li>
+<p>语言为<code>默认</code></p>
+</li>
+<li>
+<p>访问地址为：<code>/post/why-we-made-fungo/</code></p>
+</li>
+<li>
+<p>当lang = &quot;zh&quot;，</p>
+</li>
+<li>
+<p>语言为<code>zh</code></p>
+</li>
+<li>
+<p>访问地址为: <code>/zh/post/why-we-made-fungo/</code></p>
+</li>
 </ul>
 <ol start="2">
-<li>
-<p>访问</p>
-<ul>
-<li>
-<p>en</p>
-<p>显示为 <code>GET STARTED</code></p>
-</li>
-<li>
-<p>zh</p>
-<p>显示为 <code>起步</code></p>
-</li>
-</ul>
-</li>
+<li>slug</li>
 </ol>
-<h2 id="heading-2">更多</h2>
+<p>设置当前文件的访问地址</p>
 <ul>
 <li>
-<p><code>i18n</code>名称不可重复</p>
+<p>slug = &quot;&quot;</p>
 </li>
 <li>
-<p>可通过<a href="/doc/config/i18n/">国际化支持</a>，配置国际化支持访问地址</p>
+<p>slug默认为<code>文件名</code></p>
 </li>
 <li>
-<p>可使用<a href="/doc/faq/how-to-set-action/">action</a>，配置国际化支持调用动态数据</p>
+<p>访问地址为：<code>/post/why-we-made-fungo/</code></p>
+</li>
+<li>
+<p>slug = &quot;/why/&quot;，</p>
+</li>
+<li>
+<p>slug默认为<code>slug值</code></p>
+</li>
+<li>
+<p>访问地址为: <code>/post/why/</code></p>
 </li>
 </ul>
+<h2 id="heading-2">建议</h2>
+<hr />
+<p>因文件名不可重复，若需同时支持多语言时，建议文件命名如下</p>
+<ul>
+<li>
+<p>默认语言</p>
+<p>/doc/your-document-name.md</p>
+</li>
+<li>
+<p>英文版本</p>
+<p>/doc/your-document-name.en.md</p>
+</li>
+<li>
+<p>中文版本</p>
+<p>/doc/your-document-name.zh.md</p>
+</li>
+<li>
+<p>……</p>
+</li>
+</ul>
+<pre><code>
+</code></pre>
 
 						</article>
 					</div>

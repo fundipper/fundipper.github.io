@@ -873,71 +873,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 语法 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8 text-gray-700">
-		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('列表')">
-			 列表
-			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-				<path
-					fill-rule="evenodd"
-					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-					clip-rule="evenodd"
-				/>
-			</svg>
-		</span>
-		
-	</p>
-	
-</div>
-
-<ul class="pl-4 text-sm"  :class="getState('列表') ? '':'hidden'" >
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/archive/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/archive/"> 归档 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/category/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/category/"> 分类 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/tag/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/tag/"> 标签 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/syntax/"> 模板语法 </a>
 		</span>
 		
 	</p>
@@ -951,7 +887,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录模板 </a>
 		</span>
 		
 	</p>
@@ -959,16 +895,13 @@
 </div>
  </li>
 	
-</ul>
- </li>
-	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('详情')">
-			 详情
+		<span class="w-full inline-flex justify-between items-center" @click="setState('详情模板')">
+			 详情模板
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -982,7 +915,7 @@
 	
 </div>
 
-<ul class="pl-4 text-sm"  :class="getState('详情') ? '':'hidden'" >
+<ul class="pl-4 text-sm"  :class="getState('详情模板') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/article/'?' hover:border-gray-500':'border-cyan-700'">
@@ -1026,35 +959,21 @@
 </div>
  </li>
 	
+</ul>
+ </li>
+	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/customize/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面模板 </a>
 		</span>
 		
 	</p>
 	
 </div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/i18n/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/i18n/"> 国际化支持 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-</ul>
  </li>
 	
 </ul>
@@ -1168,43 +1087,31 @@
 							<blockquote>
 <p>lang 需为<code>国际化</code>配置的语言列表的语言</p>
 </blockquote>
-<h2 id="heading">使用</h2>
-<hr />
-<p>文件路径</p>
-<pre><code>doc/your-document-name.md
-</code></pre>
-<ol>
-<li>
-<p>lang = &quot;&quot;</p>
-<p>访问地址为:</p>
-<pre><code>/doc/your-document-name/
-</code></pre>
-</li>
-<li>
-<p>lang = &quot;zh&quot;</p>
-<p>访问地址为:</p>
-<pre><code>/zh/doc/your-document-name/
-</code></pre>
-</li>
-</ol>
-<h2 id="heading-1">建议</h2>
-<hr />
-<p>因文件名不可重复，若需同时支持多语言时，建议文件命名如下</p>
+<h2 id="heading">说明</h2>
 <ul>
 <li>
-<p>默认语言</p>
-<p>/doc/your-document-name.md</p>
+<p>支持在模板中自动适配国际化</p>
 </li>
 <li>
-<p>英文版本</p>
-<p>/doc/your-document-name.en.md</p>
+<p>支持在内容中手动设置多语言</p>
+</li>
+</ul>
+<h2 id="heading-1">模板中</h2>
+<ul>
+<li>
+<p>使用 i18n 函数，自动获取访问地址语言对应的文字</p>
 </li>
 <li>
-<p>中文版本</p>
-<p>/doc/your-document-name.zh.md</p>
+<p>更多信息，请参考模板<a href="/doc/config/i18n/">国际化支持</a></p>
+</li>
+</ul>
+<h2 id="heading-2">内容中</h2>
+<ul>
+<li>
+<p>手动设置 meta 的 lang 为语言名称</p>
 </li>
 <li>
-<p>……</p>
+<p>更多信息，请参考内容<a href="/doc/create/i18n/">国际化支持</a></p>
 </li>
 </ul>
 
