@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>概览 - Fungo</title>
+		<title>配色设置 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -1152,7 +1152,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-1 md:col-span-3 px-10 py-5 overflow-hidden">
-						<h1 class="text-3xl">概览</h1>
+						<h1 class="text-3xl">配色设置</h1>
 						<p class="py-3 text-gray-400 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1162,210 +1162,63 @@
 									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 								/>
 							</svg>
-							<span class="mx-2 text-sm"> 2022-03-27</span>
+							<span class="mx-2 text-sm"> 2021-01-01</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<pre><code>     ____
-    / __/  __  __   ____    ____ _  ____
-   / /_   / / / /  / __ \  / __  / / __ \
-  / __/  / /_/ /  / / / / / /_/ / / /_/ /
- /_/     \__,_/  /_/ /_/  \__, /  \____/
-                        /____/ v0.2.9
-</code></pre>
-<p><a href="https://fungo.dev">fungo</a> is a simple and fast open-source static site generators base on golang.</p>
-<h2 id="heading">亮点</h2>
+							<p>该项为可选置项，<code>map</code>类型，可将模板的<code>color</code>（background, font）信息提取至配置文件</p>
+<p>在主题目录 theme.toml，可配置该项</p>
+<h2 id="heading">配置</h2>
+<hr />
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[theme.color]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>background = <span style="color:#d14">&#34;bg-cyan-800&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>font = <span style="color:#d14">&#34;text-white&#34;</span>
+</span></span></code></pre><h4 id="notice">Notice:</h4>
+<ul>
+<li>
+<p>该项为字典类型，支持配置多个非重名[name]配置项</p>
+</li>
+<li>
+<p>该项所定义内容，在任意模板页均可使用</p>
+</li>
+<li>
+<p>该内容仅为<code>使用方法</code>举例，用户可基于<code>toml</code>语法，进行自定义配置</p>
+</li>
+</ul>
+<h2 id="heading-1">释义</h2>
 <hr />
 <ol>
 <li>
-<p>Simple</p>
-<p>only 5 command, easy to use</p>
+<p>background</p>
+<p>设置站点<code>background（背景颜色）</code>信息</p>
 </li>
 <li>
-<p>Fast</p>
-<p>serve &amp; build mode, both start less than 1s</p>
-</li>
-<li>
-<p>I18N</p>
-<p>add multi-language not need to change any code</p>
-</li>
-<li>
-<p>Customize</p>
-<p>can be blog &amp; document &amp; page and more</p>
-</li>
-<li>
-<p>Markdown</p>
-<p>syntax highlighting &amp; toc markdown support</p>
-</li>
-<li>
-<p>SEO</p>
-<p>automatic seo friendly siteamp &amp; rss</p>
+<p>font</p>
+<p>设置站点<code>font（字体颜色）</code>信息</p>
 </li>
 </ol>
-<h2 id="heading-1">安装</h2>
-<hr />
-<p>local</p>
-<pre><code>go install github.com/fundipper/fungo@latest
-</code></pre>
-<p>docker</p>
-<pre><code>docker pull fundipper/fungo:latest
-</code></pre>
-<p>get more info, checkout <a href="/doc/start/local/">local</a>， <a href="/doc/start/docker/">docker</a> document</p>
-<h2 id="heading-2">文档</h2>
-<hr />
-<p>the official website <a href="https://fungo.dev">fungo.dev</a> is generate by <code>fungo</code> now.</p>
+<h2 id="heading-2">使用</h2>
 <ul>
 <li>
-<p><a href="/doc/overview/">document</a></p>
-</li>
-<li>
-<p><a href="/post/">blog</a></p>
-</li>
-<li>
-<p><a href="/theme/">theme</a></p>
-</li>
-</ul>
-<h2 id="heading-3">特性</h2>
-<hr />
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Support</p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/article/">Article</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/page/">Page</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/document/">Document</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/customize/">Customize</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/create/i18n/">I18N</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/markdown/">Markdown</a></p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> TOC</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> META</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Emoji</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> GFM (Table，Strikethrough，Linkify，TaskList)</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> DefinitionList</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Footnote</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Typographer</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Mathjax</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Mermaid</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/highlighting/">Highlighting</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/image/">Image Lazyload</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/link/">Link Reset</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/video/">Video Embed</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/feeds/">Feeds</a></p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> RSS 2.0</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> Atom 1.0</p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> JSON 1.1</p>
-</li>
-</ul>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> SEO</p>
-<ul>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/sitemap/">Sitemap.xml</a></p>
-</li>
-<li>
-<p><input checked="" disabled="" type="checkbox" /> <a href="/doc/config/site/robots/">Robots.txt</a></p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="heading-4">感谢</h2>
-<hr />
-<ul>
-<li>
-<p>Language &amp; Framework</p>
-<ul>
-<li>
-<p><a href="https://go.dev/" target="_blank" rel="nofollow">golang</a></p>
-</li>
-<li>
-<p><a href="https://www.tailwindcss.com/" target="_blank" rel="nofollow">tailwindcss</a></p>
-</li>
-<li>
-<p><a href="https://alpinejs.dev/" target="_blank" rel="nofollow">alpinejs</a></p>
-</li>
-</ul>
-</li>
-<li>
-<p>Tools &amp; Libraries</p>
-<ul>
-<li>
-<p><a href="https://github.com/spf13/cobra" target="_blank" rel="nofollow">cobra</a></p>
-</li>
-<li>
-<p><a href="https://github.com/spf13/viper" target="_blank" rel="nofollow">viper</a></p>
-</li>
-<li>
-<p><a href="https://github.com/yuin/goldmark" target="_blank" rel="nofollow">goldmark</a></p>
-</li>
-<li>
-<p><a href="https://github.com/dgraph-io/ristretto" target="_blank" rel="nofollow">ristretto</a></p>
-</li>
-<li>
-<p><a href="https://github.com/julienschmidt/httprouter" target="_blank" rel="nofollow">httprouter</a></p>
-</li>
-<li>
-<p><a href="https://github.com/fsnotify/fsnotify" target="_blank" rel="nofollow">fsnotify</a></p>
-</li>
-<li>
-<p><a href="https://github.com/otiai10/copy" target="_blank" rel="nofollow">copy</a></p>
-</li>
-<li>
-<p><a href="https://github.com/go-git/go-git" rel="nofollow" target="_blank">go-git</a></p>
-</li>
-<li>
-<p><a href="https://github.com/beevik/etree" target="_blank" rel="nofollow">etree</a></p>
-</li>
-</ul>
-</li>
+<p>使用 color</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{define you-template-name}}
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	&lt;<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">title</span>&gt;Document&lt;/<span style="color:#000080">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>		&lt;<span style="color:#000080">link</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;stylesheet&#34;</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/assets/css/output.css&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	&lt;<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>		&lt;<span style="color:#000080">main</span>&gt;write-you-customize-code-here&lt;/<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>		&lt;<span style="color:#000080">footer</span> <span style="color:#008080">class</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Theme.color.background}} {{.Theme.color.font}}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>			&lt;<span style="color:#000080">p</span>&gt;{{.Theme.copyright}}&lt;/<span style="color:#000080">p</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>		&lt;/<span style="color:#000080">footer</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>&lt;/<span style="color:#000080">html</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>{{end}}
+</span></span></code></pre></li>
 </ul>
 
 						</article>
