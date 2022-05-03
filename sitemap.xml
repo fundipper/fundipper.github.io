@@ -2,26 +2,26 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
         <loc>https://fungo.dev/sitemap/article.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://fungo.dev/sitemap/document.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://fungo.dev/sitemap/page.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://fungo.dev/sitemap/i18n.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://fungo.dev/sitemap/customize.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
     <sitemap>
         <loc>https://fungo.dev/sitemap/catalog.xml</loc>
-        <lastmod>2022-04-30</lastmod>
+        <lastmod>2022-05-03</lastmod>
     </sitemap>
 </sitemapindex>
