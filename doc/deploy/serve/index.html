@@ -681,7 +681,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/deploy/platform/github/"> github </a>
+			<a class="text-cyan-700" href="/doc/deploy/platform/github/"> Github </a>
 		</span>
 		
 	</p>
@@ -695,7 +695,21 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/deploy/platform/cloudflare/"> cloudflare </a>
+			<a class="text-cyan-700" href="/doc/deploy/platform/cloudflare/"> Cloudflare </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/platform/vercel/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/deploy/platform/vercel/"> Vercel </a>
 		</span>
 		
 	</p>
@@ -709,7 +723,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/deploy/platform/netlify/"> netlify </a>
+			<a class="text-cyan-700" href="/doc/deploy/platform/netlify/"> Netlify </a>
 		</span>
 		
 	</p>
@@ -887,7 +901,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录模板 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录页模板 </a>
 		</span>
 		
 	</p>
@@ -900,8 +914,8 @@
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('详情模板')">
-			 详情模板
+		<span class="w-full inline-flex justify-between items-center" @click="setState('详情页模板')">
+			 详情页模板
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -915,7 +929,7 @@
 	
 </div>
 
-<ul class="pl-4 text-sm"  :class="getState('详情模板') ? '':'hidden'" >
+<ul class="pl-4 text-sm"  :class="getState('详情页模板') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/article/'?' hover:border-gray-500':'border-cyan-700'">
@@ -968,7 +982,7 @@
 	<p class="h-8 leading-8">
 		
 		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页面模板 </a>
+			<a class="text-cyan-700" href="/doc/theme/template/customize/"> 自定义页模板 </a>
 		</span>
 		
 	</p>

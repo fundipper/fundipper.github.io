@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>如何设置动画 - Fungo</title>
+		<title>部署到 Vercel - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -1085,7 +1085,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-1 md:col-span-3 px-10 py-5 overflow-hidden">
-						<h1 class="text-3xl">如何设置动画</h1>
+						<h1 class="text-3xl">部署到 Vercel</h1>
 						<p class="py-3 text-gray-400 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1095,107 +1095,61 @@
 									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 								/>
 							</svg>
-							<span class="mx-2 text-sm"> 2022-04-30</span>
+							<span class="mx-2 text-sm"> 2021-05-04</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
 							<blockquote>
-<p>fungo 推荐使用<code>animista</code>作为动画库</p>
+<p>使用 github pages 构建，Vercel 同步部署<br />
+请先配置<a href="/doc/deploy/platform/github/">github pages</a></p>
 </blockquote>
-<h2 id="-tail-animista">使用 tail-animista</h2>
+<h2 id="heading">部署</h2>
 <hr />
+<ol>
+<li>
+<p>创建项目</p>
+<p>打开 https://vercel.com/new/{you-team-name}</p>
+</li>
+<li>
+<p>关联帐号</p>
+<p>输入 github 帐号，并导入存储库 {your-github-page-path}</p>
+</li>
+<li>
+<p>构建部署</p>
+<p>因无法自定义构建环境，故全部使用默认配置，不构建，仅同步</p>
 <ul>
 <li>
-<p>配置tailwindcss</p>
-<p>若未配置，参考<a href="/doc/faq/how-to-modify-style/">how-to-set-style</a></p>
+<p>Build and Output Settings:</p>
+<p>Use Default Settings</p>
 </li>
 <li>
-<p>复制样式</p>
-<p>打开<a href="https://tail-animista.vercel.app/" rel="nofollow" target="_blank">https://tail-animista.vercel.app/</a> ,获取你需要的样式</p>
+<p>Environment Variables:</p>
+<p>Use Default Variables</p>
 </li>
 <li>
-<p>修改配置</p>
-<p>修改 tailwind.config.js</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>module.exports <span style="color:#000;font-weight:bold">=</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>	theme<span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>		extend<span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>			animation<span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>				<span style="color:#d14">&#34;fade-in&#34;</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000)   both&#34;</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>			},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>			keyframes<span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>				<span style="color:#d14">&#34;fade-in&#34;</span><span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>					<span style="color:#d14">&#34;0%&#34;</span><span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>						opacity<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;0&#34;</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>					},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>					to<span style="color:#000;font-weight:bold">:</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>						opacity<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#34;1&#34;</span>,
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>					},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>				},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>			},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>		},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>	},
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>};
-</span></span></code></pre></li>
-<li>
-<p>使用动画</p>
-<p>当配置<code>fade-in</code>后，可在<code>template</code>使用<code>animate-fade-in</code>调用动画</p>
+<p>点击 <code>Deploy</code> 按钮</p>
 </li>
 </ul>
-<h2 id="-animistanet">使用 animista.net</h2>
+</li>
+<li>
+<p>访问项目</p>
+<p>打开 https://vercel.com/{your-team-name}/{your-project-name}</p>
+<p>点击<code>Visit</code>按钮，即可访问项目</p>
+</li>
+</ol>
+<h2 id="heading-1">优化</h2>
 <hr />
-<ul>
+<ol>
 <li>
-<p>复制样式</p>
-<p>打开<a href="https://animista.net/" rel="nofollow" target="_blank">https://animista.net/</a> ,获取你需要的样式</p>
+<p>添加域名</p>
+<p>打开https://vercel.com/{your-team-name}/{your-project-name}/settings/domains</p>
+<p>打开 https://dash.cloudflare.com/{your-dash-id}/add-site</p>
+<p>添加跟域名，然后点击<code>Save</code>按钮</p>
 </li>
 <li>
-<p>新建文件</p>
-<p>vim animate.css</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>.<span style="color:#458;font-weight:bold">fade-in</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>	<span style="color:#000;font-weight:bold">-webkit-</span><span style="color:#000;font-weight:bold">animation</span>: fade-in <span style="color:#099">1.2</span><span style="color:#458;font-weight:bold">s</span> <span style="color:#0086b3">cubic-bezier</span>(<span style="color:#099">0.39</span>, <span style="color:#099">0.575</span>, <span style="color:#099">0.565</span>, <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">both</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	<span style="color:#000;font-weight:bold">animation</span>: fade-in <span style="color:#099">1.2</span><span style="color:#458;font-weight:bold">s</span> <span style="color:#0086b3">cubic-bezier</span>(<span style="color:#099">0.39</span>, <span style="color:#099">0.575</span>, <span style="color:#099">0.565</span>, <span style="color:#099">1</span>) <span style="color:#000;font-weight:bold">both</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>@<span style="color:#000;font-weight:bold">-webkit-keyframes</span> <span style="color:#000080">fade-in</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>	<span style="color:#000080">0</span><span style="color:#000;font-weight:bold">%</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		<span style="color:#000;font-weight:bold">opacity</span>: <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	<span style="color:#000080">100</span><span style="color:#000;font-weight:bold">%</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>		<span style="color:#000;font-weight:bold">opacity</span>: <span style="color:#099">1</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>@<span style="color:#000;font-weight:bold">keyframes</span> <span style="color:#000080">fade-in</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	<span style="color:#000080">0</span><span style="color:#000;font-weight:bold">%</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>		<span style="color:#000;font-weight:bold">opacity</span>: <span style="color:#099">0</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>	}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>	<span style="color:#000080">100</span><span style="color:#000;font-weight:bold">%</span> {
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>		<span style="color:#000;font-weight:bold">opacity</span>: <span style="color:#099">1</span>;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>	}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>}
-</span></span></code></pre></li>
-<li>
-<p>使用样式</p>
-<p>引用 output.css 和 animate.css</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{define you-template-name}}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>	&lt;<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">title</span>&gt;Document&lt;/<span style="color:#000080">title</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>		&lt;<span style="color:#000080">link</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;stylesheet&#34;</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/assets/css/output.css&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    	&lt;<span style="color:#000080">link</span> <span style="color:#008080">rel</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;stylesheet&#34;</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/assets/css/animate.css&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>	&lt;<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>		&lt;<span style="color:#000080">main</span>&gt;write-you-customize-code-here&lt;/<span style="color:#000080">main</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>&lt;/<span style="color:#000080">html</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>{{end}}
-</span></span></code></pre></li>
-<li>
-<p>使用动画</p>
-<p>当配置<code>fade-in</code>后，可在<code>template</code>使用<code>animate-fade-in</code>调用动画</p>
+<p>配置 DNS</p>
+<p>根据提示，设置域名 DNS 记录，然后点击<code>Refresh</code>按钮</p>
 </li>
-</ul>
+</ol>
 
 						</article>
 					</div>
