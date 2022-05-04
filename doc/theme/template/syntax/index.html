@@ -31,19 +31,15 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/doc/overview/">Doc</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
+				<a href="/theme">Theme</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/post/">Blog</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -787,34 +783,6 @@
 <ul class="pl-4 text-sm"  :class="getState('主题设置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/tdk/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/tdk/"> tdk </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/author/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/author/"> 作者 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/color/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -835,20 +803,6 @@
 		
 		<span class="w-full inline-flex justify-between items-center">
 			<a class="text-cyan-700" href="/doc/theme/config/image/"> 图片 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/link/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/link/"> 链接 </a>
 		</span>
 		
 	</p>
@@ -991,6 +945,20 @@
  </li>
 	
 </ul>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
  </li>
 	
 </ul>
@@ -1320,7 +1288,7 @@
 </ul>
 </li>
 </ul>
-<p>更多用法，查看<a href="https://pkg.go.dev/html/template" rel="nofollow" target="_blank">html/template</a>文档</p>
+<p>更多用法，查看<a href="https://pkg.go.dev/html/template" target="_blank" rel="nofollow">html/template</a>文档</p>
 
 						</article>
 					</div>

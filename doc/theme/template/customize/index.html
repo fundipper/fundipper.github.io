@@ -31,19 +31,15 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/doc/overview/">Doc</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
+				<a href="/theme">Theme</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/post/">Blog</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -787,34 +783,6 @@
 <ul class="pl-4 text-sm"  :class="getState('主题设置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/tdk/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/tdk/"> tdk </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/author/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/author/"> 作者 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/color/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -835,20 +803,6 @@
 		
 		<span class="w-full inline-flex justify-between items-center">
 			<a class="text-cyan-700" href="/doc/theme/config/image/"> 图片 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/link/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/link/"> 链接 </a>
 		</span>
 		
 	</p>
@@ -991,6 +945,20 @@
  </li>
 	
 </ul>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
  </li>
 	
 </ul>
@@ -1179,18 +1147,18 @@
 <li>设置 TDK</li>
 </ul>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	&lt;<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">title</span>&gt;{{.Theme.tdk.archive.title}} - {{.Site.Name}}&lt;/<span style="color:#000080">title</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;description&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Theme.tdk.archive.description}}&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>   &lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>   	&lt;<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>   		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>   		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>   		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>   		&lt;<span style="color:#000080">title</span>&gt;{{i18n .Lang &#34;tdk.index.title&#34;}} - {{.Site.Name}}&lt;/<span style="color:#000080">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>   		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;description&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{i18n .Lang &#34;</span><span style="color:#008080">tdk</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">index</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">description</span><span style="color:#a61717;background-color:#e3d2d2">&#34;}}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>   	&lt;/<span style="color:#000080">head</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	&lt;<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>		&lt;<span style="color:#000080">main</span>&gt;write your code here&lt;/<span style="color:#000080">main</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>   	&lt;<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>   		&lt;<span style="color:#000080">main</span>&gt;write your code here&lt;/<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>   	&lt;/<span style="color:#000080">body</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>&lt;/<span style="color:#000080">html</span>&gt;
 </span></span></code></pre><ul>
 <li>循环列表</li>

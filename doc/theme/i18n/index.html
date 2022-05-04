@@ -5,7 +5,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>TDK设置 - Fungo</title>
+		<title>国际化支持 - Fungo</title>
 		<meta name="description" content="" />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 		<style>
@@ -31,19 +31,15 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/doc/overview/">Doc</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme/">Theme</a>
+				<a href="/theme">Theme</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
 				<a href="/post/">Blog</a>
 			</li>
-			
 			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -787,34 +783,6 @@
 <ul class="pl-4 text-sm"  :class="getState('主题设置') ? '':'hidden'" >
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/tdk/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/tdk/"> tdk </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/author/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/author/"> 作者 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/color/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -835,20 +803,6 @@
 		
 		<span class="w-full inline-flex justify-between items-center">
 			<a class="text-cyan-700" href="/doc/theme/config/image/"> 图片 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/config/link/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/config/link/"> 链接 </a>
 		</span>
 		
 	</p>
@@ -991,6 +945,20 @@
  </li>
 	
 </ul>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/i18n/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/i18n/"> 国际化支持 </a>
+		</span>
+		
+	</p>
+	
+</div>
  </li>
 	
 </ul>
@@ -1160,7 +1128,7 @@
 						</ul>
 					</aside>
 					<div class="col-span-1 md:col-span-3 px-10 py-5 overflow-hidden">
-						<h1 class="text-3xl">TDK设置</h1>
+						<h1 class="text-3xl">国际化支持</h1>
 						<p class="py-3 text-gray-400 flex flex-row justify-center md:justify-start items-center">
 							<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
 								<path
@@ -1170,26 +1138,60 @@
 									d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
 								/>
 							</svg>
-							<span class="mx-2 text-sm"> 2021-01-01</span>
+							<span class="mx-2 text-sm"> 2021-05-04</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<p>该项为可选置项，<code>map</code>类型，可将模板的<code>tdk</code>（title,description,keyword）信息提取至配置文件</p>
-<p>在主题目录 theme.toml，可配置该项</p>
+							<p>该项为可选置项，<code>map</code>类型，可将 i18n 下的<code>toml</code>信息提取至模板文件</p>
+<p>在主题目录 i18n/{your-lang-config.toml，可配置该项</p>
 <h2 id="heading">配置</h2>
 <hr />
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>[[theme.tdk.index]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>title = <span style="color:#d14">&#39;Fungo - simple and fast static site engine&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>description = <span style="color:#d14">&#39;Fungo is a simple and fast static site engine, which can help you start writing without programming.&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>keyword = <span style="color:#d14">&#39;static site engine, Fungo&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>[theme.tdk.themes]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>title = <span style="color:#d14">&#39;theme store&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>description = <span style="color:#d14">&#39;theme store of fungo, to find, download open source free themes, of course you can publish your own one.&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>[theme.tdk.posts]
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>title = <span style="color:#d14">&#39;official blog&#39;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>description = <span style="color:#d14">&#39;official blog of fungo, for release new version, publish new tutorials&#39;</span>
-</span></span></code></pre><h4 id="notice">Notice:</h4>
+<ol>
+<li>设置 TDK</li>
+</ol>
+<ul>
+<li>
+<p>en.toml</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#998;font-style:italic"># tdk</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[tdk.index.title]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>other = <span style="color:#d14">&#34;Fungo - simple and fast static site engine&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>[tdk.index.description]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>other = <span style="color:#d14">&#34;Fungo is a simple and fast static site engine, which can help you start your business without any programming.&#34;</span>
+</span></span></code></pre></li>
+<li>
+<p>zh-CN.toml</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#998;font-style:italic"># tdk</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[tdk.index.title]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>other = <span style="color:#d14">&#34;Fungo - 简单快速的静态网站引擎&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>[tdk.index.description]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>other = <span style="color:#d14">&#34;Fungo 是一个简单快速的静态站点引擎，它可以帮助您在没有任何编程的情况下开始您的业务。&#34;</span>
+</span></span></code></pre></li>
+</ul>
+<ol start="2">
+<li>设置 Banner</li>
+</ol>
+<ul>
+<li>
+<p>en.toml</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#998;font-style:italic"># banner</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[banner.text.title]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>other = <span style="color:#d14">&#34;SIMPLE AND FAST STATIC SITE ENGINE&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>[banner.text.sub]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>other = <span style="color:#d14">&#34;start your business without any programming&#34;</span>
+</span></span></code></pre></li>
+<li>
+<p>zh-CN.toml</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#998;font-style:italic"># banner</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>[banner.text.title]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>other = <span style="color:#d14">&#34;简单快速的静态站点引擎&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>[banner.text.sub]
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>other = <span style="color:#d14">&#34;无需任何编程即可开始您的业务&#34;</span>
+</span></span></code></pre></li>
+</ul>
+<h4 id="notice">Notice:</h4>
 <ul>
 <li>
 <p>该项为字典类型，支持配置多个非重名[name]配置项</p>
@@ -1204,51 +1206,97 @@
 <h2 id="heading-1">释义</h2>
 <hr />
 <ol>
-<li>
-<p>index</p>
-<p>设置<code>index</code>页面的 TDK 信息</p>
+<li>en.toml</li>
+</ol>
 <ul>
 <li>
-<p>title</p>
-<p>设置<code>index</code>标题</p>
+<p>banner.text.title</p>
+<p>设置 <code>banner.text.title</code> 的 key</p>
 </li>
 <li>
-<p>description</p>
-<p>设置<code>index</code>的描述</p>
-</li>
-<li>
-<p>keyword</p>
-<p>设置<code>index</code>的关键词</p>
+<p>other</p>
+<p>设置 <code>banner.text.title</code> 的英文版 value</p>
 </li>
 </ul>
-</li>
-<li>
-<p>themes</p>
-<p>设置<code>i18n</code>页面的 TDK 信息</p>
-<p>……</p>
-</li>
+<ol start="2">
+<li>zh-CN.toml</li>
 </ol>
-<h2 id="heading-2">使用</h2>
-<hr />
 <ul>
 <li>
-<p>调用tdk index</p>
-<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>{{define you-template-name}}
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>    &lt;<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>        &lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        &lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>        &lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>        &lt;<span style="color:#000080">title</span>&gt;{{.Theme.tdk.index.title}} - {{.Site.Name}}&lt;/<span style="color:#000080">title</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>        &lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;description&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{.Theme.tdk.index.description}}&#34;</span> /&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>    &lt;/<span style="color:#000080">head</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>    &lt;<span style="color:#000080">body</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>        &lt;<span style="color:#000080">main</span>&gt;write-you-customize-code-here&lt;/<span style="color:#000080">main</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    &lt;/<span style="color:#000080">body</span>&gt;
+<p>banner.text.title</p>
+<p>设置 <code>banner.text.title</code> 的 key</p>
+</li>
+<li>
+<p>other</p>
+<p>设置 <code>banner.text.title</code> 的中文版 value</p>
+<p>……</p>
+</li>
+</ul>
+<h2 id="heading-2">使用</h2>
+<hr />
+<ol>
+<li>
+<p>设置 TDK</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	&lt;<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">title</span>&gt;{{i18n .Lang &#34;tdk.index.title&#34;}} - {{.Site.Name}}&lt;/<span style="color:#000080">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;description&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;{{i18n .Lang &#34;</span><span style="color:#008080">tdk</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">index</span><span style="color:#a61717;background-color:#e3d2d2">.</span><span style="color:#008080">description</span><span style="color:#a61717;background-color:#e3d2d2">&#34;}}&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>	&lt;<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>		&lt;<span style="color:#000080">main</span>&gt;write your code here&lt;/<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>&lt;/<span style="color:#000080">html</span>&gt;
-</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>{{end}}
 </span></span></code></pre></li>
+</ol>
+<ul>
+<li>
+<p>访问英文版</p>
+<p>title: Fungo - simple and fast static site engine</p>
+<p>description: Fungo is a simple and fast static site engine, which can help you start your business without any programming.</p>
+</li>
+<li>
+<p>访问中文版</p>
+<p>title: Fungo - 简单快速的静态网站引擎</p>
+<p>description: Fungo 是一个简单快速的静态站点引擎，它可以帮助您在没有任何编程的情况下开始您的业务。</p>
+</li>
+</ul>
+<ol start="2">
+<li>
+<p>设置 Banner</p>
+<pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span><span style="color:#999;font-weight:bold;font-style:italic">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>&lt;<span style="color:#000080">html</span> <span style="color:#008080">lang</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>	&lt;<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">charset</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;UTF-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">http-equiv</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;X-UA-Compatible&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;IE=edge&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>		&lt;<span style="color:#000080">meta</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;viewport&#34;</span> <span style="color:#008080">content</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;width=device-width, initial-scale=1.0&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>		&lt;<span style="color:#000080">title</span>&gt;Document&lt;/<span style="color:#000080">title</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>	&lt;/<span style="color:#000080">head</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>	&lt;<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>		&lt;<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>			&lt;<span style="color:#000080">div</span>&gt;{{i18n .Lang &#34;banner.text.title&#34;}}&lt;/<span style="color:#000080">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>			&lt;<span style="color:#000080">div</span>&gt;{{i18n .Lang &#34;banner.text.sub&#34;}}&lt;/<span style="color:#000080">div</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>		&lt;/<span style="color:#000080">main</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>	&lt;/<span style="color:#000080">body</span>&gt;
+</span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>&lt;/<span style="color:#000080">html</span>&gt;
+</span></span></code></pre></li>
+</ol>
+<ul>
+<li>
+<p>访问英文版</p>
+<p>title: SIMPLE AND FAST STATIC SITE ENGINE</p>
+<p>sub: start your business without any programming</p>
+</li>
+<li>
+<p>访问中文版</p>
+<p>title: 简单快速的静态站点引擎</p>
+<p>sub: 无需任何编程即可开始您的业务</p>
+</li>
 </ul>
 
 						</article>
