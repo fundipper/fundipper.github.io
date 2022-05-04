@@ -1402,6 +1402,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.25rem;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .-mt-10 {
   margin-top: -2.5rem;
 }
@@ -1416,6 +1421,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .box-border {
   box-sizing: border-box;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -1821,6 +1834,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(21 94 117 / 0));
 }
 
+.from-amber-300 {
+  --tw-gradient-from: #fcd34d;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(252 211 77 / 0));
+}
+
 .from-cyan-700 {
   --tw-gradient-from: #0e7490;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(14 116 144 / 0));
@@ -1828,6 +1846,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .to-amber-300 {
   --tw-gradient-to: #fcd34d;
+}
+
+.to-cyan-800 {
+  --tw-gradient-to: #155e75;
 }
 
 .bg-clip-text {
@@ -2017,6 +2039,23 @@ Ensure the default browser behavior of the `hidden` attribute.
 .outline-none {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.before\:px-1::before {
+  content: var(--tw-content);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.before\:text-gray-400::before {
+  content: var(--tw-content);
+  --tw-text-opacity: 1;
+  color: rgb(156 163 175 / var(--tw-text-opacity));
+}
+
+.before\:content-\[\'\$\'\]::before {
+  --tw-content: '$';
+  content: var(--tw-content);
 }
 
 .hover\:border-gray-500:hover {

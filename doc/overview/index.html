@@ -1332,13 +1332,13 @@
 <p>Language &amp; Framework</p>
 <ul>
 <li>
-<p><a href="https://go.dev/" target="_blank" rel="nofollow">golang</a></p>
+<p><a href="https://go.dev/" rel="nofollow" target="_blank">golang</a></p>
 </li>
 <li>
 <p><a href="https://www.tailwindcss.com/" rel="nofollow" target="_blank">tailwindcss</a></p>
 </li>
 <li>
-<p><a href="https://alpinejs.dev/" rel="nofollow" target="_blank">alpinejs</a></p>
+<p><a href="https://alpinejs.dev/" target="_blank" rel="nofollow">alpinejs</a></p>
 </li>
 </ul>
 </li>
@@ -1346,10 +1346,10 @@
 <p>Tools &amp; Libraries</p>
 <ul>
 <li>
-<p><a href="https://github.com/spf13/cobra" rel="nofollow" target="_blank">cobra</a></p>
+<p><a href="https://github.com/spf13/cobra" target="_blank" rel="nofollow">cobra</a></p>
 </li>
 <li>
-<p><a href="https://github.com/spf13/viper" rel="nofollow" target="_blank">viper</a></p>
+<p><a href="https://github.com/spf13/viper" target="_blank" rel="nofollow">viper</a></p>
 </li>
 <li>
 <p><a href="https://github.com/yuin/goldmark" rel="nofollow" target="_blank">goldmark</a></p>
@@ -1361,7 +1361,7 @@
 <p><a href="https://github.com/julienschmidt/httprouter" rel="nofollow" target="_blank">httprouter</a></p>
 </li>
 <li>
-<p><a href="https://github.com/fsnotify/fsnotify" target="_blank" rel="nofollow">fsnotify</a></p>
+<p><a href="https://github.com/fsnotify/fsnotify" rel="nofollow" target="_blank">fsnotify</a></p>
 </li>
 <li>
 <p><a href="https://github.com/otiai10/copy" rel="nofollow" target="_blank">copy</a></p>
@@ -1370,7 +1370,7 @@
 <p><a href="https://github.com/go-git/go-git" rel="nofollow" target="_blank">go-git</a></p>
 </li>
 <li>
-<p><a href="https://github.com/beevik/etree" rel="nofollow" target="_blank">etree</a></p>
+<p><a href="https://github.com/beevik/etree" target="_blank" rel="nofollow">etree</a></p>
 </li>
 </ul>
 </li>
@@ -1400,6 +1400,36 @@
 	btn.addEventListener("click", () => {
 		bar.classList.toggle("hidden");
 	});
+
+	window.slide = () => {
+		return {
+			index: 0,
+			submit: function (index) {
+				this.index = index;
+
+				let element;
+				switch (index) {
+					case 0:
+						element = this.$refs.blog;
+						break;
+					case 1:
+						element = this.$refs.document;
+						break;
+					case 2:
+						element = this.$refs.page;
+						break;
+					case 3:
+						element = this.$refs.more;
+						break;
+				}
+				element.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+					inline: "nearest",
+				});
+			},
+		};
+	};
 
 	window.sidebar = () => {
 		return {

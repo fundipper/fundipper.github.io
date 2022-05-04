@@ -1332,7 +1332,7 @@
 <p>Language &amp; Framework</p>
 <ul>
 <li>
-<p><a href="https://go.dev/" target="_blank" rel="nofollow">golang</a></p>
+<p><a href="https://go.dev/" rel="nofollow" target="_blank">golang</a></p>
 </li>
 <li>
 <p><a href="https://www.tailwindcss.com/" rel="nofollow" target="_blank">tailwindcss</a></p>
@@ -1358,7 +1358,7 @@
 <p><a href="https://github.com/dgraph-io/ristretto" rel="nofollow" target="_blank">ristretto</a></p>
 </li>
 <li>
-<p><a href="https://github.com/julienschmidt/httprouter" rel="nofollow" target="_blank">httprouter</a></p>
+<p><a href="https://github.com/julienschmidt/httprouter" target="_blank" rel="nofollow">httprouter</a></p>
 </li>
 <li>
 <p><a href="https://github.com/fsnotify/fsnotify" rel="nofollow" target="_blank">fsnotify</a></p>
@@ -1400,6 +1400,36 @@
 	btn.addEventListener("click", () => {
 		bar.classList.toggle("hidden");
 	});
+
+	window.slide = () => {
+		return {
+			index: 0,
+			submit: function (index) {
+				this.index = index;
+
+				let element;
+				switch (index) {
+					case 0:
+						element = this.$refs.blog;
+						break;
+					case 1:
+						element = this.$refs.document;
+						break;
+					case 2:
+						element = this.$refs.page;
+						break;
+					case 3:
+						element = this.$refs.more;
+						break;
+				}
+				element.scrollIntoView({
+					behavior: "smooth",
+					block: "start",
+					inline: "nearest",
+				});
+			},
+		};
+	};
 
 	window.sidebar = () => {
 		return {
