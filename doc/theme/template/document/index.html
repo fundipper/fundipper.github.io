@@ -603,7 +603,7 @@
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="font-medium">4. 部署 </span>
+		<span class="font-medium">4. 部署上线 </span>
 		
 	</p>
 	
@@ -644,8 +644,8 @@
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center" @click="setState('发布')">
-			 发布
+		<span class="w-full inline-flex justify-between items-center" @click="setState('部署')">
+			 部署
 			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
 				<path
 					fill-rule="evenodd"
@@ -659,7 +659,7 @@
 	
 </div>
 
-<ul class="pl-4 text-sm"  :class="getState('发布') ? '':'hidden'" >
+<ul class="pl-4 text-sm"  :class="getState('部署') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/deploy/server/'?' hover:border-gray-500':'border-cyan-700'">
@@ -742,7 +742,7 @@
 	
 	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="font-medium">5. 自定义主题 </span>
+		<span class="font-medium">5. 主题开发 </span>
 		
 	</p>
 	
@@ -896,20 +896,6 @@
  </li>
 	
 	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/catalog/'?' hover:border-gray-500':'border-cyan-700'">
-	
-	<p class="h-8 leading-8">
-		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录页模板 </a>
-		</span>
-		
-	</p>
-	
-</div>
- </li>
-	
-	<li>
 <div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8 text-gray-700">
@@ -977,6 +963,20 @@
  </li>
 	
 	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/catalog/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/theme/template/catalog/"> 目录页模板 </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/theme/template/customize/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -1010,6 +1010,67 @@
 <ul class="pl-4 text-sm" >
 	
 	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('配置')">
+			 配置
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('配置') ? '':'hidden'" >
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-action/'?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8">
+		
+		<span class="w-full inline-flex justify-between items-center">
+			<a class="text-cyan-700" href="/doc/faq/how-to-set-action/"> 如何设置action </a>
+		</span>
+		
+	</p>
+	
+</div>
+ </li>
+	
+</ul>
+ </li>
+	
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
+		
+		<span class="w-full inline-flex justify-between items-center" @click="setState('内容')">
+			 内容
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
+		</span>
+		
+	</p>
+	
+</div>
+
+<ul class="pl-4 text-sm"  :class="getState('内容') ? '':'hidden'" >
+	
+	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-lang/'?' hover:border-gray-500':'border-cyan-700'">
 	
 	<p class="h-8 leading-8">
@@ -1037,19 +1098,30 @@
 </div>
  </li>
 	
-	<li>
-<div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-set-action/'?' hover:border-gray-500':'border-cyan-700'">
+</ul>
+ </li>
 	
-	<p class="h-8 leading-8">
+	<li>
+<div class="px-4 text-sm border-r" :class="path !== ''?' hover:border-gray-500':'border-cyan-700'">
+	
+	<p class="h-8 leading-8 text-gray-700">
 		
-		<span class="w-full inline-flex justify-between items-center">
-			<a class="text-cyan-700" href="/doc/faq/how-to-set-action/"> 如何设置action </a>
+		<span class="w-full inline-flex justify-between items-center" @click="setState('主题')">
+			 主题
+			<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+				<path
+					fill-rule="evenodd"
+					d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+					clip-rule="evenodd"
+				/>
+			</svg>
 		</span>
 		
 	</p>
 	
 </div>
- </li>
+
+<ul class="pl-4 text-sm"  :class="getState('主题') ? '':'hidden'" >
 	
 	<li>
 <div class="px-4 text-sm border-r" :class="path !== '/doc/faq/how-to-modify-style/'?' hover:border-gray-500':'border-cyan-700'">
@@ -1081,6 +1153,9 @@
 	
 </ul>
  </li>
+	
+</ul>
+ </li>
 							
 						</ul>
 					</aside>
@@ -1098,118 +1173,7 @@
 							<span class="mx-2 text-sm"> 2021-05-04</span>
 						</p>
 						<article class="max-w-none prose prose-cyan prose-pre:bg-gray-100 prose-code:text-gray-700">
-							<h2 id="heading">数据</h2>
-<hr />
-<ol>
-<li>
-<p>站点设置</p>
-<ul>
-<li>站点信息，map 类型</li>
-</ul>
-<pre><code>{{.Site}}
-</code></pre>
-<ul>
-<li>站点名称，string 类型</li>
-</ul>
-<pre><code>{{.Site.Name}}
-</code></pre>
-<ul>
-<li>站点域名，string 类型</li>
-</ul>
-<pre><code>{{.Site.Origin}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>主题设置</p>
-<ul>
-<li>主题信息，map 类型</li>
-</ul>
-<pre><code>{{.Theme}}
-</code></pre>
-<ul>
-<li>版权信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.copyright}}
-</code></pre>
-<ul>
-<li>统计信息，string 类型</li>
-</ul>
-<pre><code>{{.Theme.analysis}}
-</code></pre>
-<p>……</p>
-</li>
-<li>
-<p>内容信息</p>
-<ul>
-<li>文章信息，map 类型</li>
-</ul>
-<pre><code>{{.Message}}
-</code></pre>
-<ul>
-<li>内容信息，string 类型</li>
-</ul>
-<pre><code>{{.Message.Content}}
-</code></pre>
-<ul>
-<li>Meta 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.Meta}}
-
-&lt;!-- 描述 --&gt;
-{{.Message.Meta.description}}
-
-&lt;!-- 日期 --&gt;
-{{.Message.Meta.date}}
-
-</code></pre>
-<ul>
-<li>TOC 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.TOC}}
-</code></pre>
-<ul>
-<li>Lang 信息，map 类型</li>
-</ul>
-<pre><code>{{.Message.Lang}}
-
-</code></pre>
-</li>
-<li>
-<p>路径信息</p>
-<pre><code>{{.Path}}
-</code></pre>
-</li>
-<li>
-<p>侧边栏信息</p>
-<ul>
-<li>侧边栏信息，array 类型</li>
-</ul>
-<pre><code>{{.Sidebar}}
-</code></pre>
-<ul>
-<li>编号信息，string 类型</li>
-</ul>
-<pre><code>{{.Number}}
-</code></pre>
-<ul>
-<li>名称信息，string 类型</li>
-</ul>
-<pre><code>{{.Name}}
-</code></pre>
-<ul>
-<li>路由信息，string 类型</li>
-</ul>
-<pre><code>{{.Route}}
-</code></pre>
-<ul>
-<li>节点信息，array 类型</li>
-</ul>
-<pre><code>{{.Node}}
-</code></pre>
-</li>
-</ol>
-<h2 id="heading-1">举例</h2>
+							<h2 id="heading">举例</h2>
 <hr />
 <ul>
 <li>设置 TDK</li>
@@ -1404,7 +1368,118 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">59</span><span>	};
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">60</span><span>&lt;/<span style="color:#000080">script</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">61</span><span>{{end}}
-</span></span></code></pre>
+</span></span></code></pre><h2 id="heading-1">数据</h2>
+<hr />
+<ol>
+<li>
+<p>站点设置</p>
+<ul>
+<li>站点信息，map 类型</li>
+</ul>
+<pre><code>{{.Site}}
+</code></pre>
+<ul>
+<li>站点名称，string 类型</li>
+</ul>
+<pre><code>{{.Site.Name}}
+</code></pre>
+<ul>
+<li>站点域名，string 类型</li>
+</ul>
+<pre><code>{{.Site.Origin}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>主题设置</p>
+<ul>
+<li>主题信息，map 类型</li>
+</ul>
+<pre><code>{{.Theme}}
+</code></pre>
+<ul>
+<li>版权信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.copyright}}
+</code></pre>
+<ul>
+<li>统计信息，string 类型</li>
+</ul>
+<pre><code>{{.Theme.analysis}}
+</code></pre>
+<p>……</p>
+</li>
+<li>
+<p>内容信息</p>
+<ul>
+<li>文章信息，map 类型</li>
+</ul>
+<pre><code>{{.Message}}
+</code></pre>
+<ul>
+<li>内容信息，string 类型</li>
+</ul>
+<pre><code>{{.Message.Content}}
+</code></pre>
+<ul>
+<li>Meta 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.Meta}}
+
+&lt;!-- 描述 --&gt;
+{{.Message.Meta.description}}
+
+&lt;!-- 日期 --&gt;
+{{.Message.Meta.date}}
+
+</code></pre>
+<ul>
+<li>TOC 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.TOC}}
+</code></pre>
+<ul>
+<li>Lang 信息，map 类型</li>
+</ul>
+<pre><code>{{.Message.Lang}}
+
+</code></pre>
+</li>
+<li>
+<p>路径信息</p>
+<pre><code>{{.Path}}
+</code></pre>
+</li>
+<li>
+<p>侧边栏信息</p>
+<ul>
+<li>侧边栏信息，array 类型</li>
+</ul>
+<pre><code>{{.Sidebar}}
+</code></pre>
+<ul>
+<li>编号信息，string 类型</li>
+</ul>
+<pre><code>{{.Number}}
+</code></pre>
+<ul>
+<li>名称信息，string 类型</li>
+</ul>
+<pre><code>{{.Name}}
+</code></pre>
+<ul>
+<li>路由信息，string 类型</li>
+</ul>
+<pre><code>{{.Route}}
+</code></pre>
+<ul>
+<li>节点信息，array 类型</li>
+</ul>
+<pre><code>{{.Node}}
+</code></pre>
+</li>
+</ol>
+
 						</article>
 					</div>
 				</div>
