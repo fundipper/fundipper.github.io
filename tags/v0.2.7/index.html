@@ -19,6 +19,7 @@
 		
 		
 <header class="bg-cyan-700 text-white">
+	
 	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
 		<div class="w-2/3 my-2 flex flex-row items-center">
 			<a href="/">
@@ -31,16 +32,16 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/doc/overview/'>Doc</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme">Theme</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/theme'>Theme</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/post/'>Blog</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+			<li class="w-full md:w-1/4 h-10 flex justify-end items-center cursor-pointer relative group">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5"
@@ -55,6 +56,14 @@
 						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
 					/>
 				</svg>
+				<ul class="w-full bg-white rounded overflow-hidden shadow hidden group-hover:block absolute top-full">
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/">English</a>
+					</li>
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/zh/">中文（简体）</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</nav>
@@ -73,7 +82,7 @@
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>	&lt;<span style="color:#000080">a</span> <span style="color:#008080">href</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;http://github.com/fundipper/fungo&#34;</span>&gt;fungo&lt;/<span style="color:#000080">a</span>&gt;
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>&lt;/<span style="color:#000080">p</span>&gt;
 </span></span></code></pre><p>we can't add any attributes, and it's usually bad for <code>SEO</code>, how to resolve it?</p>
-<p>now, we have a solution named <a href="https://github.com/fundipper/goldmark-links" rel="nofollow" target="_blank">goldmark-links</a>, an extension of goldmark.</p>
+<p>now, we have a solution named <a href="https://github.com/fundipper/goldmark-links" target="_blank" rel="nofollow">goldmark-links</a>, an extension of goldmark.</p>
 <pre tabindex="0" style="background-color:#fff;"><code><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>[site.markdown.link.source]
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span><span style="color:#d14">&#34;fungo.dev&#34;</span> = <span style="color:#000;font-weight:bold">true</span>
 </span></span><span style="display:flex;"><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#d14">&#34;www.fundipper.cn&#34;</span> = <span style="color:#000;font-weight:bold">true</span>

@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Fungo - simple and fast static site engine - Fungo</title>
-		<meta name="description" content="Fungo is a simple and fast static site engine, which can help you start your business without any programming." />
+		<meta name="description" content='Fungo is a simple and fast static site engine, which can help you start your business without any programming.' />
 		<link rel="stylesheet" href="/assets/css/output.css" />
 	</head>
 	<body class="bg-gray-100">
@@ -26,16 +26,16 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/doc/overview/'>Doc</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme">Theme</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/theme'>Theme</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/post/'>Blog</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+			<li class="w-full md:w-1/4 h-10 flex justify-end items-center cursor-pointer relative group">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5"
@@ -50,6 +50,14 @@
 						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
 					/>
 				</svg>
+				<ul class="w-full bg-white rounded overflow-hidden shadow hidden group-hover:block absolute top-full">
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/">English</a>
+					</li>
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/zh/">中文（简体）</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</nav>
@@ -80,7 +88,6 @@
 						d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
 					/>
 				</svg>
-
 				<span class="px-2 text-sm md:text-base">Get Started</span>
 			</a>
 			<a

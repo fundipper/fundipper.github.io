@@ -19,6 +19,7 @@
 		
 		
 <header class="bg-cyan-700 text-white">
+	
 	<nav class="w-11/12 max-w-screen-xl mx-auto flex flex-row flex-wrap">
 		<div class="w-2/3 my-2 flex flex-row items-center">
 			<a href="/">
@@ -31,16 +32,16 @@
 			</svg>
 		</div>
 		<ul class="w-full md:w-1/3 my-2 hidden md:flex flex-row flex-wrap menu_bar">
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/doc/overview/">Doc</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/doc/overview/'>Doc</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/theme">Theme</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/theme'>Theme</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 leading-10 text-right">
-				<a href="/post/">Blog</a>
+			<li class="w-full md:w-1/4 h-10 leading-10 text-right cursor-pointer">
+				<a href='/post/'>Blog</a>
 			</li>
-			<li class="w-full md:w-1/4 h-10 flex justify-end items-center">
+			<li class="w-full md:w-1/4 h-10 flex justify-end items-center cursor-pointer relative group">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					class="h-5 w-5"
@@ -55,6 +56,14 @@
 						d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"
 					/>
 				</svg>
+				<ul class="w-full bg-white rounded overflow-hidden shadow hidden group-hover:block absolute top-full">
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/">English</a>
+					</li>
+					<li class="h-10 leading-10 hover:bg-gray-100">
+						<a class="text-gray-700 hover:text-cyan-700 hover:bg-gray-100 text-sm" href="/zh/">中文（简体）</a>
+					</li>
+				</ul>
 			</li>
 		</ul>
 	</nav>
@@ -1228,7 +1237,7 @@
 </span></span></code></pre></li>
 <li>
 <p>code</p>
-<p><iframe src="//player.bilibili.com/player.html?aid=930778398&amp;bvid=BV1JK4y1R7RL&amp;cid=343612570&amp;page=1" alt="" title="video" height="315" border="0" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true" width="560"></iframe></p>
+<p><iframe src="//player.bilibili.com/player.html?aid=930778398&amp;bvid=BV1JK4y1R7RL&amp;cid=343612570&amp;page=1" alt="" title="video" width="560" height="315" border="0" scrolling="no" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></p>
 </li>
 <li>
 <p>如何获取视频地址?</p>
