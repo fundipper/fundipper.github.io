@@ -3,11 +3,98 @@
     <title>Fungo</title>
     <link href="https://fungo.dev"/>
     <summary type="html">simple and fast static site engine</summary>
-    <updated>2022-05-05 10:36:53.555869957 +0800 CST m=+0.118544608</updated>
+    <updated>2022-05-05 11:16:07.223667323 +0800 CST m=+0.101515145</updated>
     <entry>
         <title>why we made fungo</title>
         <link href="https://fungo.dev/post/why-we-made-fungo/"/>
         <summary type="html">fungo is a simple and fast open-source static site generators base on golang.</summary>
+        <content type="html">&lt;p&gt;当我们想&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;撰写一篇博客&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编辑一些文档&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;展示一个产品&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;发布一个海报&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我们希望有一款产品，可以具有以下特性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;开源&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持博客，文档，单页和自定义模型&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持 Markdown 文档，支持 I18N&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持拓展内容和定制主题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持预览和编译&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;容易上手&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SEO 友好&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+&lt;p&gt;我们寻找并测试了一些广受好评的作品，包括但不限于&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hugo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zola&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hexo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gridea&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zine&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;……&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结果，无一例外的经历了&lt;code&gt;从入门到放弃&lt;/code&gt;&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;索性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;我们来建造一个理想国吧！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;于是，便有了 Fungo&lt;/p&gt;
+&lt;hr /&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;开箱即用&lt;/p&gt;
+&lt;p&gt;5 条指令&lt;code&gt;site，file，theme，serve，build&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一站式服务&lt;/p&gt;
+&lt;p&gt;做官网，做博客，做文档，做单页，做海报全都支持&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;上手简单&lt;/p&gt;
+&lt;p&gt;内容使用&lt;code&gt;markdown&lt;/code&gt;呈现，支持 TOC，Meta，Mathjax，Mermaid，图片懒加载，视频嵌入，链接重置&lt;/p&gt;
+&lt;p&gt;模板使用&lt;code&gt;go template&lt;/code&gt;方案，几乎不含自创语法&lt;/p&gt;
+&lt;p&gt;样式使用主流&lt;code&gt;tailwindcss&lt;/code&gt;方案，无需重复学习&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
         <updated>2021-10-11 00:00:00 +0800 CST</updated>
         <author>
             <name>andy</name>
