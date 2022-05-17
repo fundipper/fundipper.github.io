@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://fungo.dev/zh/post/why-we-made-fungo/</loc>
-        <lastmod>2022-05-09</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
         <loc>https://fungo.dev/post/why-we-made-fungo/</loc>
-        <lastmod>2022-05-09</lastmod>
+        <lastmod>2022-05-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
-        <loc>https://fungo.dev/zh/theme/fungo/</loc>
-        <lastmod>2022-05-09</lastmod>
+        <loc>https://fungo.dev/zh/post/why-we-made-fungo/</loc>
+        <lastmod>2022-05-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
     <url>
         <loc>https://fungo.dev/theme/fungo/</loc>
-        <lastmod>2022-05-09</lastmod>
+        <lastmod>2022-05-17</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://fungo.dev/zh/theme/fungo/</loc>
+        <lastmod>2022-05-17</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
